@@ -1,825 +1,1157 @@
 // Data Materi & Games PAI Kelas 5 SD (Fase C)
-// Mencakup Kurikulum CP Lama (Buku Siswa Kemdikbud) dan CP Baru (Revisi CP 020/2026 Fase C)
+// Terbagi jelas antara CP LAMA (Buku Siswa Kemdikbud) dan CP BARU (Revisi BSKAP 020/2026 Word Docx)
 
 export const kelas5Data = {
   kelas: 5,
   namaFase: "Fase C (Kelas 5 SD)",
-  deskripsi: "Pembelajaran mendalam tajwid Mim Sukun dan Qalqalah, Surah Al-Ma'un dan Al-'Asr, Asmaul Husna pilihan, Akhlak berdoa dan berteman, Fikih Puasa Wajib & Sunah serta Makanan Halal-Haram, dan Kepemimpinan Rasulullah di Madinah.",
 
-  // ================= SEMESTER 1 =================
-  semester1: [
-    {
-      id: "k5-sem1-bab1",
-      bab: 1,
-      elemen: "Al-Qur'an dan Hadis",
-      judul: "Menyayangi Anak Yatim & Surah Al-Mā'ūn / Al-'Aṣr",
-      judulCPBaru: "Huruf Bersambung, Tajwid Mim Sukun & Surah al-'Aṣr",
-      icon: "BookOpen",
-      temaWarna: "emerald",
-      cpLama: {
-        fokus: "Q.S. al-Mā'ūn dan Hadis terkait Toleransi & Kepedulian Sosial",
-        kompetensi: "Membaca, menghafal, dan memahami pesan pokok Q.S. al-Mā'ūn"
-      },
-      cpBaru: {
-        fokus: "Huruf Hijaiah Bersambung (3 Kata), Praktik Bacaan Mim Sukun & Surah al-'Aṣr",
-        kompetensi: "Membedakan hukum bacaan Mim Sukun, membaca Surah al-'Aṣr, dan menghargai waktu"
-      },
-      tujuan: [
-        "Membaca Q.S. Al-Mā'ūn dan Surah Al-'Aṣr secara tartil dan fasih",
-        "Mengetahui ciri-ciri pendusta agama menurut Surah Al-Mā'ūn",
-        "Menguasai 3 hukum bacaan Mim Sukun (Ikhfa Syafawi, Idgham Mimi, Idzhar Syafawi)",
-        "Memahami pentingnya memanfaatkan waktu untuk beriman dan beramal saleh (Surah Al-'Aṣr)"
-      ],
-      materi: {
-        pengantar: "Al-Qur'an menuntun kita untuk selalu peduli terhadap sesama dan disiplin memanfaatkan waktu. Di semester ini kita mengkaji Surah Al-Mā'ūn dan Surah Al-'Aṣr serta hukum tajwid Mim Sukun.",
-        subBab: [
-          {
-            judul: "A. Surah Al-Mā'ūn (CP Lama & Materi Buku)",
-            isi: "Surah Al-Mā'ūn terdiri dari 7 ayat. Al-Mā'ūn artinya barang-barang yang berguna. Surah ini memperingatkan orang-orang yang mendustakan agama:",
-            ayatPenting: [
-              { arab: "أَرَأَيْتَ الَّذِي يُكَذِّبُ بِالدِّينِ", latin: "Ara'aitallażī yukażżibu bid-dīn", arti: "Tahukah kamu (orang) yang mendustakan agama?" },
-              { arab: "فَذَٰلِكَ الَّذِي يَدُعُّ الْيَتِيمَ", latin: "Fażālikallażī yadu''ul-yatīm", arti: "Maka itulah orang yang menghardik anak yatim," },
-              { arab: "وَلَا يَحُضُّ عَلَىٰ طَعَامِ الْمِسْكِينِ", latin: "Wa lā yaḥuḍḍu 'alā ṭa'āmil-miskīn", arti: "dan tidak mendorong memberi makan orang miskin." },
-              { arab: "فَوَيْلٌ لِّلْمُصَلِّينَ", latin: "Fa wailul lil-muṣallīn", arti: "Maka celakalah bagi orang-orang yang salat," },
-              { arab: "الَّذِينَ هُمْ عَن صَلَاتِهِمْ سَاهُونَ", latin: "Allażīna hum 'an ṣalātihim sāhūn", arti: "(yaitu) orang-orang yang lalai terhadap salatnya," },
-              { arab: "الَّذِينَ هُمْ يُرَاءُونَ", latin: "Allażīna hum yurā'ūn", arti: "orang-orang yang berbuat riya," },
-              { arab: "وَيَمْنَعُونَ الْمَاعُونَ", latin: "Wa yamna'ūnal-mā'ūn", arti: "dan enggan (memberikan) bantuan barang berguna." }
-            ],
-            ciriPendusta: [
-              "Menghardik (membentak/menyakiti) anak yatim",
-              "Tidak mau mengajak/membantu memberi makan fakir miskin",
-              "Lalai dari salatnya (mengulur-ulur waktu dan malas)",
-              "Riya (beribadah hanya ingin dipuji orang lain)",
-              "Enggan memberi bantuan barang yang berguna kepada orang lain"
-            ]
-          },
-          {
-            judul: "B. Praktik Tajwid: Tiga Hukum Mim Sukun (مْ) (CP Baru)",
-            isi: "Apabila ada huruf Mim Sukun (مْ) bertemu huruf hijaiah, terdapat 3 macam hukum bacaan:",
-            hukumMim: [
-              {
-                nama: "1. Ikhfa Syafawi (إِخْفَاء شَفَوِي)",
-                aturan: "Mim Sukun (مْ) bertemu dengan huruf Ba (ب).",
-                caraBaca: "Disamarkan di bibir disertai dengung (gunnah) selama 2 harakat.",
-                contoh: "تَرْمِيهِم بِحِجَارَةٍ (Tarmiihim biḥijārah) dalam Surah Al-Fil."
-              },
-              {
-                nama: "2. Idgham Mimi / Mutamatsilain (إِدْغَام مِثْلَيْنِ)",
-                aturan: "Mim Sukun (مْ) bertemu dengan sesama huruf Mim (م).",
-                caraBaca: "Memasukkan bunyi mim pertama ke mim kedua disertai dengung 2 harakat.",
-                contoh: "أَطْعَمَهُم مِّن جُوعٍ (Aṭ'amahum min joo')"
-              },
-              {
-                nama: "3. Idzhar Syafawi (إِظْهَار شَفَوِي)",
-                aturan: "Mim Sukun (مْ) bertemu dengan seluruh huruf hijaiah SELAIN huruf Mim dan Ba (26 huruf).",
-                caraBaca: "Dibaca jelas di bibir tanpa dengung.",
-                contoh: "هُمْ فِيهَا (Hum fīhā), أَلَمْ تَرَ (Alam tara)"
+  // =========================================================================
+  // 1. KURIKULUM CP LAMA (Berdasarkan Buku Siswa Kemdikbud Cetak)
+  // =========================================================================
+  cpLama: {
+    deskripsi: "Kurikulum berdasarkan Buku Siswa PAI & Budi Pekerti Kelas 5 Kemdikbud (CP 046/2025). Terdiri dari 10 Bab.",
+    semester1: [
+      {
+        id: "k5-lama-bab-1",
+        bab: 1,
+        elemen: "Al-Qur'an dan Hadis",
+        judul: "Menyayangi Anak Yatim (Surah Al-Mā'ūn)",
+        icon: "quran",
+        fokusCP: "Membaca, menulis, menghafal, dan memahami pesan pokok Q.S. al-Mā'ūn tentang kepedulian sosial.",
+        tujuan: [
+          "Membaca Q.S. Al-Mā'ūn ayat 1-7 dengan tartil dan fasih sesuai kaidah tajwid.",
+          "Menuliskan kembali ayat-ayat Q.S. Al-Mā'ūn dengan kaidah khat yang benar.",
+          "Menghafal Surah Al-Mā'ūn dengan lancar di depan kelas.",
+          "Menjelaskan ciri-ciri orang yang mendustakan agama menurut Surah Al-Mā'ūn."
+        ],
+        materi: {
+          pengantar: "Surah Al-Mā'ūn adalah surah ke-107 dalam Al-Qur'an yang terdiri atas 7 ayat. Surah ini tergolong Makkiyah. Al-Mā'ūn artinya barang-barang yang berguna. Surah ini memberikan peringatan keras kepada orang-orang yang mengaku beragama tetapi tindakannya menelantarkan kaum yang lemah.",
+          subBab: [
+            {
+              subJudul: "A. Membaca dan Menulis Surah Al-Mā'ūn",
+              ilustrasi: "quran",
+              ayatPenting: [
+                { no: 1, arab: "أَرَأَيْتَ الَّذِي يُكَذِّبُ بِالدِّينِ", latin: "Ara'aitallażī yukażżibu bid-dīn", arti: "Tahukah kamu (orang) yang mendustakan agama?" },
+                { no: 2, arab: "فَذَٰلِكَ الَّذِي يَدُعُّ الْيَتِيمَ", latin: "Fażālikallażī yadu''ul-yatīm", arti: "Maka itulah orang yang menghardik anak yatim," },
+                { no: 3, arab: "وَلَا يَحُضُّ عَلَىٰ طَعَامِ الْمِسْكِينِ", latin: "Wa lā yaḥuḍḍu 'alā ṭa'āmil-miskīn", arti: "dan tidak mendorong memberi makan orang miskin." },
+                { no: 4, arab: "فَوَيْلٌ لِّلْمُصَلِّينَ", latin: "Fa wailul lil-muṣallīn", arti: "Maka celakalah bagi orang-orang yang salat," },
+                { no: 5, arab: "الَّذِينَ هُمْ عَن صَلَاتِهِمْ سَاهُونَ", latin: "Allażīna hum 'an ṣalātihim sāhūn", arti: "(yaitu) orang-orang yang lalai terhadap salatnya," },
+                { no: 6, arab: "الَّذِينَ هُمْ يُرَاءُونَ", latin: "Allażīna hum yurā'ūn", arti: "orang-orang yang berbuat riya," },
+                { no: 7, arab: "وَيَمْنَعُونَ الْمَاعُونَ", latin: "Wa yamna'ūnal-mā'ūn", arti: "dan enggan (memberikan) bantuan barang berguna." }
+              ]
+            },
+            {
+              subJudul: "B. Pesan Pokok: Ciri-Ciri Pendusta Agama",
+              ilustrasi: "mosque",
+              uraian: "Surah Al-Mā'ūn menyebutkan 5 sifat orang yang mendustakan agama:",
+              ciriList: [
+                "1. Menghardik anak yatim (membentak, menzalimi haknya, atau tidak menyayangi mereka).",
+                "2. Tidak menganjurkan memberi makan orang miskin.",
+                "3. Lalai dari salatnya (menunda-nunda waktu salat dan malas-malasan).",
+                "4. Berbuat riya (beribadah hanya ingin dilihat dan dipuji manusia).",
+                "5. Enggan menolong dengan barang yang berguna (pelit meminjamkan barang sepele)."
+              ]
+            },
+            {
+              subJudul: "C. Hadis Keutamaan Menyayangi Anak Yatim",
+              ilustrasi: "tahmid",
+              dalil: {
+                arab: "أَنَا وَكَافِلُ الْيَتِيمِ فِي الْجَنَّةِ هَكَذَا وَأَشَارَ بِالسَّبَّابَةِ وَالْوُسْطَى",
+                latin: "Anā wa kāfilul-yatīmi fil-jannati hākażā (wa asyāra bis-sabbābati wal-wusṭā)",
+                arti: "Aku dan orang yang memelihara anak yatim di surga bagaikan ini (beliau merapatkan jari telunjuk dan jari tengahnya). (H.R. Bukhari)"
               }
-            ]
-          },
-          {
-            judul: "C. Surah Al-'Aṣr (CP Baru)",
-            isi: "Surah Al-'Aṣr menegaskan bahwa seluruh manusia berada dalam kerugian, kecuali orang yang memiliki 4 sifat:",
-            empatSifat: [
-              "1. Beriman kepada Allah Swt.",
-              "2. Mengerjakan amal kebajikan (amal saleh)",
-              "3. Saling menasihati untuk kebenaran",
-              "4. Saling menasihati untuk kesabaran"
-            ],
-            dalil: {
-              arab: "وَالْعَصْرِ ۙ إِنَّ الْإِنسَانَ لَفِي خُسْرٍ ۙ إِلَّا الَّذِينَ آمَنُوا وَعَمِلُوا الصَّالِحَاتِ وَتَوَاصَوْا بِالْحَقِّ وَتَوَاصَوْا بِالصَّبْرِ",
-              latin: "Wal-'aṣr. Innal-insāna lafī khusr. Illallażīna āmanū wa 'amiluṣ-ṣāliḥāti wa tawāṣau bil-ḥaqqi wa tawāṣau biṣ-ṣabr.",
-              arti: "Demi masa. Sungguh, manusia berada dalam kerugian, kecuali orang-orang yang beriman dan mengerjakan kebajikan serta saling menasihati untuk kebenaran dan saling menasihati untuk kesabaran."
             }
-          }
-        ],
-        rangkuman: [
-          "Surah Al-Ma'un mengecam orang yang menindas anak yatim, riya, dan lalai salat.",
-          "Hukum Mim Sukun ada tiga: Ikhfa Syafawi (ketemu Ba), Idgham Mimi (ketemu Mim), dan Idzhar Syafawi (ketemu 26 huruf lainnya).",
-          "Surah Al-'Asr mengajarkan disiplin waktu dan empat kunci terbebas dari kerugian hidup."
-        ]
+          ],
+          rangkuman: [
+            "Al-Mā'ūn artinya barang-barang yang berguna.",
+            "Ciri pendusta agama: menghardik anak yatim, lalai salat, berbuat riya, dan kikir.",
+            "Penyantun anak yatim akan berdampingan dekat dengan Rasulullah di surga."
+          ],
+          budiPekerti: "Menyisihkan uang saku untuk kotak infak anak yatim di hari Jumat."
+        },
+        game: {
+          id: "game-k5-lama-b1",
+          tipe: "knowledge-challenge",
+          nama: "Kuis Detektif Surah Al-Ma'un",
+          petunjuk: "Jawablah pertanyaan penting seputar kandungan Surah Al-Mā'ūn!",
+          questions: [
+            {
+              tanya: "Apakah arti dari kata 'Al-Mā'ūn'?",
+              opsi: ["Barang-barang yang berguna", "Anak yatim", "Hari kiamat"],
+              benar: 0,
+              alasan: "Al-Ma'un artinya barang-barang yang berguna yang enggan dipinjamkan oleh orang kikir."
+            },
+            {
+              tanya: "Salah satu ciri pendusta agama menurut Surah Al-Mā'ūn adalah orang yang salatnya...",
+              opsi: ["Lalai dan berbuat riya (ingin dipuji)", "Khusyuk dan tepat waktu", "Berjamaah di masjid"],
+              benar: 0,
+              alasan: "Surah Al-Ma'un mengecam orang yang lalai salat dan hanya ingin pamer (riya)."
+            }
+          ]
+        }
       },
-      game: {
-        id: "game-k5-bab1",
-        tipe: "tajwid-detective",
-        nama: "Detektif Tajwid Mim Sukun",
-        petunjuk: "Analisis penggalan ayat Al-Qur'an berikut! Tentukan hukum Mim Sukun yang terkandung di dalamnya!",
-        soalList: [
-          {
-            potonganAyat: "تَرْمِيهِم بِحِجَارَةٍ (Tarmiihim bihijārah)",
-            tanya: "Mim sukun (مْ) bertemu huruf Ba (ب). Hukum bacaannya adalah...",
-            pilihan: ["Ikhfa Syafawi", "Idgham Mimi", "Idzhar Syafawi"],
-            kunci: "Ikhfa Syafawi",
-            alasan: "Karena Mim Sukun bertemu Ba, dibaca samar di bibir dengan dengung 2 harakat."
-          },
-          {
-            potonganAyat: "أَطْعَمَهُم مِّن جُوعٍ (At'amahum min joo')",
-            tanya: "Mim sukun (مْ) bertemu huruf Mim (م). Hukum bacaannya adalah...",
-            pilihan: ["Idgham Mimi / Mutamatsilain", "Idzhar Syafawi", "Iqlab"],
-            kunci: "Idgham Mimi / Mutamatsilain",
-            alasan: "Pertemuan dua huruf mim sejenis yang dileburkan dengan dengung."
-          },
-          {
-            potonganAyat: "أَلَمْ تَرَ كَيْفَ فَعَلَ رَبُّكَ (Alam tara kaifa...)",
-            tanya: "Mim sukun (مْ) bertemu huruf Ta (ت). Hukum bacaannya adalah...",
-            pilihan: ["Idzhar Syafawi", "Ikhfa Syafawi", "Idgham Bilaghunnah"],
-            kunci: "Idzhar Syafawi",
-            alasan: "Ta bukan mim dan bukan ba, maka mim sukun dibaca jelas tanpa dengung."
-          },
-          {
-            potonganAyat: "هُمْ فِيهَا خَالِدُونَ (Hum fiihaa...)",
-            tanya: "Mim sukun (مْ) bertemu huruf Fa (ف). Hukum bacaannya adalah...",
-            pilihan: ["Idzhar Syafawi", "Ikhfa Syafawi", "Idgham Mimi"],
-            kunci: "Idzhar Syafawi",
-            alasan: "Pertemuan mim sukun dengan huruf Fa harus dibaca jelas (Idzhar Syafawi), hati-hati jangan sampai tersamarkan."
-          }
-        ]
-      }
-    },
 
-    {
-      id: "k5-sem1-bab2",
-      bab: 2,
-      elemen: "Akidah",
-      judul: "Asmaulhusna: Mengenal Nama-Nama Agung Allah",
-      judulCPBaru: "Asmaulhusna (al-Ḥalīm, asy-Syakūr, al-Ḥakīm, al-Wadūd)",
-      icon: "Sparkles",
-      temaWarna: "amber",
-      cpLama: {
-        fokus: "al-Bā'iś, al-Qawiyyu, al-Muḥyi, al-Mumīt, al-Qayyūm",
-        kompetensi: "Mengenal 5 Asmaulhusna tentang kekuasaan dan kehidupan"
+      {
+        id: "k5-lama-bab-2",
+        bab: 2,
+        elemen: "Akidah",
+        judul: "Lebih Dekat dengan Nama-Nama Allah (Asmaulhusna)",
+        icon: "asmaul-husna",
+        fokusCP: "Mengenal 5 Asmaulhusna: al-Bā'iś, al-Qawiyyu, al-Muḥyi, al-Mumīt, dan al-Qayyūm.",
+        tujuan: [
+          "Menjelaskan makna Asmaulhusna al-Bā'iś, al-Qawiyyu, al-Muḥyi, al-Mumīt, dan al-Qayyūm.",
+          "Menyebutkan bukti kebesaran kekuasaan Allah yang menghidupkan dan mematikan.",
+          "Meneladani sikap mandiri (al-Qayyum) dan kuat fisik-mental (al-Qawiyyu) dalam belajar."
+        ],
+        materi: {
+          pengantar: "Buku Siswa Kelas 5 membahas lima Asmaul Husna yang menggambarkan keagungan, kekuasaan tak terbatas, dan kemandirian Allah Swt.",
+          subBab: [
+            {
+              subJudul: "A. Makna Kelima Asmaul Husna",
+              ilustrasi: "asmaul-husna",
+              daftarAsmaul: [
+                {
+                  nama: "1. Al-Bā'iś (الْبَاعِثُ) - Maha Membangkitkan",
+                  makna: "Allah akan membangkitkan kembali seluruh manusia yang telah mati dari alam kubur di hari kiamat kelak untuk mempertanggungjawabkan perbuatannya."
+                },
+                {
+                  nama: "2. Al-Qawiyyu (الْقَوِيُّ) - Maha Kuat",
+                  makna: "Kekuatan Allah tiada bandingannya. Tidak ada makhluk yang dapat mengalahkan kehendak Allah Swt. Kita harus menjadi mukmin yang kuat iman, akal, dan fisik."
+                },
+                {
+                  nama: "3. Al-Muḥyī (الْمُحْيِي) - Maha Menghidupkan",
+                  makna: "Allah yang meniupkan ruh dan memberi kehidupan kepada manusia, hewan, serta menghidupkan tanah yang gersang dengan curahan air hujan."
+                },
+                {
+                  nama: "4. Al-Mumīt (الْمُمِيتُ) - Maha Mematikan",
+                  makna: "Allah yang menentukan ajal setiap makhluk bernyawa. Tidak ada satu pun manusia yang dapat lari dari kematian bila ajalnya telah tiba."
+                },
+                {
+                  nama: "5. Al-Qayyūm (الْقَيُّومُ) - Maha Mandiri / Berdiri Sendiri",
+                  makna: "Allah mengurus seluruh alam semesta tanpa membutuhkan bantuan siapa pun dan tidak pernah mengantuk ataupun tidur."
+                }
+              ]
+            }
+          ],
+          rangkuman: [
+            "Al-Bā'iś: Membangkitkan manusia dari kubur.",
+            "Al-Qawiyyu: Kekuatan mutlak tanpa batas.",
+            "Al-Muḥyī & Al-Mumīt: Menghidupkan dan mematikan makhluk.",
+            "Al-Qayyūm: Berdiri sendiri tanpa bergantung pada makhluk."
+          ],
+          budiPekerti: "Belajar mandiri menyiapkan buku pelajaran sendiri tanpa bergantung terus pada orang tua."
+        },
+        game: {
+          id: "game-k5-lama-b2",
+          tipe: "memory-card",
+          nama: "Kartu Pasangan 5 Nama Agung Allah",
+          petunjuk: "Cocokkan nama Asmaul Husna dengan arti kekuasaan-Nya!",
+          cards: [
+            { id: 1, pairId: "baits", label: "الْبَاعِثُ (Al-Bā'iś)" },
+            { id: 2, pairId: "baits", label: "Maha Membangkitkan" },
+            { id: 3, pairId: "qawiyyu", label: "الْقَوِيُّ (Al-Qawiyyu)" },
+            { id: 4, pairId: "qawiyyu", label: "Maha Kuat" },
+            { id: 5, pairId: "qayyum", label: "الْقَيُّومُ (Al-Qayyūm)" },
+            { id: 6, pairId: "qayyum", label: "Maha Mandiri" }
+          ]
+        }
       },
-      cpBaru: {
-        fokus: "al-Ḥalīm, asy-Syakūr, al-Ḥakīm, al-Wadūd",
-        kompetensi: "Menjelaskan makna dan meneladani keluhuran budi, syukur, hikmah, dan cinta kasih"
-      },
-      tujuan: [
-        "Mengetahui Asmaulhusna versi Buku: al-Bā'iś, al-Qawiyyu, al-Muḥyi, al-Mumīt, al-Qayyūm",
-        "Mengetahui Asmaulhusna versi CP Baru: al-Ḥalīm, asy-Syakūr, al-Ḥakīm, al-Wadūd",
-        "Meneladani sifat penyantun, pemaaf, dan bijaksana dalam pergaulan sekolah",
-        "Menebarkan rasa kasih sayang (Wadūd) kepada seluruh makhluk"
-      ],
-      materi: {
-        pengantar: "Allah memiliki 99 nama-nama terbaik (Asmaulhusna). Memahami Asmaulhusna membuat hati semakin dekat dan cinta kepada Sang Maha Pencipta.",
-        subBab: [
-          {
-            judul: "A. Asmaulhusna CP Baru (CP 020/2026)",
-            isi: "Empat Asmaulhusna pembentuk akhlak mulia siswa:",
-            daftarAsmaulCPBaru: [
-              {
-                nama: "Al-Ḥalīm (الْحَلِيمُ)",
-                arti: "Maha Penyantun / Paling Sabar",
-                penjelasan: "Allah tidak tergesa-gesa menghukum hamba-Nya yang berbuat dosa, melainkan memberi kesempatan untuk bertaubat. Teladan kita: Menahan amarah dan tidak cepat membalas dendam."
-              },
-              {
-                nama: "Asy-Syakūr (الشَّكُورُ)",
-                arti: "Maha Menghargai / Mensyukuri Kebaikan",
-                penjelasan: "Allah membalas amal kebaikan kecil dari hamba-Nya dengan pahala yang berlipat ganda. Teladan kita: Selalu menghargai bantuan teman sekecil apa pun."
-              },
-              {
-                nama: "Al-Ḥakīm (الْحَكِيمُ)",
-                arti: "Maha Bijaksana",
-                penjelasan: "Segala ketetapan dan penciptaan Allah penuh dengan hikmah dan tidak ada yang sia-sia. Teladan kita: Bertindak dengan pertimbangan matang dan adil."
-              },
-              {
-                nama: "Al-Wadūd (الْوَدُودُ)",
-                arti: "Maha Mengasihi / Mencintai",
-                penjelasan: "Allah mencintai hamba-hamba-Nya yang saleh dan melimpahkan ketenteraman. Teladan kita: Menebarkan cinta kasih, ramah, dan mendamaikan teman yang berselisih."
+
+      {
+        id: "k5-lama-bab-3",
+        bab: 3,
+        elemen: "Akhlak",
+        judul: "Aku Anak Saleh (Menghargai Keragaman)",
+        icon: "sahabat",
+        fokusCP: "Menerapkan sikap saling menghargai keragaman suku bangsa serta adab berdoa.",
+        tujuan: [
+          "Menjelaskan konsep keragaman sebagai sunnatullah (ketetapan Allah).",
+          "Menunjukkan sikap toleran dan berteman tanpa membeda-bedakan suku atau warna kulit.",
+          "Mempraktikkan adab berdoa dan sikap tawakal kepada Allah."
+        ],
+        materi: {
+          pengantar: "Indonesia adalah bangsa yang kaya akan suku, budaya, bahasa, dan agama. Allah menciptakan keragaman ini agar manusia saling mengenal (lita'arafu) dan saling tolong-menolong dalam kebaikan.",
+          subBab: [
+            {
+              subJudul: "A. Keragaman adalah Sunnatullah",
+              ilustrasi: "sahabat",
+              dalil: {
+                arab: "يَا أَيُّهَا النَّاسُ إِنَّا خَلَقْنَاكُم مِّن ذَكَرٍ وَأُنثَىٰ وَجَعَلْنَاكُمْ شُعُوبًا وَقَبَائِلَ لِتَعَارَفُوا",
+                latin: "Yā ayyuhan-nāsu innā khalaqnākum min żakariw wa unṡā wa ja'alnākum syu'ūbaw wa qabā'ila lita'ārafū",
+                arti: "Wahai manusia! Sungguh, Kami telah menciptakan kamu dari seorang laki-laki dan seorang perempuan, kemudian Kami jadikan kamu berbangsa-bangsa dan bersuku-suku agar kamu saling mengenal. (Q.S. Al-Hujurat: 13)"
               }
-            ]
-          },
-          {
-            judul: "B. Asmaulhusna Sumber Buku Siswa (CP Lama)",
-            isi: "Lima Asmaulhusna tentang keagungan penciptaan dan kekuasaan mutlak Allah:",
-            daftarAsmaulCPLama: [
-              { nama: "Al-Bā'iś (الْبَاعِثُ)", arti: "Maha Membangkitkan (membangkitkan manusia dari kubur di hari kiamat)" },
-              { nama: "Al-Qawiyyu (الْقَوِيُّ)", arti: "Maha Kuat (kekuatan Allah tiada tandingannya)" },
-              { nama: "Al-Muḥyī (الْمُحْيِي)", arti: "Maha Menghidupkan (memberi kehidupan bagi seluruh makhluk)" },
-              { nama: "Al-Mumīt (الْمُمِيتُ)", arti: "Maha Mematikan (menentukan ajal setiap yang bernyawa)" },
-              { nama: "Al-Qayyūm (الْقَيُّومُ)", arti: "Maha Mandiri (berdiri sendiri tanpa membutuhkan bantuan siapa pun)" }
-            ]
-          }
-        ],
-        rangkuman: [
-          "Asmaulhusna adalah nama-nama agung dan terindah milik Allah Swt.",
-          "Al-Halim mengajarkan kita bersikap santun dan sabar.",
-          "Asy-Syakur memotivasi kita untuk selalu menghargai orang lain.",
-          "Al-Hakim mendorong kita berpikir bijaksana sebelum bertindak.",
-          "Al-Wadud menanamkan nilai cinta kasih dan persaudaraan tanpa pamrih."
-        ]
-      },
-      game: {
-        id: "game-k5-bab2",
-        tipe: "memory-asmaul-husna",
-        nama: "Taman Bintang Asmaul Husna",
-        petunjuk: "Cocokkan nama Asmaul Husna dengan arti dan teladan penerapannya!",
-        pairs: [
-          { id: 1, nama: "الْحَلِيمُ (Al-Halim)", target: "Maha Penyantun (Sabar tidak lekas marah)" },
-          { id: 2, nama: "الشَّكُورُ (Asy-Syakur)", target: "Maha Menghargai (Membalas kebaikan berlipat)" },
-          { id: 3, nama: "الْحَكِيمُ (Al-Hakim)", target: "Maha Bijaksana (Penuh hikmah)" },
-          { id: 4, nama: "الْوَدُودُ (Al-Wadud)", target: "Maha Mencintai (Penuh kasih sayang)" }
-        ]
-      }
-    },
-
-    {
-      id: "k5-sem1-bab3",
-      bab: 3,
-      elemen: "Akhlak",
-      judul: "Akhlak terhadap Allah: Berdoa dan Bertawakal",
-      judulCPBaru: "Akhlak terhadap Allah dengan Berdoa dan Bertawakal",
-      icon: "ShieldAlert",
-      temaWarna: "cyan",
-      cpLama: {
-        fokus: "Aku Anak Saleh & Akhlak Berdoa dan Bertawakal",
-        kompetensi: "Menerapkan adab berdoa dan sikap tawakal"
-      },
-      cpBaru: {
-        fokus: "Akhlak terhadap Allah Swt. dengan Berdoa dan Bertawakal kepada-Nya",
-        kompetensi: "Menerapkan kepasrahan dan optimisme melalui doa serta tawakal setelah berikhtiar"
-      },
-      tujuan: [
-        "Memahami arti doa sebagai senjata dan bentuk ibadah orang beriman",
-        "Mengetahui adab dan waktu mustajab untuk berdoa",
-        "Memahami konsep ikhtiar (berusaha keras) sebelum bertawakal",
-        "Menunjukkan sikap pantang putus asa ketika doa belum terkabul"
-      ],
-      materi: {
-        pengantar: "Manusia adalah makhluk yang lemah dan selalu membutuhkan pertolongan Allah. Doa dan tawakal adalah dua sayap keimanan yang membawa ketenangan jiwa.",
-        subBab: [
-          {
-            judul: "A. Pengertian Doa dan Maknanya",
-            isi: "Doa secara bahasa artinya memanggil atau memohon. Secara istilah, doa adalah permohonan hamba kepada Allah Swt. dengan penuh ketundukan dan pengharapan.",
-            dalil: {
-              arab: "وَقَالَ رَبُّكُمُ ادْعُونِي أَسْتَجِبْ لَكُمْ",
-              latin: "Wa qāla Rabbukumud'ūnī astajib lakum",
-              arti: "Dan Tuhanmu berfirman: 'Berdoalah kepada-Ku, niscaya akan Kuperkenankan bagimu.' (Q.S. Gafir: 60)"
+            },
+            {
+              subJudul: "B. Sikap Anak Saleh dalam Kebersamaan",
+              ilustrasi: "tahmid",
+              uraian: "Anak saleh tidak mengejek logat bahasa teman, tidak membeda-bedakan teman bermain, serta selalu menghormati teman yang sedang beribadah."
             }
-          },
-          {
-            judul: "B. Adab dan Waktu Mustajab Berdoa",
-            adabList: [
-              "Menghadap kiblat dalam keadaan suci dari hadas",
-              "Mengawali doa dengan memuji Allah (Alhamdulillah) dan bersalawat kepada Nabi Muhammad saw.",
-              "Berdoa dengan suara lembut, khusyuk, dan penuh keyakinan bahwa Allah akan mengabulkannya",
-              "Waktu mustajab: Sepertiga malam terakhir, saat sujud dalam salat, antara azan dan ikamah, serta hari Jumat."
-            ]
-          },
-          {
-            judul: "C. Konsep Tawakal yang Benar",
-            isi: "Tawakal artinya berserah diri kepada keputusan Allah SETELAH melakukan ikhtiar (usaha sungguh-sungguh). Seseorang tidak boleh hanya diam pasrah tanpa belajar saat ingin pintar, seperti sabda Nabi: 'Ikatlah untamu, lalu bertawakallah!'."
-          }
-        ],
-        rangkuman: [
-          "Doa adalah bukti kerendahan hati manusia di hadapan Allah.",
-          "Adab berdoa: Mengawali dengan hamdalah dan salawat, serta khusyuk.",
-          "Ikhtiar dan tawakal harus seimbang; usaha sekuat tenaga, hasil diserahkan kepada Allah."
-        ]
+          ],
+          rangkuman: [
+            "Keragaman manusia diciptakan Allah agar saling mengenal dan bekerja sama.",
+            "Yang paling mulia di sisi Allah adalah orang yang paling bertakwa."
+          ],
+          budiPekerti: "Bermain bersama seluruh teman di kelas dengan rukun dan adil."
+        },
+        game: {
+          id: "game-k5-lama-b3",
+          tipe: "knowledge-challenge",
+          nama: "Pohon Persaudaraan Anak Saleh",
+          petunjuk: "Tentukan sikap yang mencerminkan akhlak anak saleh!",
+          questions: [
+            {
+              tanya: "Mengapa Allah menciptakan manusia berbangsa-bangsa dan bersuku-suku?",
+              opsi: ["Agar saling mengenal dan tolong-menolong", "Agar bermusuhan", "Agar merasa sukunya paling hebat"],
+              benar: 0,
+              alasan: "Al-Qur'an menegaskan keragaman diciptakan untuk saling mengenal (lita'arafu)."
+            }
+          ]
+        }
       },
-      game: {
-        id: "game-k5-bab3",
-        tipe: "ikhtiar-tawakal-choice",
-        nama: "Jembatan Ikhtiar & Doa",
-        petunjuk: "Tentukan apakah pernyataan berikut termasuk 'Ikhtiar' atau 'Tawakal'!",
-        skenario: [
-          {
-            teks: "Belajar tekun setiap malam dan mengerjakan latihan soal menjelang ujian semester.",
-            jawaban: "Ikhtiar",
-            penjelasan: "Ini adalah bentuk usaha nyata manusia menggunakan akal dan tenaga."
-          },
-          {
-            teks: "Berdoa dengan tenang setelah ujian selesai dan menerima apa pun nilai yang diberikan Allah dengan ikhlas.",
-            jawaban: "Tawakal",
-            penjelasan: "Ini adalah sikap berserah diri setelah mengerahkan ikhtiar secara maksimal."
-          },
-          {
-            teks: "Memeriksakan diri ke dokter dan meminum obat saat sedang sakit flu.",
-            jawaban: "Ikhtiar",
-            penjelasan: "Berobat adalah ikhtiar medis yang disunnahkan Rasulullah saw."
-          }
-        ]
-      }
-    },
 
-    {
-      id: "k5-sem1-bab4",
-      bab: 4,
-      elemen: "Fikih",
-      judul: "Fikih Puasa: Puasa Wajib dan Puasa Sunah",
-      judulCPBaru: "Puasa Wajib dan Puasa Sunah dalam Islam",
-      icon: "Moon",
-      temaWarna: "indigo",
-      cpLama: {
-        fokus: "Puasa-puasa Sunah & Hidup Lapang dengan Berbagi",
-        kompetensi: "Memahami macam-macam puasa sunah dan praktiknya"
-      },
-      cpBaru: {
-        fokus: "Puasa Wajib dan Puasa Sunah",
-        kompetensi: "Menerapkan ketentuan puasa wajib Ramadan serta puasa-puasa sunah yang dianjurkan"
-      },
-      tujuan: [
-        "Memahami definisi puasa (ash-Shiyam) secara bahasa dan syariat",
-        "Mengetahui syarat wajib, syarat sah, rukun, dan hal yang membatalkan puasa",
-        "Mengenal macam-macam puasa wajib (Ramadan, Qadha, Nazar, Kifarat)",
-        "Mengenal macam-macam puasa sunah (Senin-Kamis, Ayyamul Bidh, Syawal, Arafah, Asyura)"
-      ],
-      materi: {
-        pengantar: "Puasa melatih kejujuran, disiplin, empati terhadap kaum dhuafa, dan menjaga kesehatan. Pada CP Baru, anak mempelajari puasa secara menyeluruh baik wajib maupun sunah.",
-        subBab: [
-          {
-            judul: "A. Pengertian dan Rukun Puasa",
-            isi: "Puasa artinya menahan diri dari makan, minum, dan segala hal yang membatalkan puasa mulai dari terbit fajar shadiq (subuh) hingga terbenam matahari (magrib) disertai niat karena Allah Swt.",
-            rukunPuasa: [
-              "1. Niat pada malam hari (sebelum terbit fajar)",
-              "2. Menahan diri dari makan, minum, dan perkara yang membatalkan puasa sejak fajar sampai magrib"
-            ]
-          },
-          {
-            judul: "B. Macam-Macam Puasa Wajib",
-            daftarWajib: [
-              { nama: "Puasa Ramadan", ket: "Puasa satu bulan penuh di bulan suci Ramadan (hukumnya fardhu 'ain)." },
-              { nama: "Puasa Qadha", ket: "Puasa untuk mengganti hari puasa Ramadan yang tertinggal karena sakit atau bepergian jauh (safar)." },
-              { nama: "Puasa Nazar", ket: "Puasa yang dijanjikan oleh seseorang jika keinginannya yang baik tercapai." },
-              { nama: "Puasa Kifarat", ket: "Puasa denda akibat melanggar aturan tertentu dalam syariat." }
-            ]
-          },
-          {
-            judul: "C. Macam-Macam Puasa Sunah",
-            daftarSunah: [
-              { nama: "Puasa Senin dan Kamis", ket: "Hari di mana amal perbuatan diangkat dan diperiksa oleh Allah Swt." },
-              { nama: "Puasa Ayyamul Bidh", ket: "Puasa tanggal 13, 14, dan 15 setiap bulan Hijriah saat bulan purnama." },
-              { nama: "Puasa 6 Hari di Bulan Syawal", ket: "Pahalanya seperti berpuasa satu tahun penuh." },
-              { nama: "Puasa Hari Arafah (9 Zulhijjah)", ket: "Bagi orang yang tidak berhaji, menghapus dosa setahun yang lalu dan setahun yang akan datang." },
-              { nama: "Puasa Asyura (10 Muharram)", ket: "Menghapuskan dosa setahun yang telah lalu." }
-            ]
-          }
+      {
+        id: "k5-lama-bab-4",
+        bab: 4,
+        elemen: "Fikih",
+        judul: "Hidup Lapang dengan Berbagi (Zakat, Infak, Sedekah)",
+        icon: "zakat",
+        fokusCP: "Memahami konsep zakat, infak, sedekah, serta puasa-puasa sunah.",
+        tujuan: [
+          "Memahami keutamaan berbagi rezeki kepada sesama yang membutuhkan.",
+          "Mengenal perbedaan mendasar Zakat Fitrah dan Zakat Mal.",
+          "Mengenal macam-macam puasa sunah yang dianjurkan Rasulullah saw."
         ],
-        rangkuman: [
-          "Rukun puasa ada dua: niat dan menahan diri dari yang membatalkan sejak fajar hingga magrib.",
-          "Puasa wajib: Ramadan, Qadha, Nazar, dan Kifarat.",
-          "Puasa sunah: Senin-Kamis, Ayyamul Bidh, Syawal, Arafah, dan Asyura."
-        ]
+        materi: {
+          pengantar: "Berbagi tidak akan membuat seseorang menjadi miskin. Justru dengan bersedekah, harta menjadi berkah dan dilipatgandakan oleh Allah Swt.",
+          subBab: [
+            {
+              subJudul: "A. Zakat Pembersih Jiwa dan Harta",
+              ilustrasi: "zakat",
+              uraian: "Zakat Fitrah dikeluarkan di bulan Ramadan berupa makanan pokok (beras 2,5 kg) untuk menyucikan jiwa orang yang berpuasa. Zakat Mal dikeluarkan dari harta kekayaan bila sudah mencapai nisab dan haul."
+            },
+            {
+              subJudul: "B. Mengenal Puasa-Puasa Sunah",
+              ilustrasi: "puasa",
+              uraian: "Puasa sunah yang diajarkan Nabi: Puasa Senin dan Kamis, Puasa 6 hari di bulan Syawal, Puasa Arafah (9 Zulhijjah), dan Puasa Asyura (10 Muharram)."
+            }
+          ],
+          rangkuman: [
+            "Zakat hukumnya wajib bagi yang mampu.",
+            "Puasa sunah mendatangkan pahala tambahan dan menyehatkan tubuh."
+          ],
+          budiPekerti: "Gemar menyisihkan sebagian rezeki untuk kaum fakir dan miskin."
+        },
+        game: {
+          id: "game-k5-lama-b4",
+          tipe: "knowledge-challenge",
+          nama: "Kotak Berbagi Berkah",
+          petunjuk: "Pilih jawaban yang benar seputar zakat dan puasa sunah!",
+          questions: [
+            {
+              tanya: "Berapa takaran beras Zakat Fitrah yang wajib dikeluarkan per orang?",
+              opsi: ["2,5 kg (atau 3,5 liter) beras", "10 kg beras", "1 kg beras"],
+              benar: 0,
+              alasan: "Takaran zakat fitrah per jiwa adalah 1 sha' atau setara 2,5 kg beras."
+            }
+          ]
+        }
       },
-      game: {
-        id: "game-k5-bab4",
-        tipe: "fasting-category-sorter",
-        nama: "Pilah Keranjang Puasa Wajib vs Sunah",
-        petunjuk: "Geser atau pilih jenis puasa ke dalam keranjang yang tepat: 'Puasa Wajib' atau 'Puasa Sunah'!",
-        items: [
-          { nama: "Puasa Ramadan", kategori: "Wajib" },
-          { nama: "Puasa Hari Senin & Kamis", kategori: "Sunah" },
-          { nama: "Puasa Nazar", kategori: "Wajib" },
-          { nama: "Puasa 6 Hari Syawal", kategori: "Sunah" },
-          { nama: "Puasa Qadha Pengganti", kategori: "Wajib" },
-          { nama: "Puasa Hari Arafah (9 Zulhijjah)", kategori: "Sunah" }
-        ]
-      }
-    },
 
-    {
-      id: "k5-sem1-bab5",
-      bab: 5,
-      elemen: "Sejarah Peradaban Islam",
-      judul: "Kepemimpinan Rasulullah saw. di Madinah",
-      judulCPBaru: "Kepemimpinan Nabi Muhammad saw. Membangun Kota Madinah",
-      icon: "Flag",
-      temaWarna: "rose",
-      cpLama: {
-        fokus: "Kisah Keteladanan Nabi Muhammad saw. Membangun Kota Madinah",
-        kompetensi: "Menceritakan upaya Rasulullah mempersaudarakan kaum Muhajirin dan Ansar"
-      },
-      cpBaru: {
-        fokus: "Kepemimpinan Nabi Muhammad saw. di Madinah (Piagam Madinah)",
-        kompetensi: "Menganalisis prinsip keadilan, toleransi, dan persatuan dalam Piagam Madinah"
-      },
-      tujuan: [
-        "Menceritakan peristiwa hijrah Nabi Muhammad saw. dari Makkah ke Madinah (Yatsrib)",
-        "Mengetahui langkah pertama Nabi: Membangun Masjid Nabawi sebagai pusat ibadah dan pembinaan umat",
-        "Meneladani persaudaraan tulus antara kaum Muhajirin dan kaum Ansar",
-        "Memahami nilai toleransi dalam Piagam Madinah (Sahifatul Madinah)"
-      ],
-      materi: {
-        pengantar: "Setelah berhijrah ke Madinah, Rasulullah saw. meletakkan fondasi peradaban baru yang adil, toleran, dan berkeadaban. Madinah menjadi model masyarakat madani yang rukun.",
-        subBab: [
-          {
-            judul: "A. Membangun Masjid Nabawi",
-            isi: "Langkah pertama yang dilakukan Rasulullah setibanya di Madinah adalah membangun Masjid Nabawi. Tanah dibeli dari dua anak yatim bernama Sahl dan Suhail. Masjid bukan sekadar tempat salat, melainkan pusat musyawarah, pendidikan, dan kegiatan sosial kemasyarakatan."
-          },
-          {
-            judul: "B. Mempersaudarakan Muhajirin dan Ansar",
-            isi: "Kaum Muhajirin meninggalkan harta bendanya di Makkah demi mempertahankan keimanan. Kaum Ansar (penduduk asli Madinah) menyambut mereka dengan penuh kehangatan dan membagi tempat tinggal, kebun kurma, dan makanan tanpa pamrih. Persaudaraan atas dasar iman melampaui ikatan darah."
-          },
-          {
-            judul: "C. Piagam Madinah: Teladan Kerukunan Antarumat Beragama",
-            isi: "Nabi menyusun Piagam Madinah yang disepakati oleh seluruh penduduk Madinah, baik muslim, Yahudi, maupun suku-suku Arab lainnya. Prinsip utamanya:",
-            prinsipPiagam: [
-              "Semua warga Madinah wajib saling tolong-menolong membela kota Madinah jika diserang musuh.",
-              "Kebebasan beragama dijamin sepenuhnya; tidak boleh ada pemaksaan keyakinan.",
-              "Keadilan hukum berlaku sama bagi seluruh golongan tanpa memandang suku atau agama."
-            ]
-          }
+      {
+        id: "k5-lama-bab-5",
+        bab: 5,
+        elemen: "Sejarah Peradaban Islam",
+        judul: "Meneladani Perjuangan Rasulullah Membangun Madinah",
+        icon: "mosque",
+        fokusCP: "Menceritakan kisah keteladanan Nabi Muhammad saw. membangun kota Madinah.",
+        tujuan: [
+          "Menceritakan peristiwa hijrahnya Nabi saw. dari Makkah ke Madinah.",
+          "Mengetahui peran Masjid Nabawi sebagai pusat peradaban dan ibadah.",
+          "Meneladani persaudaraan tulus antara kaum Muhajirin dan kaum Ansar."
         ],
-        rangkuman: [
-          "Masjid Nabawi adalah pilar pertama peradaban Islam di Madinah.",
-          "Muhajirin dan Ansar dipersaudarakan atas dasar ikatan akidah Islam.",
-          "Piagam Madinah adalah konstitusi tertulis pertama di dunia yang menjamin hak asasi dan toleransi beragama."
-        ]
-      },
-      game: {
-        id: "game-k5-bab5",
-        tipe: "madinah-explorer",
-        nama: "Petualangan Membangun Madinah",
-        petunjuk: "Bantu Rasulullah saw. memilih keputusan bijak dalam membangun peradaban Madinah!",
-        stages: [
-          {
-            tantangan: "Langkah pertama apa yang dilakukan Nabi saw. setibanya di Madinah?",
-            opsi: ["Mendirikan Masjid Nabawi", "Membeli senjata perang", "Membangun istana megah"],
-            benar: 0,
-            ulasan: "Masjid Nabawi dibangun sebagai sentra spiritual, musyawarah, dan pendidikan umat."
-          },
-          {
-            tantangan: "Bagaimana cara Nabi saw. menyelesaikan kesulitan hidup kaum Muhajirin?",
-            opsi: ["Mempersaudarakannya dengan kaum Ansar yang dermawan", "Menyuruh mereka kembali ke Makkah", "Menelantarkannya"],
-            benar: 0,
-            ulasan: "Persaudaraan kaum Muhajirin dan Ansar menjadi bukti kekuatan ukhuwah Islamiyah."
-          },
-          {
-            tantangan: "Apa isi penting dari Piagam Madinah mengenai kaum non-muslim?",
-            opsi: ["Menjamin kebebasan memeluk agama dan saling melindungi", "Mengusir kaum non-muslim", "Melarang ibadah mereka"],
-            benar: 0,
-            ulasan: "Piagam Madinah memberikan jaminan kebebasan beragama dan hak keamanan yang setara."
-          }
-        ]
+        materi: {
+          pengantar: "Setibanya di Madinah (Yatsrib), Rasulullah saw. meletakkan dasar-dasar masyarakat madani yang adil, bersatu, dan makmur.",
+          subBab: [
+            {
+              subJudul: "A. Pembangunan Masjid Nabawi",
+              ilustrasi: "mosque",
+              uraian: "Langkah pertama yang dilakukan Nabi saw. adalah mendirikan Masjid Nabawi. Tanah dibeli dari dua anak yatim bernama Sahl dan Suhail. Masjid digunakan untuk salat, bermusyawarah, dan majelis ilmu."
+            },
+            {
+              subJudul: "B. Persaudaraan Muhajirin dan Ansar",
+              ilustrasi: "sahabat",
+              uraian: "Kaum Muhajirin yang datang dari Makkah tidak membawa harta. Kaum Ansar menyambut mereka dengan penuh keikhlasan, membagi rumah, tanah, dan kebun kurma mereka atas dasar tali persaudaraan iman."
+            }
+          ],
+          rangkuman: [
+            "Masjid Nabawi adalah sentra utama peradaban Islam di Madinah.",
+            "Ukhuwah Islamiyah mempersatukan kaum Muhajirin dan Ansar melampaui ikatan darah."
+          ],
+          budiPekerti: "Suka menolong teman baru yang pindah dari sekolah lain agar merasa nyaman."
+        },
+        game: {
+          id: "game-k5-lama-b5",
+          tipe: "knowledge-challenge",
+          nama: "Petualangan Hijrah Madinah",
+          petunjuk: "Pilih fakta sejarah pembangunan kota Madinah!",
+          questions: [
+            {
+              tanya: "Kaum muslimin asli Madinah yang menolong kaum Muhajirin disebut...",
+              opsi: ["Kaum Ansar", "Kaum Quraisy", "Kaum Romawi"],
+              benar: 0,
+              alasan: "Ansar artinya para penolong, yaitu penduduk muslim asli kota Madinah."
+            }
+          ]
+        }
       }
-    }
-  ],
+    ],
 
-  // ================= SEMESTER 2 =================
-  semester2: [
-    {
-      id: "k5-sem2-bab6",
-      bab: 6,
-      elemen: "Al-Qur'an dan Hadis",
-      judul: "Tajwid Qalqalah & Hadis Berbakti kepada Orang Tua dan Guru",
-      judulCPBaru: "Tajwid Qalqalah & Birrul Walidain (Berbakti)",
-      icon: "HeartHandshake",
-      temaWarna: "emerald",
-      cpLama: {
-        fokus: "Q.S. ar-Rūm: 22 dan al-Baqarah: 256 (Toleransi & Keragaman)",
-        kompetensi: "Memahami keragaman bahasa dan warna kulit serta toleransi"
-      },
-      cpBaru: {
-        fokus: "Praktik Bacaan Kalkalah (Qalqalah) & Hadis Berbuat Baik kepada Orang Tua dan Guru",
-        kompetensi: "Mempraktikkan Qalqalah Sugra & Kubra serta mengamalkan adab berbakti"
-      },
-      tujuan: [
-        "Mengetahui 5 huruf Qalqalah (ق, ط, ب, ج, د / baju di toko)",
-        "Membedakan cara membaca Qalqalah Sugra (pantulan kecil) dan Qalqalah Kubra (pantulan besar)",
-        "Menghafal dan mengartikan Hadis tentang keutamaan berbakti kepada orang tua dan guru",
-        "Menunjukkan sikap hormat dan patuh kepada nasihat orang tua dan guru"
-      ],
-      materi: {
-        pengantar: "Membaca Al-Qur'an dengan tajwid memantul (Qalqalah) membuat bacaan indah dan berirama. Di samping itu, ridha Allah bergantung pada ridha kedua orang tua kita.",
-        subBab: [
-          {
-            judul: "A. Hukum Tajwid Qalqalah (قَلْقَلَة)",
-            isi: "Qalqalah artinya memantul atau bergetar. Huruf qalqalah ada lima yang disingkat 'Ba-Ju-Di-To-Qo' (ب - ج - د - ط - ق):",
-            jenisQalqalah: [
-              {
-                nama: "1. Qalqalah Sugra (Pantulan Kecil)",
-                ket: "Huruf qalqalah berharakat sukun ASLI dan berada di tengah kata.",
-                caraBaca: "Memantul ringan tanpa jeda nafas.",
-                contoh: "يَطْمَعُ (Yaṭma'u), أَبْصَارِهِمْ (Abṣārihim), خَلَقْنَا (Khalaqnā)"
-              },
-              {
-                nama: "2. Qalqalah Kubra (Pantulan Besar)",
-                ket: "Huruf qalqalah berada di akhir kata dan disukunkan karena waqaf (berhenti membaca).",
-                caraBaca: "Memantul kuat dan jelas.",
-                contoh: "الْفَلَقِ ۙ dibaca 'Al-Falaq!', الْعَلَقِ ۙ dibaca 'Al-'Alaq!', أَحَدٌ ۙ dibaca 'Ahad!'"
+    semester2: [
+      {
+        id: "k5-lama-bab-6",
+        bab: 6,
+        elemen: "Al-Qur'an dan Hadis",
+        judul: "Hidup Damai dalam Kebersamaan (Q.S. Ar-Rūm & Al-Baqarah)",
+        icon: "quran",
+        fokusCP: "Memahami makna Q.S. ar-Rūm: 22 dan al-Baqarah: 256 tentang toleransi tanpa paksaan.",
+        tujuan: [
+          "Membaca Q.S. ar-Rūm: 22 tentang tanda kekuasaan Allah pada bahasa dan warna kulit.",
+          "Memahami Q.S. al-Baqarah: 256 bahwa tidak ada paksaan dalam memeluk agama Islam.",
+          "Menunjukkan sikap toleransi dan menghormati peribadatan agama lain."
+        ],
+        materi: {
+          pengantar: "Islam mengajarkan perdamaian. Perbedaan ras, bahasa, dan agama bukanlah alasan untuk bermusuhan, melainkan kesempatan untuk saling berlomba dalam kebaikan.",
+          subBab: [
+            {
+              subJudul: "A. Keragaman Bahasa dan Warna Kulit (Q.S. Ar-Rūm: 22)",
+              ilustrasi: "quran",
+              dalil: {
+                arab: "وَمِنْ آيَاتِهِ خَلْقُ السَّمَاوَاتِ وَالْأَرْضِ وَاخْتِلَافُ أَلْسِنَتِكُمْ وَأَلْوَانِكُمْ",
+                latin: "Wa min āyātihī khalqus-samāwāti wal-arḍi wakhtilāfu alsinatikum wa alwānikum",
+                arti: "Dan di antara tanda-tanda (kebesaran)-Nya ialah penciptaan langit dan bumi, perbedaan bahasa-bahasamu dan warna kulitmu. (Q.S. Ar-Rum: 22)"
               }
-            ]
-          },
-          {
-            judul: "B. Hadis Berbuat Baik kepada Orang Tua dan Guru (CP Baru)",
-            isi: "Berbakti kepada kedua orang tua dinamakan 'Birrul Wālidain'. Guru adalah orang tua rohani kita di sekolah yang membimbing kita dengan ilmu.",
-            hadisOrangTua: {
-              arab: "رِضَى الرَّبِّ فِي رِضَى الْوَالِدَيْنِ وَسَخَطُ الرَّبِّ فِي سَخَطِ الْوَالِدَيْنِ",
-              latin: "Riḍār-Rabbi fī riḍāl-wālidaini wa sakhaṭur-Rabbi fī sakhaṭil-wālidain",
-              arti: "Ridha Allah terletak pada ridha kedua orang tua, dan murka Allah terletak pada kemurkaan kedua orang tua. (H.R. Tirmizi)"
-            }
-          }
-        ],
-        rangkuman: [
-          "Huruf Qalqalah ada 5: Ba, Jim, Dal, Tha, Qaf.",
-          "Qalqalah Sugra sukun di tengah kata; Qalqalah Kubra sukun di akhir karena berhenti (waqaf).",
-          "Membahagiakan orang tua dan memuliakan guru adalah kunci kesuksesan dunia dan akhirat."
-        ]
-      },
-      game: {
-        id: "game-k5-bab6",
-        tipe: "qalqalah-matcher",
-        nama: "Pantulan Qalqalah Ceria",
-        petunjuk: "Dengarkan dan tentukan apakah kata berikut termasuk Qalqalah Sugra atau Kubra!",
-        soalList: [
-          { kata: "يَجْعَلْ (Yaj'al)", jawaban: "Qalqalah Sugra", alasan: "Huruf Jim sukun berada di tengah kata." },
-          { kata: "قُلْ هُوَ اللَّهُ أَحَدٌ ۙ (Ahad)", jawaban: "Qalqalah Kubra", alasan: "Huruf Dal berada di akhir ayat dan dibaca waqaf (memantul besar)." },
-          { kata: "إِذَا وَقَبَ ۙ (Waqab)", jawaban: "Qalqalah Kubra", alasan: "Huruf Ba di akhir ayat berhenti karena waqaf." },
-          { kata: "حَبْلٌ مِّن مَّسَدٍ (Hablun)", jawaban: "Qalqalah Sugra", alasan: "Huruf Ba sukun asli di tengah kata." }
-        ]
-      }
-    },
-
-    {
-      id: "k5-sem2-bab7",
-      bab: 7,
-      elemen: "Akidah",
-      judul: "Iman kepada Hari Akhir (Kiamat)",
-      judulCPBaru: "Ketika Kehidupan Telah Berhenti: Hari Akhir",
-      icon: "Clock",
-      temaWarna: "amber",
-      cpLama: {
-        fokus: "Ketika Kehidupan Telah Berhenti & Hari Kiamat",
-        kompetensi: "Memahami makna beriman kepada hari akhir"
-      },
-      cpBaru: {
-        fokus: "Iman kepada Hari Akhir",
-        kompetensi: "Menjelaskan tanda-tanda hari akhir dan meyakini pertanggungjawaban amal"
-      },
-      tujuan: [
-        "Memahami bahwa hari akhir (kiamat) pasti akan datang dan hanya Allah yang tahu waktunya",
-        "Mengetahui perbedaan Kiamat Sugra (kecil) dan Kiamat Kubra (besar)",
-        "Mengenal tahapan peristiwa setelah hari kiamat (Ba'ats, Hasyr, Hisab, Mizan, Jaza')",
-        "Membiasakan beramal saleh sebagai bekal menuju alam akhirat"
-      ],
-      materi: {
-        pengantar: "Hari akhir adalah rukun iman kelima. Mengimani hari akhir menjadikan kita bijak dalam memanfaatkan umur dan takut berbuat dosa.",
-        subBab: [
-          {
-            judul: "A. Pengertian Hari Kiamat dan Jenisnya",
-            isi: "Hari kiamat adalah hari berakhirnya seluruh kehidupan di alam semesta. Kiamat terbagi menjadi dua:",
-            jenisKiamat: [
-              {
-                nama: "1. Kiamat Sugra (Kiamat Kecil)",
-                ket: "Kematian setiap manusia atau bencana alam lokal seperti banjir, gempa bumi, tsunami, dan gunung meletus."
-              },
-              {
-                nama: "2. Kiamat Kubra (Kiamat Besar)",
-                ket: "Hancurnya seluruh alam semesta, bintang-bintang berjatuhan, bumi digoncangkan sehebat-hebatnya saat Malaikat Israfil meniup sangkakala pertama."
+            },
+            {
+              subJudul: "B. Tidak Ada Paksaan dalam Agama (Q.S. Al-Baqarah: 256)",
+              ilustrasi: "mosque",
+              dalil: {
+                arab: "لَا إِكْرَاهَ فِي الدِّينِ ۖ قَد تَّبَيَّنَ الرُّشْدُ مِنَ الْغَيِّ",
+                latin: "Lā ikrāha fid-dīn, qad tabayyanar-rusydu minal-gayy",
+                arti: "Tidak ada paksaan dalam (menganut) agama (Islam); sungguh telah jelas jalan yang benar dari jalan yang sesat."
               }
-            ]
-          },
-          {
-            judul: "B. Tahapan Perjalanan Setelah Kematian",
-            tahapan: [
-              { nama: "Alam Barzakh (Kubur)", ket: "Pintu gerbang penantian antara dunia dan akhirat." },
-              { nama: "Yaumul Ba'ats", ket: "Hari dibangkitkannya seluruh manusia dari dalam kubur." },
-              { nama: "Yaumul Hasyr / Mahsyar", ket: "Hari dikumpulkannya seluruh umat manusia di Padang Mahsyar." },
-              { nama: "Yaumul Hisab & Mizan", ket: "Hari perhitungan dan penimbangan seluruh amal baik dan buruk manusia tanpa ada yang terlewat." },
-              { nama: "As-Sirath", ket: "Jembatan yang membentang di atas neraka menuju surga." },
-              { nama: "Surga atau Neraka", ket: "Tempat pembalasan abadi bagi orang beriman (Surga) atau durhaka (Neraka)." }
-            ]
-          }
-        ],
-        rangkuman: [
-          "Hari kiamat pasti datang, hanya Allah yang mengetahui waktunya.",
-          "Kiamat sugra berupa kematian dan bencana alam; Kiamat kubra kehancuran total semesta.",
-          "Seluruh perbuatan manusia akan ditimbang di Yaumul Mizan."
-        ]
-      },
-      game: {
-        id: "game-k5-bab7",
-        tipe: "timeline-journey",
-        nama: "Jejak Langkah Hari Pembalasan",
-        petunjuk: "Susun tahapan kehidupan setelah hari kiamat secara berurutan!",
-        tahapanUrut: [
-          { no: 1, nama: "Alam Barzakh (Kubur)" },
-          { no: 2, nama: "Yaumul Ba'ats (Kebangkitan)" },
-          { no: 3, nama: "Padang Mahsyar (Pengumpulan)" },
-          { no: 4, nama: "Yaumul Hisab & Mizan (Penimbangan)" },
-          { no: 5, nama: "Surga Kenikmatan Abadi" }
-        ]
-      }
-    },
-
-    {
-      id: "k5-sem2-bab8",
-      bab: 8,
-      elemen: "Akhlak",
-      judul: "Akhlak terhadap Teman: Indahnya Persahabatan",
-      judulCPBaru: "Akhlak terhadap Teman (Anti-Bullying & Toleransi)",
-      icon: "Users",
-      temaWarna: "cyan",
-      cpLama: {
-        fokus: "Akhlak terhadap Teman dan Tetangga & Senangnya Berteman",
-        kompetensi: "Menerapkan sikap saling menghargai teman"
-      },
-      cpBaru: {
-        fokus: "Akhlak terhadap Teman",
-        kompetensi: "Menerapkan sikap setia kawan, menjauhi perundungan (bullying), dan menjaga rahasia sahabat"
-      },
-      tujuan: [
-        "Mengetahui adab bergaul dengan teman sebaya dalam Islam",
-        "Menghindari perilaku buruk: mengejek, memanggil dengan julukan jelek, dan ghibah",
-        "Menunjukkan sikap saling memaafkan dan menolong teman yang kesusahan",
-        "Mewujudkan kelas yang nyaman dan bebas dari perundungan"
-      ],
-      materi: {
-        pengantar: "Teman yang baik bagaikan penjual minyak wangi: bila kita berdekatan dengannya, kita ikut tertular aroma harum kebaikannya. Islam mengajarkan persahabatan yang tulus karena Allah.",
-        subBab: [
-          {
-            judul: "A. Adab Berteman yang Baik",
-            adabBerteman: [
-              "Mengucapkan salam dan tersenyum ketika bertemu",
-              "Menolong teman yang sedang membutuhkan bantuan tanpa pamrih",
-              "Berbicara dengan kata-kata santun dan mendengarkan ketika teman berbicara",
-              "Menjaga aib dan rahasia teman, tidak membicarakannya di belakang (ghibah)"
-            ]
-          },
-          {
-            judul: "B. Larangan Menyakiti Teman (Stop Perundungan)",
-            isi: "Allah Swt. melarang keras perbuatan mencela dan merendahkan sesama:",
-            dalil: {
-              arab: "يَا أَيُّهَا الَّذِينَ آمَنُوا لَا يَسْخَرْ قَوْمٌ مِّن قَوْمٍ عَسَىٰ أَن يَكُونُوا خَيْرًا مِّنْهُمْ",
-              latin: "Yā ayyuhallażīna āmanū lā yaskhar qaumum min qaumin 'asā ay yakūnū khairam minhum",
-              arti: "Wahai orang-orang yang beriman! Janganlah suatu kaum mengolok-olok kaum yang lain (karena) boleh jadi mereka (yang diperolok-olokkan) lebih baik dari mereka. (Q.S. Al-Hujurat: 11)"
             }
-          }
-        ],
-        rangkuman: [
-          "Teman yang baik saling mengingatkan dalam kebaikan dan takwa.",
-          "Dilarang mengejek kekurangan fisik atau memberi julukan jelek kepada teman.",
-          "Memaafkan kesalahan teman mempererat ukhuwah islamiyah."
-        ]
-      },
-      game: {
-        id: "game-k5-bab8",
-        tipe: "friendship-shield",
-        nama: "Benteng Sahabat Sejati",
-        petunjuk: "Pilih tindakan pahlawan kebaikan untuk melindungi teman dari perundungan!",
-        cases: [
-          {
-            situasi: "Ada teman yang sepatunya basah terkena hujan lalu ditertawakan di kelas...",
-            pilihanBenar: "Menghiburnya dan membantunya mengeringkan sepatu",
-            opsiLain: ["Ikut menertawakan ramai-ramai", "Memfoto dan menyebarkannya"],
-            alasan: "Sahabat sejati hadir untuk menolong dan memberi semangat, bukan menertawakan kemalangan teman."
-          },
-          {
-            situasi: "Mendengar ada teman yang sedang membicarakan kejelekan orang lain di pojok kelas...",
-            pilihanBenar: "Menasihati dengan sopan agar berhenti ghibah",
-            opsiLain: ["Mendengarkan dengan asyik", "Menambahi cerita gosip"],
-            alasan: "Menjauhkan diri dan sahabat dari bahaya lisan ghibah."
-          }
-        ]
-      }
-    },
-
-    {
-      id: "k5-sem2-bab9",
-      bab: 9,
-      elemen: "Fikih",
-      judul: "Makanan dan Minuman yang Halal dan Haram",
-      judulCPBaru: "Makanan dan Minuman Halal serta Menjauhi yang Haram",
-      icon: "Apple",
-      temaWarna: "emerald",
-      cpLama: {
-        fokus: "Memahami Zakat (Zakat Fitrah & Zakat Mal)",
-        kompetensi: "Menjelaskan ketentuan zakat"
-      },
-      cpBaru: {
-        fokus: "Makanan Minuman yang Halal dan Haram",
-        kompetensi: "Menganalisis kriteria makanan dan minuman halal thayyib serta bahaya makanan haram"
-      },
-      tujuan: [
-        "Memahami arti Halal (boleh dikonsumsi) dan Thayyib (baik, bergizi, menyehatkan)",
-        "Mengetahui jenis binatang yang halal dan yang haram dimakan",
-        "Mengetahui sebab-sebab makanan menjadi haram (zatnya atau cara memperolehnya)",
-        "Membiasakan membaca label halal saat membeli makanan kemasan"
-      ],
-      materi: {
-        pengantar: "Makanan yang masuk ke dalam tubuh kita menjadi energi untuk beribadah dan darah daging kita. Mengonsumsi makanan halal dan thayyib adalah perintah langsung dari Allah Swt.",
-        subBab: [
-          {
-            judul: "A. Konsep Halalan Thayyiban",
-            isi: "Halal artinya diizinkan menurut syariat Islam. Thayyib artinya bersih, suci, bergizi, higienis, dan bermanfaat bagi kesehatan jasmani.",
-            dalil: {
-              arab: "يَا أَيُّهَا النَّاسُ كُلُوا مِمَّا فِي الْأَرْضِ حَلَالًا طَيِّبًا",
-              latin: "Yā ayyuhan-nāsu kulū mimmā fil-arḍi ḥalālan ṭayyibā",
-              arti: "Wahai manusia! Makanlah dari (makanan) yang halal dan baik yang terdapat di bumi. (Q.S. Al-Baqarah: 168)"
+          ],
+          rangkuman: [
+            "Perbedaan bahasa dan warna kulit adalah tanda kebesaran Allah.",
+            "Islam tidak memaksakan keyakinan kepada orang lain."
+          ],
+          budiPekerti: "Tidak mengganggu tetangga yang sedang menjalankan ibadah agamanya."
+        },
+        game: {
+          id: "game-k5-lama-b6",
+          tipe: "knowledge-challenge",
+          nama: "Cahaya Toleransi Damai",
+          petunjuk: "Pilih sikap yang sesuai dengan prinsip toleransi Islam!",
+          questions: [
+            {
+              tanya: "Arti dari potongan ayat 'Lā ikrāha fid-dīn' adalah...",
+              opsi: ["Tidak ada paksaan dalam menganut agama", "Semua manusia sama saja", "Perangilah orang lain"],
+              benar: 0,
+              alasan: "Islam melarang pemaksaan agama kepada siapa pun."
             }
-          },
-          {
-            judul: "B. Jenis Makanan & Hewan yang Diharamkan",
-            isi: "Secara zatnya (Haram Liżātihī), ada makanan yang tegas dilarang Allah:",
-            haramList: [
-              "1. Bangkai (kecuali bangkai ikan laut dan belalang yang halal)",
-              "2. Darah yang mengalir",
-              "3. Daging babi dan seluruh produk olahan turunannya",
-              "4. Hewan yang disembelih tanpa menyebut nama Allah",
-              "5. Hewan bertaring yang memangsa (singa, harimau, serigala)",
-              "6. Burung yang berkuku tajam mencengkeram mangsa (elang, rajawali)",
-              "7. Hewan yang hidup di dua alam (katak) dan hewan yang menjijikkan / disuruh dibunuh (ular, tikus)",
-              "8. Segala minuman yang memabukkan (khamr, alkohol, narkoba)"
-            ]
-          },
-          {
-            judul: "C. Haram Karena Cara Memperolehnya (Haram Ligairihī)",
-            isi: "Makanan yang asalnya halal (seperti nasi, ayam, buah) bisa menjadi haram apabila diperoleh dengan cara mencuri, menipu, memeras, atau hasil korupsi."
-          }
-        ],
-        rangkuman: [
-          "Halal artinya diizinkan syariat; thayyib artinya sehat, bergizi, dan higienis.",
-          "Bangkai ikan dan belalang halal dimakan tanpa perlu disembelih.",
-          "Hewan bertaring buas dan minuman memabukkan haram dikonsumsi.",
-          "Makanan haram menghalangi terkabulnya doa kita."
-        ]
+          ]
+        }
       },
-      game: {
-        id: "game-k5-bab9",
-        tipe: "halal-express",
-        nama: "Keranjang Halal Thayyib Express",
-        petunjuk: "Sortir makanan ke dalam kotak 'Halal Thayyib' atau kotak 'Haram / Bahaya'!",
-        items: [
-          { nama: "Ikan Laut Segar", tipe: "Halal", icon: "🐟" },
-          { nama: "Daging Babi", tipe: "Haram", icon: "🥩" },
-          { nama: "Madu & Buah Apel", tipe: "Halal", icon: "🍎" },
-          { nama: "Minuman Keras / Alkohol", tipe: "Haram", icon: "🍾" },
-          { nama: "Daging Sapi Sembelihan Halal", tipe: "Halal", icon: "🥩" },
-          { nama: "Daging Bangkai Ayam", tipe: "Haram", icon: "🍗" }
-        ]
-      }
-    },
 
-    {
-      id: "k5-sem2-bab10",
-      bab: 10,
-      elemen: "Sejarah Peradaban Islam",
-      judul: "Kisah Perjuangan Nabi: Hudaibiah, Fathu Makkah & Haji Wada'",
-      judulCPBaru: "Perjanjian Hudaibiah, Fathu Makkah, dan Haji Wada'",
-      icon: "Shield",
-      temaWarna: "purple",
-      cpLama: {
-        fokus: "Kisah keteladanan Nabi Muhammad saw. (Perjanjian Hudaibiah, Fathu Makkah, Haji Wada')",
-        kompetensi: "Menceritakan peristiwa damai Hudaibiah dan Fathu Makkah"
-      },
-      cpBaru: {
-        fokus: "Perjanjian Hudaibiah, Fathu Makkah, dan Haji Wada'",
-        kompetensi: "Menganalisis strategi diplomasi damai Rasulullah saw. dan keteladanan sifat pemaaf"
-      },
-      tujuan: [
-        "Menceritakan latar belakang Perjanjian Hudaibiah sebagai diplomasi damai yang cerdas",
-        "Mengetahui peristiwa Fathu Makkah (Pembebasan Makkah) tanpa pertumpahan darah",
-        "Meneladani keagungan sikap pemaaf Rasulullah kepada kaum Quraisy yang dahulu memusuhi",
-        "Memahami pesan persaudaraan dan kesetaraan dalam khutbah Haji Wada' (Haji Perpisahan)"
-      ],
-      materi: {
-        pengantar: "Dakwah Rasulullah saw. mencapai puncak kejayaannya bukan melalui peperangan, melainkan dengan diplomasi damai dan sifat pemaaf yang memikat jutaan hati manusia.",
-        subBab: [
-          {
-            judul: "A. Perjanjian Hudaibiah (Tahun 6 H)",
-            isi: "Saat Rasulullah dan kaum muslimin hendak berumrah, mereka dihadang kafir Quraisy di Hudaibiah. Rasulullah mengutamakan perdamaian melalui perjanjian gencatan senjata selama 10 tahun. Perjanjian ini membuka jalan dakwah Islam tersebar luas ke seluruh jazirah Arab."
-          },
-          {
-            judul: "B. Fathu Makkah: Kemenangan Tanpa Darah (Tahun 8 H)",
-            isi: "Setelah kaum Quraisy melanggar isi perjanjian Hudaibiah, Rasulullah berangkat menuju Makkah bersama 10.000 pasukan. Pasukan masuk kota Makkah dengan damai. Berhala di sekeliling Ka'bah dihancurkan. Rasulullah mengumumkan pengampunan umum kepada seluruh penduduk Makkah dengan sabda beliau: 'Pergilah kalian, hari ini tidak ada cercaan atas kalian, kalian bebas!'."
-          },
-          {
-            judul: "C. Haji Wada' (Tahun 10 H)",
-            isi: "Haji Wada' adalah haji terakhir sekaligus haji perpisahan Rasulullah saw. bersama lebih dari 100.000 sahabat. Dalam khotbah terakhirnya, Rasulullah berpesan agar umat Islam tidak menzalimi wanita, tidak menumpahkan darah sesama, dan berpegang teguh pada Al-Qur'an dan Sunnah."
-          }
+      {
+        id: "k5-lama-bab-7",
+        bab: 7,
+        elemen: "Akidah",
+        judul: "Ketika Kehidupan Telah Berhenti (Hari Akhir)",
+        icon: "qada-qadar",
+        fokusCP: "Memahami makna beriman kepada hari akhir, kiamat sugra dan kubra.",
+        tujuan: [
+          "Menjelaskan pengertian hari akhir (kiamat).",
+          "Membedakan Kiamat Sugra (kecil) dan Kiamat Kubra (besar).",
+          "Meyakini adanya hari pembalasan amal perbuatan."
         ],
-        rangkuman: [
-          "Perjanjian Hudaibiah mengajarkan pentingnya diplomasi dan musyawarah damai.",
-          "Fathu Makkah membuktikan bahwa Islam disebarkan dengan cinta dan pengampunan.",
-          "Pesan Haji Wada': Semua manusia setara, yang membedakan di hadapan Allah hanyalah ketakwaan."
-        ]
+        materi: {
+          pengantar: "Kehidupan dunia ini tidak kekal. Suatu saat alam semesta beserta seluruh isinya akan hancur lebur, dan seluruh manusia akan dibangkitkan untuk mempertanggungjawabkan perbuatannya.",
+          subBab: [
+            {
+              subJudul: "A. Kiamat Sugra dan Kiamat Kubra",
+              ilustrasi: "qada-qadar",
+              uraian: "Kiamat Sugra adalah kematian seseorang atau bencana alam (tsunami, gempa). Kiamat Kubra adalah hancurnya seluruh alam semesta saat sangkakala pertama ditiup oleh Malaikat Israfil."
+            }
+          ],
+          rangkuman: [
+            "Hari kiamat pasti terjadi dan hanya Allah yang tahu waktunya.",
+            "Kiamat sugra berupa kematian; kiamat kubra kehancuran total jagat raya."
+          ],
+          budiPekerti: "Memperbanyak amal saleh dan memohon ampunan setiap hari."
+        },
+        game: {
+          id: "game-k5-lama-b7",
+          tipe: "knowledge-challenge",
+          nama: "Tantangan Hari Akhir",
+          petunjuk: "Jawablah seputar tanda dan peristiwa hari akhir!",
+          questions: [
+            {
+              tanya: "Kematian seseorang dan terjadinya bencana gempa bumi termasuk contoh...",
+              opsi: ["Kiamat Sugra (Kecil)", "Kiamat Kubra (Besar)", "Kiamat Abadi"],
+              benar: 0,
+              alasan: "Kematian dan bencana lokal merupakan Kiamat Sugra."
+            }
+          ]
+        }
       },
-      game: {
-        id: "game-k5-bab10",
-        tipe: "history-quiz",
-        nama: "Lintas Sejarah Fathu Makkah",
-        petunjuk: "Uji wawasanmu tentang peristiwa agung pembebasan kota Makkah!",
-        questions: [
-          {
-            tanya: "Bagaimanakah sikap Rasulullah saw. kepada kaum kafir Quraisy saat Fathu Makkah?",
-            opsi: ["Memaafkan dan membebaskan mereka semua", "Membalas dendam masa lalu", "Menghukum mereka"],
-            benar: 0,
-            alasan: "Rasulullah saw. berjiwa mulia dengan memaafkan musuh-musuh yang dulu pernah menganiayanya."
-          },
-          {
-            tanya: "Berapa tahun kesepakatan gencatan senjata dalam Perjanjian Hudaibiah?",
-            opsi: ["10 Tahun", "2 Tahun", "1 Tahun"],
-            benar: 0,
-            alasan: "Perjanjian Hudaibiah menyepakati gencatan senjata antara muslim dan Quraisy selama 10 tahun."
-          },
-          {
-            tanya: "Dua pusaka utama yang ditinggalkan Nabi saw. pada Haji Wada' agar umat tidak sesat adalah...",
-            opsi: ["Kitabullah (Al-Qur'an) dan Sunnah Rasul", "Emas dan Perak", "Pedang dan Kuda"],
-            benar: 0,
-            alasan: "Al-Qur'an dan Sunnah Nabi saw. adalah pedoman abadi yang menjaga umat Islam di jalan kebenaran."
-          }
-        ]
+
+      {
+        id: "k5-lama-bab-8",
+        bab: 8,
+        elemen: "Akhlak",
+        judul: "Senangnya Berteman (Adab Bergaul)",
+        icon: "sahabat",
+        fokusCP: "Menerapkan adab bergaul dengan teman sebaya dan tetangga.",
+        tujuan: [
+          "Mengetahui adab berteman dalam Islam.",
+          "Menghindari perbuatan mencela, ghibah, dan menyakiti hati teman.",
+          "Saling tolong-menolong dalam kebaikan."
+        ],
+        materi: {
+          pengantar: "Teman yang baik adalah rezeki dari Allah. Teman yang saleh akan mengajak kita rajin salat, belajar tekun, dan mengingatkan saat kita lupa.",
+          subBab: [
+            {
+              subJudul: "A. Adab Berteman yang Santun",
+              ilustrasi: "sahabat",
+              uraian: "Tersenyum saat bertemu, memanggil dengan nama yang baik, tidak membicarakan kejelekan teman di belakang (ghibah), dan saling memaafkan."
+            }
+          ],
+          rangkuman: [
+            "Teman yang baik saling mengajak ke jalan Allah.",
+            "Dilarang mengejek kekurangan fisik teman."
+          ],
+          budiPekerti: "Membela teman yang sedang di-bully dan mengajaknya bermain bersama."
+        },
+        game: {
+          id: "game-k5-lama-b8",
+          tipe: "knowledge-challenge",
+          nama: "Benteng Sahabat Sejati",
+          petunjuk: "Pilih sikap yang mempererat persahabatan!",
+          questions: [
+            {
+              tanya: "Ketika teman kita melakukan kesalahan dan meminta maaf, sikap kita adalah...",
+              opsi: ["Memaafkannya dengan ikhlas dan tersenyum", "Mendiamkannya selamanya", "Membalas dendam"],
+              benar: 0,
+              alasan: "Islam memerintahkan kita untuk menjadi orang yang pemaaf."
+            }
+          ]
+        }
+      },
+
+      {
+        id: "k5-lama-bab-9",
+        bab: 9,
+        elemen: "Fikih",
+        judul: "Ibadah Haji dan Kurban",
+        icon: "mosque",
+        fokusCP: "Memahami ketentuan ibadah haji dan kurban.",
+        tujuan: [
+          "Menjelaskan pengertian ibadah haji sebagai rukun Islam kelima.",
+          "Mengetahui tempat-tempat bersejarah haji (Ka'bah, Arafah, Muzdalifah, Mina).",
+          "Memahami makna ibadah kurban meneladani Nabi Ibrahim dan Nabi Ismail a.s."
+        ],
+        materi: {
+          pengantar: "Ibadah haji dilaksanakan pada bulan Zulhijjah di tanah suci Makkah bagi yang mampu secara fisik dan biaya. Kurban mengajarkan keikhlasan dan kepedulian berbagi daging kepada sesama.",
+          subBab: [
+            {
+              subJudul: "A. Ibadah Haji ke Baitullah",
+              ilustrasi: "mosque",
+              uraian: "Rukun haji meliputi: Ihram disertai niat, Wukuf di padang Arafah, Tawaf mengelilingi Ka'bah 7 putaran, Sa'i antara bukit Shafa dan Marwah, Tahallul (mencukur rambut), dan Tertib."
+            },
+            {
+              subJudul: "B. Ibadah Kurban Penuh Pengorbanan",
+              ilustrasi: "zakat",
+              uraian: "Kurban dilaksanakan pada hari raya Idul Adha (10 Zulhijjah) dan hari Tasyrik (11, 12, 13 Zulhijjah) dengan menyembelih hewan ternak (kambing, domba, sapi, unta)."
+            }
+          ],
+          rangkuman: [
+            "Haji adalah rukun Islam kelima bagi yang mampu.",
+            "Kurban meneladani ketaatan Nabi Ibrahim dan keikhlasan Nabi Ismail a.s."
+          ],
+          budiPekerti: "Belajar ikhlas berbagi rezeki seperti keikhlasan Nabi Ibrahim a.s."
+        },
+        game: {
+          id: "game-k5-lama-b9",
+          tipe: "knowledge-challenge",
+          nama: "Manasik Pintar Haji & Kurban",
+          petunjuk: "Jawablah pertanyaan seputar haji dan kurban!",
+          questions: [
+            {
+              tanya: "Mengelilingi Ka'bah sebanyak 7 kali dalam ibadah haji disebut...",
+              opsi: ["Tawaf", "Sa'i", "Wukuf"],
+              benar: 0,
+              alasan: "Tawaf adalah berjalan mengelilingi Ka'bah berlawanan arah jarum jam sebanyak 7 kali."
+            }
+          ]
+        }
+      },
+
+      {
+        id: "k5-lama-bab-10",
+        bab: 10,
+        elemen: "Sejarah Peradaban Islam",
+        judul: "Keteladanan Khulafaurasyidin",
+        icon: "khulafaur-rasyidin",
+        fokusCP: "Menceritakan keteladanan empat khalifah utama: Abu Bakar, Umar, Usman, dan Ali.",
+        tujuan: [
+          "Mengenal 4 Khulafaur Rasyidin pengganti Rasulullah saw.",
+          "Mengetahui jasa monumental masing-masing khalifah bagi kemajuan Islam.",
+          "Meneladani sifat jujur, adil, dermawan, dan keberanian para sahabat utama."
+        ],
+        materi: {
+          pengantar: "Khulafaur Rasyidin adalah para pemimpin yang lurus dan mendapat petunjuk. Terdiri dari Abu Bakar ash-Shiddiq, Umar bin Khattab, Utsman bin Affan, dan Ali bin Abi Thalib.",
+          subBab: [
+            {
+              subJudul: "A. Empat Sahabat Mulia",
+              ilustrasi: "khulafaur-rasyidin",
+              uraian: "1. Abu Bakar (jujur, mengumpulkan lembaran Al-Qur'an), 2. Umar bin Khattab (tegas, adil, merintis kalender Hijriah), 3. Utsman bin Affan (dermawan, membukukan Mushaf Usmani), 4. Ali bin Abi Thalib (cerdas, ksatria pemberani)."
+            }
+          ],
+          rangkuman: [
+            "Khulafaur Rasyidin memimpin dengan musyawarah dan keadilan tinggi.",
+            "Keempat sahabat hidup bersahaja dan mendahulukan kepentingan umat."
+          ],
+          budiPekerti: "Berani berkata jujur dan membela kebenaran dalam musyawarah kelas."
+        },
+        game: {
+          id: "game-k5-lama-b10",
+          tipe: "knowledge-challenge",
+          nama: "Bintang 4 Khulafaur Rasyidin",
+          petunjuk: "Cocokkan jasa kepemimpinan sahabat Nabi saw.!",
+          questions: [
+            {
+              tanya: "Khalifah yang memelopori penetapan Kalender Hijriah adalah...",
+              opsi: ["Umar bin Khattab", "Abu Bakar", "Ali bin Abi Thalib"],
+              benar: 0,
+              alasan: "Umar bin Khattab menetapkan kalender Hijriah diawali dari peristiwa hijrah Nabi saw."
+            }
+          ]
+        }
       }
-    }
-  ]
+    ]
+  },
+
+  // =========================================================================
+  // 2. KURIKULUM CP BARU (Berdasarkan Revisi BSKAP 020/2026 Word Docx)
+  // =========================================================================
+  cpBaru: {
+    deskripsi: "Kurikulum berdasarkan Keputusan BSKAP No. 020/2026 (Perubahan CP Fase C Kelas 5). Memuat materi baru: Tajwid Mim Sukun & Qalqalah terstruktur, Surah Al-'Asr, Asmaul Husna Al-Halim/Syakur/Hakim/Wadud, Fikih Puasa Wajib/Sunah, dan Makanan Halal-Haram.",
+    semester1: [
+      {
+        id: "k5-baru-bab-1",
+        bab: 1,
+        elemen: "Al-Qur'an dan Hadis",
+        judul: "Huruf Bersambung, Tajwid Mim Sukun & Surah al-'Aṣr",
+        icon: "tajwid",
+        fokusCP: "Membaca huruf bersambung 3 kata/lebih, praktik tajwid 3 hukum Mim Sukun, dan tadabur Surah al-'Aṣr.",
+        tujuan: [
+          "Membaca kalimat bersambung 3 kata atau lebih dengan lancar sesuai makhraj.",
+          "Menguasai 3 hukum bacaan Mim Sukun: Ikhfa Syafawi, Idgham Mimi, dan Idzhar Syafawi.",
+          "Membaca dan menghafal Surah Al-'Aṣr secara tartil.",
+          "Memahami 4 kunci agar terhindar dari kerugian hidup menurut Surah Al-'Aṣr."
+        ],
+        materi: {
+          pengantar: "Catatan CP Baru: Di CP 020/2026, materi semester 1 difokuskan pada penguasaan HUKUM MIM SUKUN (مْ) dan tadabur SURAH AL-'AṢR yang mengajarkan disiplin waktu dan amal saleh.",
+          subBab: [
+            {
+              subJudul: "A. Praktik Tajwid: Tiga Hukum Mim Sukun (مْ)",
+              ilustrasi: "mim-sukun",
+              uraian: "Jika ada huruf Mim Sukun (مْ) bertemu huruf hijaiah, terdapat 3 hukum bacaan:",
+              hukumMim: [
+                {
+                  nama: "1. Ikhfa Syafawi (إِخْفَاء شَفَوِي)",
+                  aturan: "Mim Sukun (مْ) bertemu dengan huruf Ba (ب).",
+                  caraBaca: "Disamarkan di bibir disertai dengung (gunnah) 2 harakat.",
+                  contoh: "تَرْمِيهِم بِحِجَارَةٍ (Tarmiihim biḥijārah)"
+                },
+                {
+                  nama: "2. Idgham Mimi / Mutamatsilain (إِدْغَام مِثْلَيْنِ)",
+                  aturan: "Mim Sukun (مْ) bertemu dengan sesama huruf Mim (م).",
+                  caraBaca: "Dileburkan ke mim kedua disertai dengung 2 harakat.",
+                  contoh: "أَطْعَمَهُم مِّن جُوعٍ (Aṭ'amahum min joo')"
+                },
+                {
+                  nama: "3. Idzhar Syafawi (إِظْهَار شَفَوِي)",
+                  aturan: "Mim Sukun (مْ) bertemu 26 huruf hijaiah SELAIN Mim dan Ba.",
+                  caraBaca: "Dibaca jelas di bibir tanpa dengung sama sekali.",
+                  contoh: "أَلَمْ تَرَ (Alam tara), هُمْ فِيهَا (Hum fīhā)"
+                }
+              ]
+            },
+            {
+              subJudul: "B. Tadabur Surah Al-'Aṣr (Demi Masa)",
+              ilustrasi: "quran",
+              dalil: {
+                arab: "وَالْعَصْرِ ۙ إِنَّ الْإِنسَانَ لَفِي خُسْرٍ ۙ إِلَّا الَّذِينَ آمَنُوا وَعَمِلُوا الصَّالِحَاتِ وَتَوَاصَوْا بِالْحَقِّ وَتَوَاصَوْا بِالصَّبْرِ",
+                latin: "Wal-'aṣr. Innal-insāna lafī khusr. Illallażīna āmanū wa 'amiluṣ-ṣāliḥāti wa tawāṣau bil-ḥaqqi wa tawāṣau biṣ-ṣabr.",
+                arti: "Demi masa. Sungguh, manusia berada dalam kerugian, kecuali orang-orang yang beriman dan mengerjakan kebajikan serta saling menasihati untuk kebenaran dan saling menasihati untuk kesabaran."
+              },
+              uraian: "Empat sifat agar terbebas dari kerugian: 1. Beriman kepada Allah, 2. Beramal saleh, 3. Saling menasihati dalam kebenaran, 4. Saling menasihati dalam kesabaran."
+            }
+          ],
+          rangkuman: [
+            "Hukum Mim Sukun ada 3: Ikhfa Syafawi (ke Ba), Idgham Mimi (ke Mim), Idzhar Syafawi (ke 26 huruf lainnya).",
+            "Surah Al-'Asr mengingatkan manusia agar tidak membuang waktu secara sia-sia."
+          ],
+          budiPekerti: "Membuat jadwal kegiatan belajar di rumah dan menepatinya secara disiplin."
+        },
+        game: {
+          id: "game-k5-baru-b1",
+          tipe: "tajwid-detective",
+          nama: "Detektif Tajwid Mim Sukun",
+          petunjuk: "Temukan hukum Mim Sukun pada penggalan ayat Al-Qur'an berikut!",
+          soalList: [
+            {
+              potonganAyat: "تَرْمِيهِم بِحِجَارَةٍ",
+              tanya: "Mim sukun (مْ) bertemu huruf Ba (ب). Hukum bacaannya adalah...",
+              pilihan: ["Ikhfa Syafawi", "Idgham Mimi", "Idzhar Syafawi"],
+              kunci: "Ikhfa Syafawi",
+              alasan: "Mim Sukun bertemu Ba dibaca samar berdehem di bibir (Ikhfa Syafawi)."
+            },
+            {
+              potonganAyat: "أَطْعَمَهُم مِّن جُوعٍ",
+              tanya: "Mim sukun (مْ) bertemu huruf Mim (م). Hukum bacaannya adalah...",
+              pilihan: ["Idgham Mimi", "Idzhar Syafawi", "Ikhfa Syafawi"],
+              kunci: "Idgham Mimi",
+              alasan: "Mim sukun bertemu sesama mim dileburkan dengan dengung."
+            },
+            {
+              potonganAyat: "أَلَمْ تَرَ كَيْفَ",
+              tanya: "Mim sukun (مْ) bertemu huruf Ta (ت). Hukum bacaannya adalah...",
+              pilihan: ["Idzhar Syafawi", "Ikhfa Syafawi", "Idgham Mimi"],
+              kunci: "Idzhar Syafawi",
+              alasan: "Ta bukan mim dan bukan ba, maka dibaca jelas (Idzhar Syafawi)."
+            }
+          ]
+        }
+      },
+
+      {
+        id: "k5-baru-bab-2",
+        bab: 2,
+        elemen: "Akidah",
+        judul: "Asmaulhusna: al-Ḥalīm, asy-Syakūr, al-Ḥakīm, al-Wadūd",
+        icon: "asmaul-husna",
+        fokusCP: "Menjelaskan makna dan meneladani keluhuran sifat al-Ḥalīm, asy-Syakūr, al-Ḥakīm, dan al-Wadūd.",
+        tujuan: [
+          "Mengartikan Asmaulhusna al-Ḥalīm (Maha Penyantun).",
+          "Mengartikan Asmaulhusna asy-Syakūr (Maha Menghargai / Mensyukuri).",
+          "Mengartikan Asmaulhusna al-Ḥakīm (Maha Bijaksana).",
+          "Mengartikan Asmaulhusna al-Wadūd (Maha Mencintai / Mengasihi).",
+          "Meneladani sifat-sifat mulia tersebut dalam interaksi pertemanan di sekolah."
+        ],
+        materi: {
+          pengantar: "Catatan CP Baru: Di CP 020/2026, materi Asmaul Husna kelas 5 BERGANTI NAMA menjadi al-Ḥalīm, asy-Syakūr, al-Ḥakīm, dan al-Wadūd. Nama-nama ini mengedepankan pembentukan budi pekerti kasih sayang, kesantunan, dan kebijaksanaan.",
+          subBab: [
+            {
+              subJudul: "A. Empat Asmaul Husna CP Baru",
+              ilustrasi: "asmaul-husna",
+              daftarBaru: [
+                {
+                  nama: "Al-Ḥalīm (الْحَلِيمُ) - Maha Penyantun & Pemaaf",
+                  penjelasan: "Allah tidak terburu-buru menurunkan siksa bagi hamba-Nya yang berbuat dosa, melainkan memberi kesempatan untuk bertaubat. Teladan kita: Menahan amarah dan tidak cepat membalas dendam saat diejek teman."
+                },
+                {
+                  nama: "Asy-Syakūr (الشَّكُورُ) - Maha Menghargai Kebaikan",
+                  penjelasan: "Allah membalas amal kebaikan kecil dengan pahala berlipat ganda. Teladan kita: Selalu menghargai dan mengucapkan terima kasih atas bantuan sekecil apa pun dari teman."
+                },
+                {
+                  nama: "Al-Ḥakīm (الْحَكِيمُ) - Maha Bijaksana",
+                  penjelasan: "Segala ciptaan dan takdir Allah penuh hikmah dan tidak ada yang sia-sia. Teladan kita: Berpikir matang dan adil sebelum mengambil keputusan."
+                },
+                {
+                  nama: "Al-Wadūd (الْوَدُودُ) - Maha Penuh Kasih Sayang",
+                  penjelasan: "Allah mencintai hamba-hamba-Nya yang beriman dan melimpahkan ketenteraman hati. Teladan kita: Menebarkan kasih sayang, ramah, dan mendamaikan teman yang berselisih."
+                }
+              ]
+            }
+          ],
+          rangkuman: [
+            "Al-Halim: Teladan santun dan tidak pemarah.",
+            "Asy-Syakur: Teladan suka memuji dan menghargai kebaikan orang lain.",
+            "Al-Hakim: Teladan bertindak bijaksana.",
+            "Al-Wadud: Teladan penuh cinta dan persaudaraan."
+          ],
+          budiPekerti: "Tersenyum dan memaafkan teman yang tidak sengaja menyenggol meja kita."
+        },
+        game: {
+          id: "game-k5-baru-b2",
+          tipe: "memory-card",
+          nama: "Taman Bintang Asmaul Husna Baru",
+          petunjuk: "Cocokkan nama Asmaul Husna dengan teladan karakternya!",
+          cards: [
+            { id: 1, pairId: "halim", label: "الْحَلِيمُ (Al-Halim)" },
+            { id: 2, pairId: "halim", label: "Maha Penyantun (Sabar)" },
+            { id: 3, pairId: "syakur", label: "الشَّكُورُ (Asy-Syakur)" },
+            { id: 4, pairId: "syakur", label: "Maha Menghargai" },
+            { id: 5, pairId: "wadud", label: "الْوَدُودُ (Al-Wadud)" },
+            { id: 6, pairId: "wadud", label: "Maha Mengasihi" }
+          ]
+        }
+      },
+
+      {
+        id: "k5-baru-bab-3",
+        bab: 3,
+        elemen: "Akhlak",
+        judul: "Akhlak terhadap Allah: Berdoa dan Bertawakal",
+        icon: "tahmid",
+        fokusCP: "Menerapkan kepasrahan dan optimisme melalui adab berdoa serta sikap tawakal setelah ikhtiar.",
+        tujuan: [
+          "Memahami doa sebagai ibadah dan senjata utama seorang mukmin.",
+          "Mengetahui adab dan waktu-waktu mustajab terkabulnya doa.",
+          "Memahami hubungan antara Ikhtiar (usaha maksimal) dan Tawakal (berserah diri).",
+          "Menjauhi sikap putus asa ketika doa belum terwujud."
+        ],
+        materi: {
+          pengantar: "Doa dan tawakal adalah dua pilar ketenangan jiwa. Manusia diperintahkan untuk berusaha sekuat tenaga, lalu berserah diri sepenuhnya kepada ketetapan Allah Yang Maha Mengetahui yang terbaik.",
+          subBab: [
+            {
+              subJudul: "A. Hakikat Doa dan Adabnya",
+              ilustrasi: "tahmid",
+              dalil: {
+                arab: "وَقَالَ رَبُّكُمُ ادْعُونِي أَسْتَجِبْ لَكُمْ",
+                latin: "Wa qāla Rabbukumud'ūnī astajib lakum",
+                arti: "Dan Tuhanmu berfirman, 'Berdoalah kepada-Ku, niscaya akan Kuperkenankan bagimu.' (Q.S. Gafir: 60)"
+              },
+              uraian: "Adab berdoa: Menghadap kiblat, dalam keadaan suci, mengawali dengan tahmid dan salawat nabi, merendahkan suara, khusyuk, dan yakin Allah akan mengabulkannya."
+            },
+            {
+              subJudul: "B. Keseimbangan Ikhtiar dan Tawakal",
+              ilustrasi: "qada-qadar",
+              uraian: "Ikhtiar artinya berusaha sungguh-sungguh menggunakan akal dan tenaga. Tawakal artinya menyerahkan hasil akhir kepada Allah. Seseorang tidak boleh hanya berdoa tanpa belajar saat ingin lulus ujian."
+            }
+          ],
+          rangkuman: [
+            "Doa adalah senjata orang beriman.",
+            "Tawakal dilakukan setelah ikhtiar sungguh-sungguh, bukan sebelum berusaha."
+          ],
+          budiPekerti: "Belajar sungguh-sungguh setiap malam menjelang ujian, lalu berdoa memohon kemudahan."
+        },
+        game: {
+          id: "game-k5-baru-b3",
+          tipe: "knowledge-challenge",
+          nama: "Jembatan Ikhtiar & Tawakal",
+          petunjuk: "Tentukan apakah pernyataan berikut termasuk Ikhtiar atau Tawakal!",
+          questions: [
+            {
+              tanya: "Mengerjakan latihan soal matematika dan belajar tekun setiap malam adalah bentuk...",
+              opsi: ["Ikhtiar (Usaha Nyata)", "Tawakal (Berserah Diri)", "Takdir Mubram"],
+              benar: 0,
+              alasan: "Belajar dan berlatih adalah usaha nyata (ikhtiar) manusia."
+            },
+            {
+              tanya: "Menerima nilai hasil ujian dengan lapang dada dan ikhlas setelah belajar keras adalah bentuk...",
+              opsi: ["Tawakal (Berserah Diri)", "Ikhtiar", "Sombong"],
+              benar: 0,
+              alasan: "Tawakal adalah menerima ketetapan Allah setelah mengerahkan usaha maksimal."
+            }
+          ]
+        }
+      },
+
+      {
+        id: "k5-baru-bab-4",
+        bab: 4,
+        elemen: "Fikih",
+        judul: "Fikih Puasa: Puasa Wajib dan Puasa Sunah",
+        icon: "puasa",
+        fokusCP: "Menerapkan ketentuan puasa wajib Ramadan serta puasa-puasa sunah yang dianjurkan syariat.",
+        tujuan: [
+          "Memahami pengertian puasa, rukun puasa, syarat sah, dan hal yang membatalkan puasa.",
+          "Mengenal 4 macam puasa wajib: Puasa Ramadan, Qadha, Nazar, dan Kifarat.",
+          "Mengenal puasa sunah: Senin-Kamis, Ayyamul Bidh, 6 hari Syawal, dan Arafah.",
+          "Merasakan hikmah puasa: menumbuhkan empati dhuafa dan melatih kejujuran."
+        ],
+        materi: {
+          pengantar: "Catatan CP Baru: Pada CP 020/2026, materi Fikih semester 1 membahas FIKIH PUASA SECARA LENGKAP mencakup puasa wajib (Ramadan) dan puasa sunah.",
+          subBab: [
+            {
+              subJudul: "A. Pengertian dan Rukun Puasa",
+              ilustrasi: "puasa",
+              uraian: "Puasa (ash-Shiyam) artinya menahan diri dari makan, minum, dan segala hal yang membatalkannya mulai dari terbit fajar shadiq (subuh) hingga terbenam matahari (magrib) disertai niat ikhlas karena Allah Swt."
+            },
+            {
+              subJudul: "B. Macam Puasa Wajib dan Sunah",
+              ilustrasi: "puasa",
+              uraian: "Puasa Wajib: 1. Ramadan (sebulan penuh), 2. Qadha (pengganti hari sakit/safar), 3. Nazar (janji kebaikan), 4. Kifarat (denda). Puasa Sunah: Senin-Kamis, Ayyamul Bidh (13, 14, 15 Hijriah), Syawal (6 hari), dan Arafah (9 Zulhijjah)."
+            }
+          ],
+          rangkuman: [
+            "Rukun puasa: Niat dan menahan diri sejak subuh hingga magrib.",
+            "Puasa wajib: Ramadan, Qadha, Nazar, Kifarat.",
+            "Puasa sunah melipatgandakan pahala dan menyehatkan tubuh."
+          ],
+          budiPekerti: "Berlatih puasa sunah hari Senin atau puasa penuh di bulan Ramadan dengan sabar."
+        },
+        game: {
+          id: "game-k5-baru-b4",
+          tipe: "knowledge-challenge",
+          nama: "Pilah Keranjang Puasa Wajib vs Sunah",
+          petunjuk: "Pilih kategori puasa dengan tepat!",
+          questions: [
+            {
+              tanya: "Puasa yang dilaksanakan pada hari Senin dan Kamis hukumnya adalah...",
+              opsi: ["Sunah", "Wajib", "Makruh"],
+              benar: 0,
+              alasan: "Puasa Senin-Kamis adalah puasa sunah yang rutin dikerjakan Rasulullah saw."
+            },
+            {
+              tanya: "Puasa untuk mengganti puasa Ramadan yang tertinggal karena sakit disebut...",
+              opsi: ["Puasa Qadha (Wajib)", "Puasa Syawal", "Puasa Arafah"],
+              benar: 0,
+              alasan: "Puasa Qadha wajib ditunaikan sebelum datang Ramadan berikutnya."
+            }
+          ]
+        }
+      },
+
+      {
+        id: "k5-baru-bab-5",
+        bab: 5,
+        elemen: "Sejarah Peradaban Islam",
+        judul: "Kepemimpinan Nabi Muhammad saw. di Madinah",
+        icon: "mosque",
+        fokusCP: "Menganalisis prinsip keadilan, toleransi, dan piagam Madinah dalam kepemimpinan Rasulullah saw.",
+        tujuan: [
+          "Menjelaskan isi dan makna historis Piagam Madinah (Sahifatul Madinah).",
+          "Menganalisis cara Nabi saw. memimpin masyarakat majemuk yang terdiri dari suku dan agama berbeda.",
+          "Meneladani keadilan dan sikap musyawarah Rasulullah saw. dalam kepemimpinan."
+        ],
+        materi: {
+          pengantar: "Catatan CP Baru: Di CP 020/2026, materi sejarah kelas 5 difokuskan pada KEPEMIMPINAN NABI DI MADINAH, khususnya Piagam Madinah sebagai percontohan masyarakat madani yang toleran dan adil.",
+          subBab: [
+            {
+              subJudul: "A. Piagam Madinah: Konstitusi Tertulis Pertama Dunia",
+              ilustrasi: "mosque",
+              uraian: "Piagam Madinah disepakati bersama oleh kaum muslim, kaum Yahudi, dan suku-suku Arab Madinah. Isi pentingnya: 1. Semua warga Madinah wajib saling membela jika kota diserang musuh, 2. Kebebasan beragama dijamin tanpa paksaan, 3. Penegakan hukum yang adil tanpa memandang suku atau strata sosial."
+            },
+            {
+              subJudul: "B. Karakter Pemimpin Sejati",
+              ilustrasi: "khulafaur-rasyidin",
+              uraian: "Rasulullah memimpin tidak seperti raja yang sewenang-wenang. Beliau selalu bermusyawarah dengan para sahabat, mendengar pendapat anak muda, dan hidup bersahaja."
+            }
+          ],
+          rangkuman: [
+            "Piagam Madinah menjamin kebebasan beragama dan persamaan hak di depan hukum.",
+            "Rasulullah saw. memimpin dengan musyawarah, kasih sayang, dan keadilan."
+          ],
+          budiPekerti: "Menghormati keputusan musyawarah pemilihan ketua kelas dan melaksanakannya bersama."
+        },
+        game: {
+          id: "game-k5-baru-b5",
+          tipe: "knowledge-challenge",
+          nama: "Diplomasi Agung Piagam Madinah",
+          petunjuk: "Jawablah seputar prinsip kepemimpinan Nabi di Madinah!",
+          questions: [
+            {
+              tanya: "Salah satu prinsip penting dalam Piagam Madinah terhadap kaum non-muslim adalah...",
+              opsi: ["Menjamin kebebasan beragama dan hak keamanan bersama", "Mengusir mereka", "Memaksa mereka masuk Islam"],
+              benar: 0,
+              alasan: "Piagam Madinah secara tegas menjamin kebebasan memeluk keyakinan masing-masing."
+            }
+          ]
+        }
+      }
+    ],
+
+    semester2: [
+      {
+        id: "k5-baru-bab-6",
+        bab: 6,
+        elemen: "Al-Qur'an dan Hadis",
+        judul: "Tajwid Qalqalah & Hadis Berbakti kepada Orang Tua dan Guru",
+        icon: "qalqalah",
+        fokusCP: "Mempraktikkan bacaan Qalqalah Sugra & Kubra serta mengamalkan hadis Birrul Walidain.",
+        tujuan: [
+          "Mengenal 5 huruf Qalqalah (Ba, Jim, Dal, Tha, Qaf / disingkat Ba-Ju-Di-To-Qo).",
+          "Membedakan cara membaca Qalqalah Sugra (pantulan kecil di tengah) dan Qalqalah Kubra (pantulan besar di waqaf).",
+          "Menghafal dan mengamalkan Hadis tentang ridha Allah terletak pada ridha kedua orang tua."
+        ],
+        materi: {
+          pengantar: "Catatan CP Baru: Di CP 020/2026, materi semester 2 memuat HUKUM TAJWID QALQALAH secara mendalam serta HADIS BIRRUL WALIDAIN (berbakti kepada orang tua dan guru).",
+          subBab: [
+            {
+              subJudul: "A. Hukum Tajwid Qalqalah (قَلْقَلَة)",
+              ilustrasi: "qalqalah",
+              uraian: "Qalqalah artinya memantul. Hurufnya ada lima: ق, ط, ب, ج, د. Terbagi dua:",
+              jenisQalqalah: [
+                {
+                  nama: "1. Qalqalah Sugra (Kecil)",
+                  ket: "Huruf qalqalah berharakat sukun ASLI di tengah kata.",
+                  contoh: "يَطْمَعُ (Yaṭma'u), أَبْصَارِهِمْ (Abṣārihim), يَجْعَلْ (Yaj'al)"
+                },
+                {
+                  nama: "2. Qalqalah Kubra (Besar)",
+                  ket: "Huruf qalqalah di akhir kata dan disukunkan karena waqaf (berhenti).",
+                  contoh: "الْفَلَقِ ۙ (Al-Falaq!), أَحَدٌ ۙ (Ahad!), وَتَبَّ ۙ (Wa tabb!)"
+                }
+              ]
+            },
+            {
+              subJudul: "B. Hadis Berbakti kepada Orang Tua dan Guru",
+              ilustrasi: "birrul-walidain",
+              dalil: {
+                arab: "رِضَى الرَّبِّ فِي رِضَى الْوَالِدَيْنِ وَسَخَطُ الرَّبِّ فِي سَخَطِ الْوَالِدَيْنِ",
+                latin: "Riḍār-Rabbi fī riḍāl-wālidaini wa sakhaṭur-Rabbi fī sakhaṭil-wālidain",
+                arti: "Ridha Allah terletak pada ridha kedua orang tua, dan murka Allah terletak pada kemurkaan kedua orang tua. (H.R. Tirmizi)"
+              }
+            }
+          ],
+          rangkuman: [
+            "Huruf qalqalah: Ba, Jim, Dal, Tha, Qaf.",
+            "Qalqalah Sugra memantul ringan di tengah kata; Qalqalah Kubra memantul kuat saat waqaf.",
+            "Ridha Allah bergantung pada ridha kedua orang tua kita."
+          ],
+          budiPekerti: "Mencium tangan kedua orang tua saat berpamitan berangkat sekolah dan mendoakannya."
+        },
+        game: {
+          id: "game-k5-baru-b6",
+          tipe: "knowledge-challenge",
+          nama: "Pantulan Indah Qalqalah",
+          petunjuk: "Tentukan jenis Qalqalah pada kata berikut!",
+          questions: [
+            {
+              tanya: "Pada kata 'يَجْعَلْ' (Yaj'al), huruf Jim sukun berada di tengah kata. Hukumnya adalah...",
+              opsi: ["Qalqalah Sugra (Kecil)", "Qalqalah Kubra (Besar)", "Bukan Qalqalah"],
+              benar: 0,
+              alasan: "Huruf qalqalah sukun di tengah kata disebut Qalqalah Sugra."
+            },
+            {
+              tanya: "Pada akhir ayat 'قُلْ هُوَ اللَّهُ أَحَدٌ ۙ', huruf Dal diwaqafkan. Hukumnya adalah...",
+              opsi: ["Qalqalah Kubra (Besar)", "Qalqalah Sugra", "Iqlab"],
+              benar: 0,
+              alasan: "Huruf qalqalah di akhir kalimat yang dibaca berhenti memantul kuat (Qalqalah Kubra)."
+            }
+          ]
+        }
+      },
+
+      {
+        id: "k5-baru-bab-7",
+        bab: 7,
+        elemen: "Akidah",
+        judul: "Iman kepada Hari Akhir (Tahapan Alam Akhirat)",
+        icon: "qada-qadar",
+        fokusCP: "Menjelaskan peristiwa dan tahapan hari akhir serta meyakini pertanggungjawaban amal di hadapan Allah.",
+        tujuan: [
+          "Menjelaskan pengertian rukun iman kelima: Iman kepada Hari Akhir.",
+          "Mengetahui tahapan perjalanan manusia setelah wafat: Alam Barzakh, Yaumul Ba'ats, Mahsyar, Hisab, Mizan, Sirath, hingga Surga/Neraka.",
+          "Menumbuhkan kesadaran bahwa seluruh amal perbuatan akan dipertanggungjawabkan."
+        ],
+        materi: {
+          pengantar: "Kiamat adalah keniscayaan. Iman kepada hari akhir membentuk pribadi anak yang berakhlak mulia karena sadar bahwa setiap kebaikan dan keburukan sekecil biji zarrah pun akan ditimbang secara adil.",
+          subBab: [
+            {
+              subJudul: "A. Tahapan Perjalanan Hari Akhir",
+              ilustrasi: "qada-qadar",
+              tahapanList: [
+                { nama: "1. Alam Barzakh (Kubur)", ket: "Pintu gerbang penantian antara dunia dan akhirat." },
+                { nama: "2. Yaumul Ba'ats", ket: "Hari dibangkitkannya seluruh manusia dari dalam kubur." },
+                { nama: "3. Padang Mahsyar", ket: "Hari dikumpulkannya seluruh umat manusia di hadapan Allah." },
+                { nama: "4. Yaumul Hisab & Mizan", ket: "Hari perhitungan dan penimbangan seluruh amal perbuatan." },
+                { nama: "5. As-Sirath & Pembalasan", ket: "Jembatan penyeberangan menuju Surga kenikmatan atau Neraka siksaan." }
+              ]
+            }
+          ],
+          rangkuman: [
+            "Hari kiamat pasti datang dan tidak ada yang mengetahui waktunya kecuali Allah.",
+            "Timbangan kebaikan (Mizan) akan menentukan balasan surga atau neraka."
+          ],
+          budiPekerti: "Menghindari perbuatan curang atau mengganggu teman karena takut dosa di akhirat."
+        },
+        game: {
+          id: "game-k5-baru-b7",
+          tipe: "knowledge-challenge",
+          nama: "Jejak Langkah Hari Akhir",
+          petunjuk: "Pilih tahapan perjalanan hari akhir yang tepat!",
+          questions: [
+            {
+              tanya: "Hari dibangkitkannya manusia dari dalam kubur disebut...",
+              opsi: ["Yaumul Ba'ats", "Yaumul Hisab", "Yaumul Mizan"],
+              benar: 0,
+              alasan: "Yaumul Ba'ats artinya hari kebangkitan dari kubur."
+            }
+          ]
+        }
+      },
+
+      {
+        id: "k5-baru-bab-8",
+        bab: 8,
+        elemen: "Akhlak",
+        judul: "Akhlak terhadap Teman (Anti-Bullying & Menjaga Lisan)",
+        icon: "sahabat",
+        fokusCP: "Menerapkan sikap setia kawan, menjauhi perundungan (bullying), dan menjaga rahasia sahabat.",
+        tujuan: [
+          "Mengetahui hak dan kewajiban dalam pertemanan Islami.",
+          "Mengetahui larangan perundungan (bullying fisik, verbal, maupun siber).",
+          "Membiasakan saling memaafkan dan menjaga nama baik sahabat."
+        ],
+        materi: {
+          pengantar: "Catatan CP Baru: Pada CP 020/2026, materi semester 2 ditekankan secara spesifik pada AKHLAK TERHADAP TEMAN (mencegah perundungan dan membina empati sebaya).",
+          subBab: [
+            {
+              subJudul: "A. Larangan Menyakiti dan Mengolok-olok Teman",
+              ilustrasi: "sahabat",
+              dalil: {
+                arab: "يَا أَيُّهَا الَّذِينَ آمَنُوا لَا يَسْخَرْ قَوْمٌ مِّن قَوْمٍ عَسَىٰ أَن يَكُونُوا خَيْرًا مِّنْهُمْ",
+                latin: "Yā ayyuhallażīna āmanū lā yaskhar qaumum min qaumin 'asā ay yakūnū khairam minhum",
+                arti: "Wahai orang-orang yang beriman! Janganlah suatu kaum mengolok-olok kaum yang lain (karena) boleh jadi mereka (yang diperolok-olokkan) lebih baik dari mereka. (Q.S. Al-Hujurat: 11)"
+              }
+            },
+            {
+              subJudul: "B. Tiga Pilar Stop Perundungan di Sekolah",
+              ilustrasi: "mosque",
+              uraian: "1. Tidak memanggil teman dengan julukan yang menyakitkan hati, 2. Tidak mengucilkan teman yang pendiam, 3. Berani melapor kepada bapak/ibu guru jika melihat perundungan terjadi di lingkungan sekolah."
+            }
+          ],
+          rangkuman: [
+            "Menyakiti teman dengan lisan atau fisik dilarang keras dalam Islam.",
+            "Sahabat sejati adalah yang saling menasihati dalam kebaikan dan menutup aib temannya."
+          ],
+          budiPekerti: "Mengajak teman yang menyendiri untuk ikut bermain bola atau membaca buku bersama."
+        },
+        game: {
+          id: "game-k5-baru-b8",
+          tipe: "knowledge-challenge",
+          nama: "Pahlawan Ramah Anti-Bullying",
+          petunjuk: "Pilih sikap pahlawan kebaikan di sekolah!",
+          questions: [
+            {
+              tanya: "Jika melihat ada teman yang diejek karena bajunya kotor terkena cipratan air hujan, sikap kita...",
+              opsi: ["Membantunya membersihkan dan menegur yang mengejek", "Ikut menertawakannya", "Merekam dengan HP"],
+              benar: 0,
+              alasan: "Anak berakhlak mulia selalu menolong teman yang kesusahan."
+            }
+          ]
+        }
+      },
+
+      {
+        id: "k5-baru-bab-9",
+        bab: 9,
+        elemen: "Fikih",
+        judul: "Makanan dan Minuman yang Halal dan Haram",
+        icon: "halal",
+        fokusCP: "Menganalisis kriteria makanan dan minuman halal thayyiban serta bahaya mengonsumsi yang haram.",
+        tujuan: [
+          "Memahami arti Halalan Thayyiban (halal syariatnya dan baik/bergizi zatnya).",
+          "Mengetahui binatang yang halal dan binatang yang diharamkan dalam Islam.",
+          "Membedakan haram li-dzatihi (zatnya haram) dan haram li-ghairihi (cara memperolehnya haram).",
+          "Membiasakan memeriksa sertifikasi logo Halal saat membeli makanan jajanan."
+        ],
+        materi: {
+          pengantar: "Catatan CP Baru: Pada CP 020/2026, materi MAKANAN & MINUMAN HALAL HARAM DIPINDAHKAN dari kelas 6 ke KELAS 5 SEMESTER 2. Makanan yang masuk ke tubuh akan menjadi darah daging dan memengaruhi akhlak serta diterimanya doa.",
+          subBab: [
+            {
+              subJudul: "A. Konsep Halalan Thayyiban",
+              ilustrasi: "halal",
+              dalil: {
+                arab: "يَا أَيُّهَا النَّاسُ كُلُوا مِمَّا فِي الْأَرْضِ حَلَالًا طَيِّبًا",
+                latin: "Yā ayyuhan-nāsu kulū mimmā fil-arḍi ḥalālan ṭayyibā",
+                arti: "Wahai manusia! Makanlah dari (makanan) yang halal dan baik yang terdapat di bumi. (Q.S. Al-Baqarah: 168)"
+              }
+            },
+            {
+              subJudul: "B. Hewan yang Diharamkan dalam Islam",
+              ilustrasi: "halal",
+              uraian: "1. Bangkai (kecuali bangkai ikan dan belalang), 2. Darah yang mengalir, 3. Daging babi dan olahannya, 4. Hewan yang disembelih tanpa menyebut nama Allah, 5. Hewan bertaring buas (singa, harimau, serigala), 6. Burung berkuku cengkeram tajam (elang), 7. Hewan yang hidup di dua alam (katak), 8. Segala minuman keras yang memabukkan (khamr, alkohol, narkoba)."
+            }
+          ],
+          rangkuman: [
+            "Halal artinya diizinkan syariat; thayyib artinya sehat, bersih, dan bergizi.",
+            "Makanan haram merusak kesehatan tubuh dan menghalangi terkabulnya doa."
+          ],
+          budiPekerti: "Membaca basmalah sebelum makan dan memilih jajanan yang bersih dan bersertifikat halal."
+        },
+        game: {
+          id: "game-k5-baru-b9",
+          tipe: "knowledge-challenge",
+          nama: "Keranjang Halal Thayyib Express",
+          petunjuk: "Pilah makanan yang halal dan thayyib untuk tubuh!",
+          questions: [
+            {
+              tanya: "Bangkai hewan yang HALAL dimakan tanpa perlu disembelih adalah...",
+              opsi: ["Ikan laut dan Belalang", "Ayam dan Sapi", "Burung pipit"],
+              benar: 0,
+              alasan: "Rasulullah saw. menegaskan bahwa bangkai ikan dan belalang dihalalkan bagi umat Islam."
+            },
+            {
+              tanya: "Minuman yang memabukkan dan merusak akal (khamr) hukumnya adalah...",
+              opsi: ["Haram", "Halal", "Makruh"],
+              benar: 0,
+              alasan: "Khamr dan segala yang memabukkan tegas diharamkan dalam Al-Qur'an."
+            }
+          ]
+        }
+      },
+
+      {
+        id: "k5-baru-bab-10",
+        bab: 10,
+        elemen: "Sejarah Peradaban Islam",
+        judul: "Perjanjian Hudaibiah, Fathu Makkah, dan Haji Wada'",
+        icon: "khulafaur-rasyidin",
+        fokusCP: "Menganalisis strategi diplomasi damai Rasulullah saw. dan keteladanan sifat pemaaf saat Fathu Makkah.",
+        tujuan: [
+          "Menceritakan latar belakang Perjanjian Hudaibiah sebagai jalan diplomasi damai.",
+          "Mengetahui peristiwa Fathu Makkah yang dimenangkan tanpa pertumpahan darah.",
+          "Meneladani keagungan sikap pemaaf Rasulullah kepada kaum Quraisy yang dahulu memusuhi.",
+          "Memahami pesan persaudaraan dan kesetaraan dalam khutbah Haji Wada'."
+        ],
+        materi: {
+          pengantar: "Dakwah Islam mencapai puncak kejayaannya bukan dengan pedang dan kekerasan, melainkan dengan diplomasi damai dan keagungan budi pekerti Rasulullah yang memaafkan seluruh musuh-musuhnya.",
+          subBab: [
+            {
+              subJudul: "A. Perjanjian Hudaibiah (Tahun 6 H)",
+              ilustrasi: "mosque",
+              uraian: "Perjanjian gencatan senjata selama 10 tahun antara kaum muslim dan kafir Quraisy. Meskipun terkesan merugikan di awal, perjanjian ini membuka jalan dakwah Islam tersebar luas dengan damai ke seluruh penjuru jazirah Arab."
+            },
+            {
+              subJudul: "B. Fathu Makkah: Kemenangan Tanpa Darah (Tahun 8 H)",
+              ilustrasi: "khulafaur-rasyidin",
+              uraian: "Rasulullah memimpin 10.000 pasukan memasuki Makkah dengan damai. Berhala dihancurkan. Rasulullah mengumumkan pengampunan umum dengan sabdanya: 'Pergilah kalian semua, hari ini tidak ada cercaan atas kalian, kalian bebas!'."
+            },
+            {
+              subJudul: "C. Haji Wada' (Haji Perpisahan)",
+              ilustrasi: "mosque",
+              uraian: "Haji terakhir Rasulullah saw. bersama ratusan ribu sahabat. Nabi berpesan agar tidak menzalimi sesama, memuliakan wanita, dan berpegang teguh pada dua pusaka: Al-Qur'an dan Sunnah."
+            }
+          ],
+          rangkuman: [
+            "Perjanjian Hudaibiah mengajarkan pentingnya diplomasi damai.",
+            "Fathu Makkah membuktikan bahwa Islam menang dengan cinta dan pengampunan.",
+            "Pesan Haji Wada': Semua manusia setara, hanya takwa yang membedakan di hadapan Allah."
+          ],
+          budiPekerti: "Tidak membalas perlakuan buruk orang lain dengan keburukan, melainkan membalasnya dengan senyuman dan kebaikan."
+        },
+        game: {
+          id: "game-k5-baru-b10",
+          tipe: "knowledge-challenge",
+          nama: "Napak Tilas Fathu Makkah",
+          petunjuk: "Jawablah seputar peristiwa agung Fathu Makkah!",
+          questions: [
+            {
+              tanya: "Bagaimanakah sikap Rasulullah saw. kepada kaum musyrikin Quraisy saat penaklukan kota Makkah?",
+              opsi: ["Memaafkan dan membebaskan mereka semua tanpa dendam", "Memenjarakan mereka", "Mengusir mereka"],
+              benar: 0,
+              alasan: "Rasulullah menunjukkan akhlak agung dengan memaafkan dan membebaskan seluruh penduduk Makkah."
+            }
+          ]
+        }
+      }
+    ]
+  }
 };
-

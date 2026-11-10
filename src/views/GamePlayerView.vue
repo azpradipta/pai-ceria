@@ -317,7 +317,7 @@ const currentSorterIdx = ref(0);
 const sorterFeedback = ref(null);
 
 const babData = computed(() => {
-  return getMateriByKelasAndBab(Number(props.kelas), props.babId);
+  return getMateriByKelasAndBab(Number(props.kelas), props.babId, store.curriculumMode);
 });
 
 // Normalizing questions list from game data

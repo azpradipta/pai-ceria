@@ -105,3 +105,4 @@ pnpm run preview
 1. Buka link web di browser Google Chrome (Android) atau Safari (iOS).
 2. Pada banner atas yang muncul, klik tombol **"Pasang PWA"** atau buka menu browser titik tiga (⋮) lalu pilih **"Tambahkan ke Layar Utama" (Add to Home screen)**.
 3. Ikon aplikasi **PAI Ceria** akan muncul di layar utama HP layaknya aplikasi Android/iOS native dan dapat dibuka kapan saja bahkan tanpa kuota internet!
+

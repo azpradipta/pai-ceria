@@ -112,7 +112,12 @@ const notesList = computed(() => {
     let foundKelas = null;
 
     for (const [k, kData] of Object.entries(allKelasData)) {
-      const allB = [...kData.semester1, ...kData.semester2];
+      const allB = [
+        ...(kData.cpLama?.semester1 || []),
+        ...(kData.cpLama?.semester2 || []),
+        ...(kData.cpBaru?.semester1 || []),
+        ...(kData.cpBaru?.semester2 || [])
+      ];
       const match = allB.find(b => b.id === babId);
       if (match) {
         foundBab = match;

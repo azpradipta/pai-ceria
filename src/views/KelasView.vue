@@ -20,7 +20,7 @@
         </h1>
 
         <p class="text-xs sm:text-sm text-slate-600 max-w-3xl leading-relaxed">
-          {{ kelasInfo?.deskripsi }}
+          {{ activeCurriculumObj?.deskripsi }}
         </p>
       </div>
 
@@ -36,6 +36,38 @@
           Kelas {{ k }}
         </button>
       </div>
+    </div>
+
+    <!-- Active Curriculum Banner with Explanation -->
+    <div
+      class="rounded-3xl p-5 flex flex-col sm:flex-row sm:items-center justify-between gap-4 text-xs sm:text-sm shadow-sm transition-colors duration-300"
+      :class="store.curriculumMode === 'cp-baru' ? 'bg-emerald-50 border-2 border-emerald-300 text-emerald-950' : 'bg-amber-50 border-2 border-amber-300 text-amber-950'"
+    >
+      <div class="flex items-start sm:items-center gap-3">
+        <span class="text-3xl">{{ store.curriculumMode === 'cp-baru' ? '✨' : '📖' }}</span>
+        <div class="space-y-0.5">
+          <div class="flex items-center gap-2">
+            <span class="font-black text-sm uppercase tracking-wide">
+              {{ store.curriculumMode === 'cp-baru' ? 'Mode CP Baru (Revisi Dokumen Word CP 020/2026)' : 'Mode CP Lama (Buku Siswa Kemdikbud Cetak)' }}
+            </span>
+            <span class="px-2 py-0.5 rounded-md text-[10px] font-black uppercase" :class="store.curriculumMode === 'cp-baru' ? 'bg-emerald-200 text-emerald-900' : 'bg-amber-200 text-amber-900'">
+              Aktif
+            </span>
+          </div>
+          <p class="text-slate-600 text-xs">
+            {{ store.curriculumMode === 'cp-baru' ? 'Daftar bab dan isi materi di bawah disesuaikan persis dengan keputusan BSKAP CP baru (materi tajwid runtut, surah revisi, dan nabi baru).' : 'Daftar bab dan isi materi di bawah mengikuti urutan dan judul asli cetakan Buku Siswa Kemdikbud.' }}
+          </p>
+        </div>
+      </div>
+
+      <!-- Quick Switch Button -->
+      <button
+        @click="store.setCurriculumMode(store.curriculumMode === 'cp-baru' ? 'cp-lama' : 'cp-baru')"
+        class="self-start sm:self-auto px-4 py-2 rounded-xl font-black text-xs bg-white shadow border border-slate-300 hover:bg-slate-50 transition-all flex items-center gap-1.5 active:scale-95 shrink-0"
+      >
+        <span>Ganti Tampilan ke {{ store.curriculumMode === 'cp-baru' ? '📖 CP Lama (Buku)' : '✨ CP Baru (Docx)' }}</span>
+        <span>⇄</span>
+      </button>
     </div>
 
     <!-- Filter & Search Toolbar -->
@@ -70,7 +102,6 @@
 
       <!-- Search and Element Filter -->
       <div class="flex flex-wrap items-center gap-2">
-        <!-- Element dropdown -->
         <select
           v-model="activeElemen"
           class="px-3 py-2 bg-slate-50 border border-slate-200 rounded-xl text-xs font-bold text-slate-700 focus:outline-none focus:ring-2 focus:ring-emerald-500"
@@ -83,7 +114,6 @@
           <option value="Sejarah Peradaban Islam">Sejarah Peradaban Islam (Tarikh)</option>
         </select>
 
-        <!-- Search input -->
         <div class="relative flex-1 sm:w-48">
           <input
             v-model="searchKeyword"
@@ -97,31 +127,6 @@
 
     </div>
 
-    <!-- Active Curriculum Banner -->
-    <div
-      class="rounded-2xl p-4 flex flex-col sm:flex-row sm:items-center justify-between gap-3 text-xs"
-      :class="store.curriculumMode === 'cp-baru' ? 'bg-emerald-50 border border-emerald-200 text-emerald-900' : 'bg-amber-50 border border-amber-200 text-amber-900'"
-    >
-      <div class="flex items-center gap-2.5">
-        <span class="text-xl">{{ store.curriculumMode === 'cp-baru' ? '✨' : '📖' }}</span>
-        <div>
-          <span class="font-black uppercase tracking-wide">
-            Menampilkan: {{ store.curriculumMode === 'cp-baru' ? 'Revisi CP Baru (CP 020/2026)' : 'Sumber Buku Siswa (CP Lama 046/2025)' }}
-          </span>
-          <p class="text-slate-600 mt-0.5">
-            {{ store.curriculumMode === 'cp-baru' ? 'Judul dan fokus materi telah diselaraskan dengan dokumen perubahan Word yang dilampirkan.' : 'Judul dan susunan bab mengikuti cetakan buku teks siswa Kemdikbud.' }}
-          </p>
-        </div>
-      </div>
-
-      <button
-        @click="store.setCurriculumMode(store.curriculumMode === 'cp-baru' ? 'cp-lama' : 'cp-baru')"
-        class="self-start sm:self-auto px-3 py-1.5 rounded-xl font-bold bg-white shadow-sm border border-slate-300 hover:bg-slate-50 transition-colors"
-      >
-        Beralih ke {{ store.curriculumMode === 'cp-baru' ? 'CP Lama' : 'CP Baru' }}
-      </button>
-    </div>
-
     <!-- Chapter Grid Cards -->
     <div v-if="filteredChapters.length > 0" class="grid grid-cols-1 md:grid-cols-2 gap-6">
       
@@ -132,7 +137,7 @@
       >
         <div class="space-y-4">
           
-          <!-- Top Row: Bab Badge & Element -->
+          <!-- Top Row: Bab Badge, Element & Illustration -->
           <div class="flex items-center justify-between gap-2">
             <div class="flex items-center gap-2">
               <span class="w-8 h-8 rounded-xl bg-emerald-100 text-emerald-800 font-black text-xs flex items-center justify-center">
@@ -143,32 +148,21 @@
               </span>
             </div>
 
-            <!-- Read & Game Completion Badges -->
-            <div class="flex items-center gap-1.5 text-xs">
-              <span v-if="store.isChapterRead(b.id)" class="px-2 py-0.5 rounded-full bg-emerald-100 text-emerald-700 font-bold" title="Materi sudah dipelajari">
-                ✓ Dibaca
-              </span>
-              <span v-if="store.isGameCompleted(b.game.id)" class="px-2 py-0.5 rounded-full bg-amber-100 text-amber-700 font-bold" title="Game sudah dimainkan">
-                ⭐ Game Selesai
-              </span>
-            </div>
+            <IslamicIllustration :name="b.icon || 'quran'" className="w-10 h-10" />
           </div>
 
           <!-- Title -->
           <div>
             <h3 class="text-xl font-black text-slate-900 group-hover:text-emerald-700 transition-colors">
-              Bab {{ b.bab }}: {{ store.curriculumMode === 'cp-baru' ? (b.judulCPBaru || b.judul) : b.judul }}
+              Bab {{ b.bab }}: {{ b.judul }}
             </h3>
-            <div v-if="store.curriculumMode === 'cp-baru' && b.judulCPBaru !== b.judul" class="text-[11px] text-amber-700 font-semibold mt-1">
-              (Buku Siswa: "{{ b.judul }}")
-            </div>
           </div>
 
           <!-- Highlight of Competency / Focus -->
           <div class="p-3 rounded-2xl bg-slate-50 border border-slate-100 text-xs space-y-1">
-            <div class="font-bold text-slate-500">Fokus Capaian Pembelajaran:</div>
+            <div class="font-bold text-slate-500">Fokus Pembelajaran:</div>
             <div class="font-semibold text-slate-800">
-              {{ store.curriculumMode === 'cp-baru' ? b.cpBaru?.fokus : b.cpLama?.fokus }}
+              {{ b.fokusCP }}
             </div>
           </div>
 
@@ -239,7 +233,8 @@
 import { ref, computed } from 'vue';
 import { useRouter } from 'vue-router';
 import { useAppStore } from '../stores/appStore';
-import { allKelasData } from '../data/paiData';
+import { allKelasData, getAllBabsForKelas } from '../data/paiData';
+import IslamicIllustration from '../components/IslamicIllustration.vue';
 
 const props = defineProps({
   kelas: {
@@ -257,6 +252,11 @@ const searchKeyword = ref('');
 
 const kelasNum = computed(() => Number(props.kelas));
 const kelasInfo = computed(() => allKelasData[kelasNum.value]);
+
+const activeCurriculumObj = computed(() => {
+  if (!kelasInfo.value) return null;
+  return store.curriculumMode === 'cp-lama' ? kelasInfo.value.cpLama : kelasInfo.value.cpBaru;
+});
 
 const kelasIcon = computed(() => {
   if (kelasNum.value === 1) return '🌱';
@@ -293,16 +293,7 @@ const getElemenBadgeClass = (el) => {
 };
 
 const filteredChapters = computed(() => {
-  if (!kelasInfo.value) return [];
-  
-  let list = [];
-  if (activeSemester.value === 0) {
-    list = [...kelasInfo.value.semester1, ...kelasInfo.value.semester2];
-  } else if (activeSemester.value === 1) {
-    list = [...kelasInfo.value.semester1];
-  } else {
-    list = [...kelasInfo.value.semester2];
-  }
+  let list = getAllBabsForKelas(kelasNum.value, activeSemester.value, store.curriculumMode);
 
   if (activeElemen.value !== 'Semua') {
     list = list.filter(b => b.elemen === activeElemen.value);
@@ -312,7 +303,7 @@ const filteredChapters = computed(() => {
     const kw = searchKeyword.value.toLowerCase();
     list = list.filter(b => 
       b.judul.toLowerCase().includes(kw) ||
-      (b.judulCPBaru && b.judulCPBaru.toLowerCase().includes(kw)) ||
+      b.fokusCP?.toLowerCase().includes(kw) ||
       b.materi?.pengantar?.toLowerCase().includes(kw) ||
       b.game?.nama?.toLowerCase().includes(kw)
     );
@@ -321,4 +312,3 @@ const filteredChapters = computed(() => {
   return list;
 });
 </script>
-
