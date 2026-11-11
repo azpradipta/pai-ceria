@@ -48,24 +48,24 @@
         <div class="space-y-0.5">
           <div class="flex items-center gap-2">
             <span class="font-black text-sm uppercase tracking-wide">
-              {{ store.curriculumMode === 'cp-baru' ? 'Mode CP Baru (Revisi Dokumen Word CP 020/2026)' : 'Mode CP Lama (Buku Siswa Kemdikbud Cetak)' }}
+              {{ store.curriculumMode === 'cp-baru' ? 'CP Baru · Dokumen Perubahan CP' : 'Mode CP Lama (Buku Siswa Kemdikbud Cetak)' }}
             </span>
             <span class="px-2 py-0.5 rounded-md text-[10px] font-black uppercase" :class="store.curriculumMode === 'cp-baru' ? 'bg-emerald-200 text-emerald-900' : 'bg-amber-200 text-amber-900'">
               Aktif
             </span>
           </div>
           <p class="text-slate-600 text-xs">
-            {{ store.curriculumMode === 'cp-baru' ? 'Daftar bab dan isi materi di bawah disesuaikan persis dengan keputusan BSKAP CP baru (materi tajwid runtut, surah revisi, dan nabi baru).' : 'Daftar bab dan isi materi di bawah mengikuti urutan dan judul asli cetakan Buku Siswa Kemdikbud.' }}
+            {{ store.curriculumMode === 'cp-baru' ? 'Materi dikembangkan dari lingkup dokumen perubahan CP yang disertakan, dengan penjelasan dan aktivitas belajar.' : 'Daftar bab dan isi materi di bawah mengikuti urutan dan judul asli cetakan Buku Siswa Kemdikbud.' }}
           </p>
         </div>
       </div>
 
       <!-- Quick Switch Button -->
       <button
-        @click="store.setCurriculumMode(store.curriculumMode === 'cp-baru' ? 'cp-lama' : 'cp-baru')"
+        @click="selectCurriculum(store.curriculumMode === 'cp-baru' ? 'cp-lama' : 'cp-baru')"
         class="self-start sm:self-auto px-4 py-2 rounded-xl font-black text-xs bg-white shadow border border-slate-300 hover:bg-slate-50 transition-all flex items-center gap-1.5 active:scale-95 shrink-0"
       >
-        <span>Ganti Tampilan ke {{ store.curriculumMode === 'cp-baru' ? '📖 CP Lama (Buku)' : '✨ CP Baru (Docx)' }}</span>
+        <span>Ganti Tampilan ke {{ store.curriculumMode === 'cp-baru' ? '📖 CP Lama (Buku)' : '✨ CP Baru' }}</span>
         <span>⇄</span>
       </button>
     </div>
@@ -80,7 +80,7 @@
           class="px-4 py-2 rounded-xl text-xs font-extrabold whitespace-nowrap transition-all"
           :class="activeSemester === 0 ? 'bg-slate-900 text-white shadow-sm' : 'bg-slate-100 text-slate-600 hover:bg-slate-200'"
         >
-          Semua Semester (10 Bab)
+          Semua Semester ({{ getAllBabsForKelas(kelasNum, 0, store.curriculumMode).length }} Bab)
         </button>
 
         <button
@@ -103,6 +103,7 @@
       <!-- Search and Element Filter -->
       <div class="flex flex-wrap items-center gap-2">
         <select
+          aria-label="Filter elemen pembelajaran"
           v-model="activeElemen"
           class="px-3 py-2 bg-slate-50 border border-slate-200 rounded-xl text-xs font-bold text-slate-700 focus:outline-none focus:ring-2 focus:ring-emerald-500"
         >
@@ -117,7 +118,8 @@
         <div class="relative flex-1 sm:w-48">
           <input
             v-model="searchKeyword"
-            type="text"
+            type="search"
+            aria-label="Cari materi atau bab"
             placeholder="Cari materi / bab..."
             class="w-full pl-8 pr-3 py-2 bg-slate-50 border border-slate-200 rounded-xl text-xs focus:outline-none focus:ring-2 focus:ring-emerald-500"
           />
@@ -232,6 +234,7 @@
 <script setup>
 import { ref, computed } from 'vue';
 import { useRouter } from 'vue-router';
+import { useCurriculumNavigation } from '../composables/useCurriculumNavigation';
 import { useAppStore } from '../stores/appStore';
 import { allKelasData, getAllBabsForKelas } from '../data/paiData';
 import IslamicIllustration from '../components/IslamicIllustration.vue';
@@ -245,6 +248,7 @@ const props = defineProps({
 
 const store = useAppStore();
 const router = useRouter();
+const { selectCurriculum, classLocation } = useCurriculumNavigation();
 
 const activeSemester = ref(0);
 const activeElemen = ref('Semua');
@@ -266,7 +270,7 @@ const kelasIcon = computed(() => {
 
 const switchKelas = (k) => {
   store.setKelas(k);
-  router.push(`/kelas/${k}`);
+  router.push(classLocation(k));
 };
 
 const resetFilter = () => {

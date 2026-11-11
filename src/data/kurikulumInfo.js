@@ -1,112 +1,456 @@
-// Informasi Perbandingan Capaian Pembelajaran (CP 046/2025 vs CP 020/2026)
-// Berdasarkan dokumen resmi Perubahan CP PAI Fase A dan Fase C
-
+// Transkripsi tabel dari dokumen DOCX yang disertakan; bukan klaim verifikasi regulasi.
 export const perbandinganCP = {
-  faseA: {
-    fase: 'Fase A (Kelas 1 & 2 SD)',
-    targetKelas: 'Kelas 1',
-    ringkasan: 'Pada CP baru (020/2026), kompetensi bergeser dari sekadar "memahami" menjadi kompetensi aktif seperti "membaca, membedakan, menghafal, menerapkan, dan menceritakan". Materi Al-Qur\'an lebih menitikberatkan pada Makharijul Huruf dan pengenalan bentuk huruf bersambung secara bertahap.',
-    perubahan: [
+  "faseA": {
+    "fase": "Fase A",
+    "file": "Perubahan_CP_PAI_Fase_A.docx",
+    "elemen": [
       {
-        elemen: "Al-Qur'an dan Hadis",
-        lama: "Kelas 1 Sem 1: Huruf Hijaiah Berharakat. Sem 2: Huruf Bersambung & Surah Al-Fatihah.",
-        baru: "Kelas 1 Sem 1: Huruf Hijaiah + Makhārijul Ḥuruf & Huruf Berharakat. Sem 2: Huruf Hijaiah Bersambung (2 Huruf) & Surah Al-Fatihah.",
-        fokus: "Penekanan cara pelafalan makhraj huruf sejak dini dan batasan sambung 2 huruf yang lebih ramah anak."
+        "nama": "Al-Qur'an dan Hadis",
+        "kompetensi": {
+          "lama": "memahami",
+          "baru": "membaca\nmembedakan\nMenghafal"
+        },
+        "rows": [
+          {
+            "lingkup": "Kelas 1 Semester 1",
+            "lama": "Huruf Hijaiah Berharakat",
+            "baru": "Huruf Hijaiah (Makhārijul ḥuruf)\nHuruf Hijaiah Berharakat"
+          },
+          {
+            "lingkup": "Kelas 1 Semester 2",
+            "lama": "Huruf Hijaiah Bersambung dan Surah al-Fātiḥah",
+            "baru": "Huruh Hijaiah Bersambung (2 Huruf)\nSurah al-Fātiḥah"
+          },
+          {
+            "lingkup": "Kelas 2 Semester 1",
+            "lama": "Surah al-Ikhlās dan Surah al-Falaq",
+            "baru": "Huruf Hijaiah Bersambung (3 Huruf atau Lebih)\nSurah an-Nās\nSurah al-Falaq"
+          },
+          {
+            "lingkup": "Kelas 2 Semester 2",
+            "lama": "Hadis tentang Kebersihan",
+            "baru": "Huruf Hijaiah Bersambung (2 Kata)\nSurah al-Ikhlās\nHadis tentang Kebersihan"
+          }
+        ]
       },
       {
-        elemen: "Akidah",
-        lama: "Sem 1: Rukun Iman (Iman kepada Allah & Rasul). Sem 2: Asmaulhusna Ar-Rahman & Ar-Rahim.",
-        baru: "Sem 1: Rukun Iman (6 rukun). Sem 2: Iman kepada Allah Swt. secara komprehensif melalui ciptaan-Nya.",
-        fokus: "Menanamkan tauhid dan keyakinan melalui pengamatan alam sekitar."
+        "nama": "Akidah",
+        "kompetensi": {
+          "lama": "memahami",
+          "baru": "Menjelaskan\nmeyakini"
+        },
+        "rows": [
+          {
+            "lingkup": "Kelas 1 Semester 1",
+            "lama": "Rukun Iman",
+            "baru": "Rukun Iman"
+          },
+          {
+            "lingkup": "Kelas 1 Semester 2",
+            "lama": "Iman kepada Allah Swt.",
+            "baru": "Iman kepada Allah Swt."
+          },
+          {
+            "lingkup": "Kelas 2 Semester 1",
+            "lama": "Asmaulhusna: ar-Raḥmān, ar-Raḥīm, al-Mālik",
+            "baru": "Asmaulhusna (ar-Raḥmān, ar-Raḥīm, as-Salām, al-Mu'min)"
+          },
+          {
+            "lingkup": "Kelas 2 Semester 2",
+            "lama": "Iman kepada Malaikat Allah",
+            "baru": "Iman kepada Malaikat Allah"
+          }
+        ]
       },
       {
-        elemen: "Akhlak",
-        lama: "Sem 1: Akhlak kepada Allah (Aku Cinta Allah). Sem 2: Hidup Bersih, Tanggung Jawab & Mandiri.",
-        baru: "Sem 1: Akhlak terhadap Allah Swt. dengan Menyucikan-Nya (Subhanallah). Sem 2: Akhlak terhadap Allah Swt. dengan Memuji-Nya (Alhamdulillah).",
-        fokus: "Pembiasaan kalimat thayyibah (Tasbih & Tahmid) dalam kehidupan keseharian anak."
+        "nama": "Akhlak",
+        "kompetensi": {
+          "lama": "memahami",
+          "baru": "menerapkan"
+        },
+        "rows": [
+          {
+            "lingkup": "Kelas 1 Semester 1",
+            "lama": "Akhlak kepada Allah (Aku Anak Saleh Cinta Allah yang Maha Suci)",
+            "baru": "Akhlak terhadap Allah Swt. dengan Menyucikan-Nya"
+          },
+          {
+            "lingkup": "Kelas 1 Semester 2",
+            "lama": "Akhlak kepada Diri Sendiri (Hidup Bersih, Tanggung Jawab dan Mandiri)",
+            "baru": "Akhlak terhadap Allah Swt. dengan Memuji-Nya"
+          },
+          {
+            "lingkup": "Kelas 2 Semester 1",
+            "lama": "Akhlak kepada Diri Sendiri (Menuntut Ilmu dan Bekerja Keras)",
+            "baru": "Akhlak terhadap Diri Sendiri (Pola Hidup Bersih dan Sehat)"
+          },
+          {
+            "lingkup": "Kelas 2 Semester 2",
+            "lama": "Akhlak kepada Diri Sendiri (Sabar dan Kanaah)",
+            "baru": "Akhlak terhadap Diri Sendiri (Terbiasa Berdoa)"
+          }
+        ]
       },
       {
-        elemen: "Fikih",
-        lama: "Sem 1: Rukun Islam & Syahadatain. Sem 2: Tata Cara Bersuci (Wudu, Tayamum).",
-        baru: "Sem 1: Rukun Islam & Syahadatain. Sem 2: Tata Cara Bersuci (Wudu, Tayamum, dan Istinja).",
-        fokus: "Praktik langsung adab buang air (istinja) dan thaharah secara higienis."
+        "nama": "Fikih",
+        "kompetensi": {
+          "lama": "memahami",
+          "baru": "menerapkan"
+        },
+        "rows": [
+          {
+            "lingkup": "Kelas 1 Semester 1",
+            "lama": "Rukun Islam dan Syahadatain",
+            "baru": "Rukun Islam dan Syahadatain"
+          },
+          {
+            "lingkup": "Kelas 1 Semester 2",
+            "lama": "Tata Cara Bersuci (Wudu, Tayamum dan Istinja)",
+            "baru": "Tata Cara Bersuci (Wudu, Tayamum dan Istinja)"
+          },
+          {
+            "lingkup": "Kelas 2 Semester 1",
+            "lama": "Salat Fardu, Azan, dan Ikamah",
+            "baru": "Salat Fardu"
+          },
+          {
+            "lingkup": "Kelas 2 Semester 2",
+            "lama": "Zikir dan Berdoa setelah Salat",
+            "baru": "Zikir dan Berdoa setelah Salat"
+          }
+        ]
       },
       {
-        elemen: "Sejarah Peradaban Islam (Tarikh)",
-        lama: "Sem 1: Kisah Nabi Adam a.s. Sem 2: Kisah Nabi Ibrahim a.s. / Nabi Muhammad saw.",
-        baru: "Sem 1: Kisah Keteladanan Nabi Adam a.s. Sem 2: Kisah Keteladanan Nabi Idris a.s.",
-        fokus: "Kisah Nabi Idris a.s. yang tekun belajar, menjahit, cerdas dan gemar membaca lebih relevan untuk usia awal sekolah."
+        "nama": "Sejarah Peradaban Islam",
+        "kompetensi": {
+          "lama": "memahami",
+          "baru": "menceritakan"
+        },
+        "rows": [
+          {
+            "lingkup": "Kelas 1 Semester 1",
+            "lama": "Kisah Keteladanan Nabi Adam a.s.",
+            "baru": "Kisah Keteladanan Nabi Adam a.s."
+          },
+          {
+            "lingkup": "Kelas 1 Semester 2",
+            "lama": "Kisah Keteladanan Nabi Ibrahim a.s.",
+            "baru": "Kisah keteladanan Nabi Idris a.s."
+          },
+          {
+            "lingkup": "Kelas 2 Semester 1",
+            "lama": "Kisah Keteladanan Nabi Idris a.s.",
+            "baru": "Kisah keteladanan Nabi Nuh a.s."
+          },
+          {
+            "lingkup": "Kelas 2 Semester 2",
+            "lama": "Kisah Keteladanan Nabi Nuh a.s.",
+            "baru": "Kisah keteladanan Nabi Ibrahim a.s."
+          }
+        ]
       }
     ]
   },
-  faseC: {
-    fase: 'Fase C (Kelas 5 & 6 SD)',
-    targetKelas: 'Kelas 5 & Kelas 6',
-    ringkasan: 'Pada CP baru (020/2026), terdapat penataan tajwid yang sistematis (Mim Sukun di Kls 5 Sem 1, Qalqalah di Kls 5 Sem 2, Ghunnah di Kls 6 Sem 1, dan Tafkhim-Tarqiq di Kls 6 Sem 2). Penyesuaian nama Asmaul Husna serta pergeseran materi Zakat/Wakaf dan Makanan Halal-Haram agar sejalan dengan psikologi anak pra-remaja.',
-    perubahanKelas5: [
+  "faseB": {
+    "fase": "Fase B",
+    "file": "Perubahan_CP_PAI_Fase_B.docx",
+    "elemen": [
       {
-        elemen: "Al-Qur'an dan Hadis",
-        lama: "Sem 1: Q.S. Al-Ma'un & Hadis Toleransi. Sem 2: Q.S. Ar-Rum: 22 & Al-Baqarah: 256.",
-        baru: "Sem 1: Huruf Bersambung (3 Kata/lebih) + Praktik Tajwid Mim Sukun & Surah Al-'Asr. Sem 2: Praktik Qalqalah & Hadis Berbuat Baik kepada Orang Tua dan Guru.",
-        fokus: "Surah Al-'Asr mendisiplinkan waktu belajar siswa; Tajwid Mim Sukun & Qalqalah dilatih intensif."
+        "nama": "Al-Qur'an dan Hadis",
+        "kompetensi": {
+          "lama": "memahami",
+          "baru": "Membaca, menulis, membedakan\nMenghafal, menjelaskan"
+        },
+        "rows": [
+          {
+            "lingkup": "Kelas 3 Semester 1",
+            "lama": "Q.S. al-'Alaq/96: 1-5",
+            "baru": "Huruf Hijaiah Bersambung (3 Kata atau Lebih) (Praktik Bacaan Mad Tabii)\nSurah al-Kauśar"
+          },
+          {
+            "lingkup": "Kelas 3 Semester 2",
+            "lama": "Q.S. al-Baqarah/2: 43 Hadis tentang kewajiban salat",
+            "baru": "Huruf Hijaiah Bersambung (3 Kata atau Lebih) (Praktik Bacaan Izhar Halqi)\nHadis tentang Kewajiban Salat"
+          },
+          {
+            "lingkup": "Kelas 4 Semester 1",
+            "lama": "Q.S. al-Ḥujurāt/49: 10-11 Hadis tentang Menjaga Hubungan Baik",
+            "baru": "Huruf Hijaiyah Bersambung (3 Kata atau Lebih) (Praktik Bacaan Idgam bigunah dan bila gunah)\nSurah an-Naṣr"
+          },
+          {
+            "lingkup": "Kelas 4 Semester 2",
+            "lama": "Q.S. at-Tīn dan Hadis tentang Silaturahmi",
+            "baru": "Huruf Hijaiyah Bersambung (3 Kata atau Lebih) (Praktik Bacaan Iklab dan Ikhfa)\nHadis tentang Menjaga Hubungan Baik terhadap Sesama"
+          }
+        ]
       },
       {
-        elemen: "Akidah (Asmaul Husna)",
-        lama: "Sem 1: al-Bā'iś, al-Qawiyyu, al-Muḥyi, al-Mumīt, al-Qayyūm. Sem 2: Iman Hari Akhir.",
-        baru: "Sem 1: al-Ḥalīm, asy-Syakūr, al-Ḥakīm, al-Wadūd. Sem 2: Iman kepada Hari Akhir.",
-        fokus: "Asmaul Husna yang diajarkan lebih mengedepankan karakter santun, bijak, bersyukur, dan cinta kasih (Wadud)."
+        "nama": "Akidah",
+        "kompetensi": {
+          "lama": "memahami",
+          "baru": "Menjelaskan\nmeyakini"
+        },
+        "rows": [
+          {
+            "lingkup": "Kelas 3 Semester 1",
+            "lama": "Sifat-Sifat Allah Swt.",
+            "baru": "Sifat-Sifat Allah Swt."
+          },
+          {
+            "lingkup": "Kelas 3 Semester 2",
+            "lama": "Iman Kepada Kitab-Kitab Allah Swt.",
+            "baru": "Iman Kepada Kitab-Kitab Allah Swt."
+          },
+          {
+            "lingkup": "Kelas 4 Semester 1",
+            "lama": "Asmaulhusna al-'Azīz, al-Quddūs, as-Salām, al-Mu'min, al-Muhaimin",
+            "baru": "Asmaulhusna (al-Gaffār, al-Wahhāb, al-Fattāḥ, al-Latīf)"
+          },
+          {
+            "lingkup": "Kelas 4 Semester 2",
+            "lama": "Iman Kepada Rasul-Rasul Allah Swt.",
+            "baru": "Iman Kepada Rasul-Rasul Allah Swt."
+          }
+        ]
       },
       {
-        elemen: "Akhlak",
-        lama: "Sem 1: Akhlak berdoa & tawakal. Sem 2: Akhlak kepada teman & tetangga.",
-        baru: "Sem 1: Akhlak berdoa & bertawakal kepada-Nya. Sem 2: Akhlak terhadap Teman (anti-bullying, saling menghargai).",
-        fokus: "Penguatan relasi sosial sebaya di sekolah."
+        "nama": "Akhlak",
+        "kompetensi": {
+          "lama": "memahami",
+          "baru": "menerapkan"
+        },
+        "rows": [
+          {
+            "lingkup": "Kelas 3 Semester 1",
+            "lama": "Berbaik Sangka kepada Allah Swt.",
+            "baru": "Akhlak terhadap Allah Swt. dengan Berbaik Sangka kepada-Nya"
+          },
+          {
+            "lingkup": "Kelas 3 Semester 2",
+            "lama": "Akhlak terhadap Orang Tua",
+            "baru": "Akhlak terhadap Orang Tua"
+          },
+          {
+            "lingkup": "Kelas 4 Semester 1",
+            "lama": "Akhlak terhadap Keluarga",
+            "baru": "Akhlak terhadap Keluarga"
+          },
+          {
+            "lingkup": "Kelas 4 Semester 2",
+            "lama": "Akhlak terhadap Guru",
+            "baru": "Akhlak terhadap Guru"
+          }
+        ]
       },
       {
-        elemen: "Fikih",
-        lama: "Sem 1: Puasa-puasa Sunah. Sem 2: Memahami Zakat.",
-        baru: "Sem 1: Puasa Wajib dan Sunah. Sem 2: Makanan dan Minuman yang Halal dan Haram.",
-        fokus: "Pemahaman puasa Ramadan secara utuh sejak kelas 5, diikuti pemilahan makanan halal/haram dalam jajanan anak."
+        "nama": "Fikih",
+        "kompetensi": {
+          "lama": "memahami",
+          "baru": "menerapkan"
+        },
+        "rows": [
+          {
+            "lingkup": "Kelas 3 Semester 1",
+            "lama": "Puasa",
+            "baru": "Azan, Ikamah"
+          },
+          {
+            "lingkup": "Kelas 3 Semester 2",
+            "lama": "Salat Sunah Rawatib & Salat-Salat Sunah (Duha dan Tahajud)",
+            "baru": "Ketentuan dan Praktik Salat Jumat"
+          },
+          {
+            "lingkup": "Kelas 4 Semester 1",
+            "lama": "Balig dan Tanggung Jawab yang Menyertainya (Taklīf)",
+            "baru": "Salat Sunah Rawatib, Duha, dan Tahajud"
+          },
+          {
+            "lingkup": "Kelas 4 Semester 2",
+            "lama": "Salat Jumat",
+            "baru": "Balig dan Tanggung Jawab yang Menyertainya (Taklīf)."
+          }
+        ]
       },
       {
-        elemen: "Tarikh",
-        lama: "Sem 1: Membangun Madinah. Sem 2: Hudaibiah, Fathu Makkah, Haji Wada'.",
-        baru: "Sem 1: Kepemimpinan Nabi Muhammad saw. di Madinah. Sem 2: Hudaibiah, Fathu Makkah, dan Haji Wada'.",
-        fokus: "Analisis kepemimpinan yang adil dan Piagam Madinah sebagai teladan toleransi."
+        "nama": "Sejarah Peradaban Islam",
+        "kompetensi": {
+          "lama": "memahami",
+          "baru": "Menceritakan\nMenjelaskan"
+        },
+        "rows": [
+          {
+            "lingkup": "Kelas 3 Semester 1",
+            "lama": "Kondisi Bangsa Arab sebelum Islam, Kelahiran, dan Masa Kanak-Kanak Nabi Muhammad saw.",
+            "baru": "Kelahiran dan Masa Kanak-Kanak Nabi Muhammad saw."
+          },
+          {
+            "lingkup": "Kelas 3 Semester 2",
+            "lama": "Masa Remaja dan Pernikahan Nabi Muhammad saw.",
+            "baru": "Masa Remaja dan Pernikahan Nabi Muhammad saw."
+          },
+          {
+            "lingkup": "Kelas 4 Semester 1",
+            "lama": "Nabi Muhammad saw. Diangkat Menjadi Rasul dan Berdakwah",
+            "baru": "Kerasulan dan Dakwah Nabi Muhammad saw. Periode Makkah"
+          },
+          {
+            "lingkup": "Kelas 4 Semester 2",
+            "lama": "Nabi Muhammad saw. Berhijrah",
+            "baru": "Hijrah Nabi Muhammad saw."
+          }
+        ]
       }
-    ],
-    perubahanKelas6: [
+    ]
+  },
+  "faseC": {
+    "fase": "Fase C",
+    "file": "Perubahan_CP_PAI_Fase_C.docx",
+    "elemen": [
       {
-        elemen: "Al-Qur'an dan Hadis",
-        lama: "Sem 1: Q.S. Al-Kafirun / Ad-Duha. Sem 2: Q.S. Al-Hujurat: 13 / Al-A'la.",
-        baru: "Sem 1: Praktik Bacaan Ghunnah & Surah Al-Insyirah. Sem 2: Praktik Tafkhim & Tarqiq (huruf Ra & Lam) + Hadis Berbuat Baik terhadap Teman.",
-        fokus: "Surah Al-Insyirah memberi motivasi mental menjelang ujian kelulusan; tajwid tingkat lanjut."
+        "nama": "Al-Qur'an dan Hadis",
+        "kompetensi": {
+          "lama": "memahami",
+          "baru": "Membaca, menulis, membedakan\nMenjelaskan"
+        },
+        "rows": [
+          {
+            "lingkup": "Kelas 5 Semester 1",
+            "lama": "Q.S. al-Mā'ūn dan Hadis terkait Toleransi",
+            "baru": "Huruf Hijaiah Bersambung (3 Kata atau Lebih) (Praktik Bacaan Mim Sukun)\nSurah al-'Aṣr"
+          },
+          {
+            "lingkup": "Kelas 5 Semester 2",
+            "lama": "Q.S. ar-Rūm/30: 22 dan al-Baqarah/2: 256",
+            "baru": "Huruf Hijaiah Bersambung (3 Kata atau Lebih) (Praktik Bacaan Kalkalah)\nHadis tentang Berbuat Baik kepada Orang Tua dan Guru"
+          },
+          {
+            "lingkup": "Kelas 6 Semester 1",
+            "lama": "QS. Al-Kafirun + Hadis terkait saling menghargai",
+            "baru": "Huruf Hijaiah Bersambung (3 Kata atau Lebih) (Praktik Bacaan Gunah)\nSurah al-Insyiraḥ"
+          },
+          {
+            "lingkup": "Kelas 6 Semester 2",
+            "lama": "Q.S. al-Ḥujurāt/49: 13 dan Hadist terkait",
+            "baru": "Huruf Hijaiah Bersambung (3 Kata atau Lebih) (Praktik Bacaan Tafkhim Tarkik)\nHadis tentang Berbuat Baik terhadap Teman"
+          }
+        ]
       },
       {
-        elemen: "Akidah (Asmaul Husna)",
-        lama: "Sem 1: al-Gaffār, al-'Afuw, al-Wāḥid, aṣ-Ṣamad. Sem 2: Iman kepada Qada & Qadar.",
-        baru: "Sem 1: al-Waliy, al-Ḥamīd, al-'Adl, aṣ-Ṣabūr. Sem 2: Iman Kepada Qada dan Qadar.",
-        fokus: "Pengenalan sifat Allah Yang Melindungi (Al-Waliy), Terpuji (Al-Hamid), Adil, dan Sabar."
+        "nama": "Akidah",
+        "kompetensi": {
+          "lama": "memahami",
+          "baru": "Menjelaskan\nmeyakini"
+        },
+        "rows": [
+          {
+            "lingkup": "Kelas 5 Semester 1",
+            "lama": "Asmaulhusna: al-Bāiś, al-Qawiyyu, al-Muḥyi, al-Mumīt, dan al-Qayyūm",
+            "baru": "Asmaulhusna (al-Ḥalīm, asy-Syakūr, al-Ḥakīm, al-Wadūd)"
+          },
+          {
+            "lingkup": "Kelas 5 Semester 2",
+            "lama": "Iman kepada Hari Akhir",
+            "baru": "Iman kepada Hari Akhir"
+          },
+          {
+            "lingkup": "Kelas 6 Semester 1",
+            "lama": "Asmaulhusna: al-Gaffār, al-'Afuw, al-Wāḥid, dan aṣ-Ṣamad",
+            "baru": "Asmaulhusna (al-Waliy, al-Ḥamīd, al-'Adl, aṣ-Ṣabūr)"
+          },
+          {
+            "lingkup": "Kelas 6 Semester 2",
+            "lama": "Iman Kepada Qada dan Qadar",
+            "baru": "Iman Kepada Qada dan Qadar"
+          }
+        ]
       },
       {
-        elemen: "Akhlak",
-        lama: "Sem 1: Akhlak terhadap Non Muslim. Sem 2: Peduli Lingkungan & Hewan.",
-        baru: "Sem 1: Akhlak terhadap Tetangga dan Non Muslim. Sem 2: Akhlak terhadap Hewan dan Lingkungan.",
-        fokus: "Adab bertetangga majemuk dan kesadaran ekologis (eco-Islamic)."
+        "nama": "Akhlak",
+        "kompetensi": {
+          "lama": "memahami",
+          "baru": "menerapkan"
+        },
+        "rows": [
+          {
+            "lingkup": "Kelas 5 Semester 1",
+            "lama": "Akhlak terhadap Allah Swt. dengan Berdoa dan Bertawakal kepada-Nya,",
+            "baru": "Akhlak terhadap Allah Swt. dengan Berdoa dan Bertawakal kepada-Nya,"
+          },
+          {
+            "lingkup": "Kelas 5 Semester 2",
+            "lama": "Akhlak terhadap Teman dan Tetangga",
+            "baru": "Akhlak terhadap Teman"
+          },
+          {
+            "lingkup": "Kelas 6 Semester 1",
+            "lama": "Akhlak terhadap Non Muslim",
+            "baru": "Akhlak terhadap Tetangga dan Non Muslim"
+          },
+          {
+            "lingkup": "Kelas 6 Semester 2",
+            "lama": "Akhlak terhadap Hewan dan Lingkungan",
+            "baru": "Akhlak terhadap Hewan dan Lingkungan"
+          }
+        ]
       },
       {
-        elemen: "Fikih",
-        lama: "Sem 1: Hukum Makanan/Minuman Halal & Haram. Sem 2: Infak, Sedekah, Hadiah.",
-        baru: "Sem 1: Zakat, Infak dan Sedekah. Sem 2: Wakaf (Pengertian, Dasar Hukum, Jenis, dan Manfaat).",
-        fokus: "Materi Wakaf kini diajarkan mendalam di kelas 6 sebagai filantropi Islam tingkat lanjut."
+        "nama": "Fikih",
+        "kompetensi": {
+          "lama": "memahami",
+          "baru": "Menerapkan"
+        },
+        "rows": [
+          {
+            "lingkup": "Kelas 5 Semester 1",
+            "lama": "Puasa-Puasa Sunah",
+            "baru": "Puasa Wajib dan Sunah"
+          },
+          {
+            "lingkup": "Kelas 5 Semester 2",
+            "lama": "Memahami Zakat",
+            "baru": "Makanan Minuman yang Halal dan Haram."
+          },
+          {
+            "lingkup": "Kelas 6 Semester 1",
+            "lama": "Hukum Makanan dan Minuman yang Halal dan Haram",
+            "baru": "Zakat, Infak dan Sedekah"
+          },
+          {
+            "lingkup": "Kelas 6 Semester 2",
+            "lama": "Infak, Sedekah, dan Hadiah",
+            "baru": "Wakaf (Pengertian, Dasar Hukum, dan Jenis)"
+          }
+        ]
       },
       {
-        elemen: "Tarikh",
-        lama: "Sem 1: Abu Bakar & Umar bin Khattab. Sem 2: Usman bin Affan & Ali bin Abi Thalib.",
-        baru: "Sem 1: Kisah Keteladanan Abu Bakar & Umar bin Khattab. Sem 2: Kisah Keteladanan Usman bin Affan & Ali bin Abi Talib.",
-        fokus: "Refleksi karakter Khulafaur Rasyidin dalam memecahkan masalah umat."
+        "nama": "Sejarah Peradaban Islam",
+        "kompetensi": {
+          "lama": "memahami",
+          "baru": "Menceritakan"
+        },
+        "rows": [
+          {
+            "lingkup": "Kelas 5 Semester 1",
+            "lama": "Kisah Keteladanan Nabi Muhammad saw. Membangun Kota Madinah",
+            "baru": "Kepemimpinan Nabi Muhammad saw. di Madinah"
+          },
+          {
+            "lingkup": "Kelas 5 Semester 2",
+            "lama": "Memahami kisah keteladanan Nabi Muhammad Saw (Perjanjian Hudaibiah, Fathu Makkah, dan Haji Wada)",
+            "baru": "Perjanjian Hudaibiah, Fathu Makkah, dan Haji Wada"
+          },
+          {
+            "lingkup": "Kelas 6 Semester 1",
+            "lama": "Kisah Keteladanan Abu Bakar aṣ-Ṣiddīq dan Umar bin Khattab",
+            "baru": "Kisah Keteladanan Abu Bakar aṣ-Ṣiddīq dan Umar bin Khattab"
+          },
+          {
+            "lingkup": "Kelas 6 Semester 2",
+            "lama": "Kisah Keteladanan Usman bin Affan dan Ali bin Abi Talib",
+            "baru": "Kisah Keteladanan Usman bin Affan dan Ali bin Abi Talib"
+          }
+        ]
       }
     ]
   }
 };
-

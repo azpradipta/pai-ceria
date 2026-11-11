@@ -1,108 +1,105 @@
-# 🕌 PAI Ceria - Sahabat Mengajar Ibu Guru PAI (Kelas 1, 5, dan 6 SD)
+# PAI Ceria
 
-Aplikasi web edukatif modern berbasis **Vue 3 + Tailwind CSS + PWA (Progressive Web App)** yang dirancang khusus untuk memfasilitasi pengajaran Pendidikan Agama Islam & Budi Pekerti (PAI) jenjang Sekolah Dasar.
+Aplikasi belajar Pendidikan Agama Islam dan Budi Pekerti SD kelas 1, 5, dan 6 dengan Vue 3, Vue Router, Pinia, Vite, dan PWA.
 
-Aplikasi ini menyajikan materi lengkap untuk seluruh bab pada **Kelas 1, 5, dan 6 SD**, dengan komparasi langsung antara **CP Lama (Buku Siswa Kemdikbud)** dan **CP Baru (Penyesuaian Keputusan BSKAP No. 020/2026)**, dilengkapi ragam permainan edukatif kreatif bertema islami yang disesuaikan dengan karakteristik materi tiap bab.
+Tersedia 60 versi bab: 10 bab per kelas untuk CP Lama dan CP Baru. Setiap bab memuat tujuan, materi, aktivitas, latihan dengan pembahasan, refleksi, rujukan, dan permainan. Tanda selesai serta hasil latihan disimpan di browser perangkat.
 
----
+## Menjalankan
 
-## 🌟 Fitur Utama
+Gunakan Node.js 22 dan pnpm, lalu jalankan dari direktori proyek:
 
-### 1. Cakupan Materi Lengkap (30 Bab untuk 3 Jenjang Kelas)
-- **Kelas 1 SD (Fase A - 10 Bab):**
-  - Mengenal Huruf Hijaiah, Harakat Dasar, dan Makharijul Huruf (Al-Halaq, Asy-Syafatain, Al-Lisan).
-  - 6 Rukun Iman & 5 Rukun Islam beserta Dua Kalimat Syahadat (Syahadatain).
-  - Pembiasaan Akhlak Menyucikan Allah (Tasbih "Subhanallah") dan Memuji-Nya (Tahmid "Alhamdulillah").
-  - Tata Cara Bersuci Lengkap: Wudu, Tayamum, dan Adab Istinja yang higienis.
-  - Kisah Keteladanan Nabi Adam a.s. (Taubat & Rendah Hati) serta Nabi Idris a.s. (Rajin Belajar & Menulis).
-- **Kelas 5 SD (Fase C - 10 Bab):**
-  - Surah Al-Mā'ūn (Kepedulian anak yatim), Surah Al-'Aṣr (Disiplin waktu), dan Tajwid Mim Sukun (Ikhfa Syafawi, Idgham Mimi, Idzhar Syafawi).
-  - Tajwid Qalqalah (Sugra & Kubra) dan Hadis Birrul Walidain (Berbakti kepada Orang Tua dan Guru).
-  - Asmaul Husna: Al-Ḥalīm, Asy-Syakūr, Al-Ḥakīm, Al-Wadūd (CP Baru) serta Al-Ba'its, Al-Qawiyyu, Al-Muhyi, Al-Mumit, Al-Qayyum (Buku).
-  - Fikih Puasa Wajib (Ramadan, Qadha, Nazar) & Puasa Sunah (Senin-Kamis, Syawal, Arafah).
-  - Fikih Makanan & Minuman Halalan Thayyiban serta menjauhi yang haram.
-  - Kepemimpinan Rasulullah di Madinah (Piagam Madinah) serta peristiwa damai Hudaibiah, Fathu Makkah, dan Haji Wada'.
-- **Kelas 6 SD (Fase C - 10 Bab):**
-  - Surah Ad-Duha, Surah Al-Insyirah (Optimisme kelapangan dada), dan Tajwid Ghunnah Musyaddadah (Nun & Mim Tasydid).
-  - Tajwid Tafkhim (Tebal) dan Tarqiq (Tipis) pada Lam Jalalah & Ra' serta Hadis Menyayangi Teman.
-  - Asmaul Husna: Al-Waliy, Al-Ḥamīd, Al-'Adl, Aṣ-Ṣabūr.
-  - Fikih Zakat, Infak, Sedekah (ZIS), 8 Asnaf Mustahiq, dan Fikih Wakaf (Filantropi abadi umat Islam).
-  - Iman kepada Qada dan Qadar: Membedakan Takdir Mubram (kematian, peredaran alam) vs Takdir Mu'allaq (ikhtiar, belajar, doa).
-  - Akhlak Ramah Lingkungan (Eco-Islam) dan Menyayangi Hewan.
-  - Sejarah 4 Khulafaur Rasyidin (Abu Bakar, Umar, Usman, dan Ali r.a.).
-
-### 2. Fitur Khusus untuk Ibu Guru
-- **Sakelar Mode Kurikulum (CP Baru vs CP Lama):** Ibu guru bisa langsung beralih melihat versi materi buku teks cetak atau versi capaian pembelajaran revisi terbaru dalam satu sentuhan.
-- **Halaman Analisis Perubahan CP:** Panduan komparasi resmi tabel pergeseran materi dan catatan pedagogis untuk guru.
-- **Mode Layar Mengajar (Presentation Mode):** Teks dan kartu materi otomatis diperbesar untuk kenyamanan saat HP/laptop ibu dihubungkan ke proyektor kelas atau TV interaktif.
-- **Audio Pelafalan Sintetis:** Dilengkapi audio reader untuk mendengarkan lafal teks Arab dan ayat Al-Qur'an secara offline.
-- **Jurnal Catatan Mengajar Guru:** Ibu guru dapat mencatat tanggal pelaksanaan, daftar siswa yang butuh remidi, atau ide ice breaking di setiap bab yang tersimpan aman di perangkat.
-
-### 3. Ragam Games Interaktif Kreatif (Bukan Sekadar Tanya Jawab Biasa!)
-Games dirancang bervariasi sesuai karakteristik materi:
-- 🎯 **Taman Huruf & Harakat Pop:** Mencocokkan huruf hijaiah dengan makhraj dan harakat.
-- 🧩 **Menyusun 6 Bintang Rukun Iman & 5 Menara Rukun Islam:** Permainan menyusun pilar pondasi agama secara urut.
-- 💧 **Petualangan Wudu Ceria:** Menyusun langkah urutan bersuci dari awal cuci tangan hingga tertib.
-- 🎴 **Kartu Memori Asmaul Husna:** Permainan flip & match kartu nama dan arti keluhuran budi.
-- 🔍 **Detektif Tajwid Mim Sukun, Qalqalah & Ghunnah:** Menganalisis hukum bacaan dalam potongan ayat Al-Qur'an.
-- 🛒 **Keranjang Halal Thayyib Express:** Menyortir makanan halal vs haram ke dalam gerobak belanjaan.
-- ⚖️ **Timbangan Takdir Mubram vs Mu'allaq:** Membedakan peristiwa yang pasti dengan yang dipengaruhi ikhtiar dan doa.
-- 📦 **Simulasi Kotak ZIS & Manajer Wakaf:** Menyalurkan bantuan kepada 8 asnaf dan memilih harta wakaf abadi.
-- 🧭 **Petualangan Sejarah Sahabat & Nabi:** Menjelajahi jejak kepemimpinan Rasulullah dan Khulafaur Rasyidin.
-- 🎉 **Audio Fanfare & Efek Konfeti:** Memberikan apresiasi bintang prestasi untuk membakar semangat belajar anak-anak!
-
----
-
-## 💡 Jawaban Pertanyaan: "Perlu Database Gak Kalau Mau Dideploy?"
-
-### **JAWABAN: TIDAK PERLU DATABASE BACKEND SERVER EKSTERNAL!**
-
-Berikut alasan teknis dan keunggulannya:
-
-1. **Sifat Konten Pendidikan Bersifat Statis & Terstruktur:**
-   Materi PAI, ayat Al-Qur'an, transliterasi, tajwid, dan kisi-kisi game adalah data kurikulum resmi yang sudah paten. Menyimpannya langsung di frontend sebagai modul data terstruktur membuat aplikasi **terbuka instan (tanpa jeda loading server)**.
-2. **Bisa Berjalan 100% Offline (PWA Offline First):**
-   Ibu sering mengajar di ruang kelas sekolah yang sinyal internetnya kurang stabil. Tanpa dependensi database online, aplikasi tetap bisa diakses lancar di smartphone atau laptop ibu guru tanpa kuota.
-3. **Penyimpanan Lokal (LocalStorage):**
-   Skor game anak, bintang prestasi, serta **Catatan Guru & Refleksi Ibu** disimpan langsung di browser perangkat ibu secara otomatis tanpa perlu registrasi akun atau database server.
-4. **Bebas Biaya Server & Pemeliharaan (100% Gratis):**
-   Karena berupa Single Page Application (SPA) murni, aplikasi ini dapat dideploy secara gratis selamanya di platform hosting statis modern tanpa takut kena tagihan database bulanan.
-
----
-
-## 🚀 Panduan Cara Menjalankan & Deploy
-
-### A. Menjalankan di Komputer Lokal
-```bash
-# Jalankan development server
-pnpm run dev
-
-# Buat build produksi
-pnpm run build
-
-# Pratinjau hasil build
-pnpm run preview
+```sh
+pnpm install --frozen-lockfile
+pnpm dev
+pnpm test
+pnpm build
+pnpm preview
 ```
 
-### B. Cara Deploy Gratis ke Internet
+Build produksi berada di `dist/`. Aplikasi tidak memerlukan server API atau database.
 
-#### 1. Deploy ke Vercel (Sangat Direkomendasikan - Paling Cepat & Mudah)
-1. Unggah folder proyek ini ke repositori **GitHub**.
-2. Buka [vercel.com](https://vercel.com) dan masuk dengan akun GitHub.
-3. Klik **"Add New Project"** lalu pilih repositori proyek ini.
-4. Framework Preset akan otomatis terdeteksi sebagai **Vite**.
-5. Klik **"Deploy"**. Dalam hitungan detik, web ibu sudah online dengan domain gratis seperti: `https://pai-ceria.vercel.app`!
+## Navigasi kurikulum
 
-#### 2. Deploy ke Netlify
-1. Buka [netlify.com](https://netlify.com) dan hubungkan akun GitHub.
-2. Set **Build command**: `pnpm run build`
-3. Set **Publish directory**: `dist`
-4. Klik **"Deploy site"**. Web langsung aktif dan siap dibagikan ke siswa dan wali murid.
+Alamat menyatakan versi yang sedang dibaca:
 
----
+- `/kelas/6/bab/k6-lama-bab-10`
+- `/kelas/6/bab/k6-baru-bab-10`
+- `/kelas/6/bab/k6-baru-bab-10/game`
+- `/kelas/6?cp=cp-baru`
 
-## 📱 Cara Memasang Sebagai Aplikasi di HP (PWA)
-1. Buka link web di browser Google Chrome (Android) atau Safari (iOS).
-2. Pada banner atas yang muncul, klik tombol **"Pasang PWA"** atau buka menu browser titik tiga (⋮) lalu pilih **"Tambahkan ke Layar Utama" (Add to Home screen)**.
-3. Ikon aplikasi **PAI Ceria** akan muncul di layar utama HP layaknya aplikasi Android/iOS native dan dapat dibuka kapan saja bahkan tanpa kuota internet!
+Pilihan CP mengubah URL dan isi materi. Tautan langsung, refresh, serta tombol kembali/maju mengikuti versi dari URL. Perpindahan mempertahankan nomor bab; topik nomor bab yang sama dapat berbeda antarversi. Alamat tidak valid menampilkan halaman tidak ditemukan.
 
+## Sumber dan pengembangan materi
+
+CP Lama mengikuti PDF yang disertakan:
+
+- Kelas I: Muhammad Nurzakun dan Joko Santoso, 2021; halaman cetak 1–184 untuk sepuluh bab.
+- Kelas V: `KELAS 5_BUKU SISWA.pdf`, hasil pindai; daftar isi dan halaman rujukan diperiksa secara visual.
+- Kelas VI: Nazirwan dan Kholili Abdullah, 2022; halaman cetak 1–192 untuk sepuluh bab.
+
+CP Baru mengikuti lingkup `Perubahan_CP_PAI_Fase_A.docx` dan `Perubahan_CP_PAI_Fase_C.docx`. Fase B disajikan sebagai referensi dalam panduan CP; materi interaktif tersedia untuk kelas 1, 5, dan 6.
+
+Nomor CP 046/2025 dan 020/2026 mengikuti judul DOCX yang disertakan. Buku PDF terbit lebih awal dan tidak dianggap sebagai buku edisi CP 046/2025. Kolom lama DOCX dapat berbeda dari urutan buku. Penjelasan, aktivitas, contoh kasus, dan soal dikembangkan sebagai materi pendamping, bukan kutipan atau pengganti keseluruhan buku.
+
+Materi berada dalam:
+
+- `src/data/kelas1Data.js`, `kelas5Data.js`, `kelas6Data.js`: data dasar dan bacaan.
+- `src/data/materiPengayaan.js`: penjelasan tematik, aktivitas, dan soal pengembangan.
+- `src/data/enrichChapter.js`: pemetaan topik ke bab, koreksi terhadap PDF, rujukan, serta normalisasi game.
+- `src/data/bacaanTambahan.js`: bacaan tambahan Ad-Duha dan Al-A’la.
+- `src/data/kurikulumInfo.js`: transkripsi tabel ketiga DOCX.
+
+Untuk mengembangkan materi, baca sumber, perbarui topik dan pemetaan, lalu jalankan `pnpm test` dan `pnpm build`. Cantumkan lokasi rujukan serta pisahkan kutipan dari contoh pengembangan. Bacaan Al-Qur'an mengikuti bimbingan guru; suara pembaca merupakan sintesis teks perangkat, bukan rekaman qari.
+
+Ekspor semua versi materi menjadi JSON untuk ditinjau atau dikembangkan lagi:
+
+```sh
+pnpm materi:export
+# Atau tentukan lokasi hasil:
+node scripts/export-materials.mjs generated/materi-pai.json
+```
+
+Untuk mengekstrak ulang sumber lokal, gunakan Python 3.11 atau lebih baru:
+
+```sh
+python -m pip install -r scripts/requirements-sources.txt
+python scripts/extract-sources.py
+```
+
+Hasil ekstraksi berada di `.tools/sources/` berikut hash sumber. Halaman tanpa lapisan teks ditandai. Buku pindai perlu diperiksa visual atau melalui OCR. Ekstraksi tidak otomatis menciptakan materi atau menganggap hasil OCR sudah benar.
+
+## Pengujian browser
+
+Tes browser memeriksa 60 halaman materi dan 60 halaman game, pergantian CP, refresh, riwayat browser, filter kelas, permainan kuis/kartu/urutan, penyimpanan hasil, URL tidak valid, serta lebar layar 360, 390, 768, dan 1365 piksel.
+
+```sh
+python -m pip install -r tests/requirements-browser.txt
+python -m playwright install chromium
+# Jalankan pnpm dev pada terminal lain, kemudian:
+python tests/browser_smoke.py http://127.0.0.1:5173
+python tests/audio_browser.py http://127.0.0.1:5173
+# Setelah pnpm build dan pnpm preview, periksa versi produksi serta offline:
+python tests/production_smoke.py http://127.0.0.1:4173
+```
+
+Untuk browser yang sudah terpasang, atur `PLAYWRIGHT_CHROMIUM_EXECUTABLE` ke lokasi executable. Pemeriksaan data menggunakan `pnpm test` dan tidak membutuhkan browser.
+
+## Suara belajar
+
+Efek tombol dan game mulai setelah interaksi pertama. Tombol **Suara** di header membuka pengaturan mute, volume, **Coba suara**, dan musik belajar opsional. Pilihan ini tersimpan di browser perangkat. Melodi serta efek disintesis langsung di aplikasi dan tidak memerlukan unduhan audio atau backend. Musik berhenti saat tab disembunyikan dan mengecil selama narasi.
+
+Tombol **Dengarkan pengantar** dan **Dengarkan penjelasan** membaca materi menggunakan suara perangkat, dengan prioritas bahasa Indonesia. Hanya satu narasi diputar sekaligus. Mematikan suara aplikasi menghentikan musik, efek, dan narasi. Ketersediaan narasi mengikuti dukungan bahasa browser/perangkat; jika gagal, aplikasi menampilkan keterangan dan tetap bisa digunakan.
+
+Tes audio memeriksa sinyal keluaran Web Audio, musik, mute, volume, penyimpanan pilihan, serta kontrol pada layar 320–1365 piksel. Pemilihan dan pergantian narasi diuji dengan simulasi suara perangkat; tes otomatis tidak memverifikasi keluaran pengeras suara fisik.
+
+## Deploy
+
+`vercel.json` dan `netlify.toml` menyediakan build `pnpm build`, keluaran `dist`, dan fallback SPA agar alamat bab dapat dibuka langsung. Gunakan salah satu konfigurasi tersebut atau hosting statis lain dengan fallback ke `index.html`.
+
+Rujukan konfigurasi: [Vite pada Vercel](https://vercel.com/docs/frameworks/frontend/vite) dan [rewrite Netlify](https://docs.netlify.com/manage/routing/redirects/rewrites-proxies/).
+
+Sebelum menerbitkan, jalankan `pnpm test` dan `pnpm build`. Unggah hasil `dist/` atau hubungkan repositori ke hosting. Pekerjaan lokal ini tidak otomatis menerbitkan situs. PDF/DOCX di akar repositori tidak disalin ke build; aplikasi menyertakan materi pengembangan dan keterangan rujukan.
+
+## Penyimpanan dan offline
+
+Aplikasi dapat dibuka tanpa akun. Tanda selesai dan hasil latihan tersimpan di localStorage perangkat; membersihkan data browser dapat menghapusnya. Data tidak disinkronkan antarperangkat. Materi produksi dicache setelah service worker berhasil terpasang. Ketersediaan suara dan aksesnya tanpa internet mengikuti perangkat.

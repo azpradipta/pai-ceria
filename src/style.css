@@ -5,7 +5,17 @@
 @layer base {
   html {
     -webkit-tap-highlight-color: transparent;
+    scroll-behavior: smooth;
+    scroll-padding-top: 9rem;
   }
+  body { overflow-wrap: break-word; }
+  :focus-visible { outline: 3px solid #059669; outline-offset: 4px; }
+  button, a, summary { -webkit-tap-highlight-color: transparent; }
+}
+
+@layer components {
+  .eyebrow { @apply text-[11px] font-extrabold tracking-widest text-emerald-700 mb-3; }
+  .section-title { @apply text-2xl sm:text-3xl font-black tracking-tight text-slate-900 leading-snug; }
 }
 
 /* Custom Arabic Typography */
@@ -53,5 +63,9 @@
 /* Safe Area Inset for iOS and mobile notches */
 .pb-safe {
   padding-bottom: env(safe-area-inset-bottom, 1rem);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { animation: none !important; transition: none !important; scroll-behavior: auto !important; }
 }
 

@@ -7,15 +7,16 @@ export default defineConfig({
     vue(),
     VitePWA({
       registerType: 'autoUpdate',
-      includeAssets: ['favicon.ico', 'apple-touch-icon.png', 'masked-icon.svg'],
+      includeAssets: ['favicon.ico', 'apple-touch-icon.png', 'brand-mark.svg'],
       manifest: {
-        name: 'PAI Ceria - Sahabat Mengajar Ibu Guru PAI SD',
+        name: 'PAI Ceria - Belajar PAI SD',
         short_name: 'PAI Ceria',
         description: 'Aplikasi Pembelajaran PAI SD Kelas 1, 5, dan 6 (Kurikulum Merdeka CP Lama & CP Baru) Dilengkapi Game Edukatif Interaktif',
         theme_color: '#0F766E',
         background_color: '#F0FDF4',
         display: 'standalone',
-        orientation: 'portrait',
+        start_url: '/',
+        scope: '/',
         icons: [
           {
             src: '/pwa-192x192.png',
@@ -28,7 +29,8 @@ export default defineConfig({
             type: 'image/png'
           }
         ]
-      }
+      },
+      workbox: { navigateFallback: '/index.html', cleanupOutdatedCaches: true },
     })
   ],
   resolve: {

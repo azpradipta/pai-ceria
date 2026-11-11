@@ -1,13 +1,25 @@
-import { kelas1Data } from './kelas1Data';
-import { kelas5Data } from './kelas5Data';
-import { kelas6Data } from './kelas6Data';
-import { perbandinganCP } from './kurikulumInfo';
+import { kelas1Data } from './kelas1Data.js';
+import { kelas5Data } from './kelas5Data.js';
+import { kelas6Data } from './kelas6Data.js';
+import { perbandinganCP } from './kurikulumInfo.js';
+import { enrichChapter } from './enrichChapter.js';
 
-export const allKelasData = {
+const originalKelasData = {
   1: kelas1Data,
   5: kelas5Data,
   6: kelas6Data,
 };
+
+export const allKelasData = Object.fromEntries(Object.entries(originalKelasData).map(([kelas, data]) => [kelas, {
+  ...data,
+  ...Object.fromEntries([['cpLama', 'cp-lama'], ['cpBaru', 'cp-baru']].map(([key, mode]) => [key, {
+    deskripsi: mode === 'cp-lama'
+      ? `Materi kelas ${kelas} mengikuti urutan buku siswa PDF, dilengkapi penjelasan, aktivitas, dan latihan pemahaman.`
+      : `Materi kelas ${kelas} dikembangkan mengikuti lingkup dokumen perubahan CP fase ${Number(kelas) === 1 ? 'A' : 'C'}, dengan praktik dan latihan pendamping.`,
+    semester1: data[key].semester1.map(chapter => enrichChapter(chapter, Number(kelas), mode)),
+    semester2: data[key].semester2.map(chapter => enrichChapter(chapter, Number(kelas), mode)),
+  }]))
+}]));
 
 export { perbandinganCP };
 
@@ -23,80 +35,22 @@ export function getAllBabsForKelas(kelas, semester = 0, mode = 'cp-baru') {
   return [...(curObj.semester1 || []), ...(curObj.semester2 || [])];
 }
 
-export function getMateriByKelasAndBab(kelas, babId, mode = 'cp-baru') {
-  const data = allKelasData[kelas];
-  if (!data) return null;
-
-  // Search first in target curriculum mode
-  const targetCur = (mode === 'cp-lama') ? data.cpLama : data.cpBaru;
-  if (targetCur) {
-    const all = [...(targetCur.semester1 || []), ...(targetCur.semester2 || [])];
-    const match = all.find(b => b.id === babId);
-    if (match) return { ...match, mode };
-  }
-
-  // Fallback search in opposite mode if user switched mode while on detail page
-  const otherMode = (mode === 'cp-lama') ? 'cp-baru' : 'cp-lama';
-  const otherCur = (otherMode === 'cp-lama') ? data.cpLama : data.cpBaru;
-  if (otherCur) {
-    const allOther = [...(otherCur.semester1 || []), ...(otherCur.semester2 || [])];
-    const matchOther = allOther.find(b => b.id === babId);
-    if (matchOther) return { ...matchOther, mode: otherMode };
-  }
-
-  // If still not matched, check if babId contains a bab number and match by bab number
-  const babNumberMatch = babId?.match(/bab[^\d]*(\d+)/i);
-  if (babNumberMatch) {
-    const bNum = Number(babNumberMatch[1]);
-    const curList = getAllBabsForKelas(kelas, 0, mode);
-    const byNum = curList.find(b => b.bab === bNum);
-    if (byNum) return { ...byNum, mode };
-  }
-
-  return null;
+export function getMateriByKelasAndBab(kelas, babId) {
+  if (typeof babId !== 'string') return null;
+  const parsed = babId.match(/^k(1|5|6)-(lama|baru)-bab-(10|[1-9])$/);
+  if (!parsed || Number(parsed[1]) !== Number(kelas)) return null;
+  const mode = parsed[2] === 'lama' ? 'cp-lama' : 'cp-baru';
+  const chapter = getAllBabsForKelas(kelas, 0, mode).find(item => item.id === babId);
+  return chapter ? { ...chapter, mode } : null;
 }
-
-// LocalStorage helpers
 const STORAGE_KEY_PROGRESS = 'pai_ceria_student_progress_v1';
-const STORAGE_KEY_NOTES = 'pai_ceria_teacher_notes_v1';
-
 export function getSavedProgress() {
   try {
-    const raw = localStorage.getItem(STORAGE_KEY_PROGRESS);
-    return raw ? JSON.parse(raw) : { stars: 0, completedGames: {}, readChapters: {} };
-  } catch (e) {
-    return { stars: 0, completedGames: {}, readChapters: {} };
-  }
+    const saved = JSON.parse(localStorage.getItem(STORAGE_KEY_PROGRESS)) || {};
+    return { completedGames: saved.completedGames && typeof saved.completedGames === 'object' ? saved.completedGames : {},
+      readChapters: saved.readChapters && typeof saved.readChapters === 'object' ? saved.readChapters : {} };
+  } catch { return { completedGames: {}, readChapters: {} }; }
 }
-
 export function saveProgress(progress) {
-  try {
-    localStorage.setItem(STORAGE_KEY_PROGRESS, JSON.stringify(progress));
-  } catch (e) {
-    console.error('Failed to save progress to localStorage', e);
-  }
-}
-
-export function getTeacherNotes() {
-  try {
-    const raw = localStorage.getItem(STORAGE_KEY_NOTES);
-    return raw ? JSON.parse(raw) : {};
-  } catch (e) {
-    return {};
-  }
-}
-
-export function saveTeacherNote(babId, noteText) {
-  try {
-    const notes = getTeacherNotes();
-    notes[babId] = {
-      text: noteText,
-      updatedAt: new Date().toISOString()
-    };
-    localStorage.setItem(STORAGE_KEY_NOTES, JSON.stringify(notes));
-    return true;
-  } catch (e) {
-    console.error('Failed to save teacher note', e);
-    return false;
-  }
+  try { localStorage.setItem(STORAGE_KEY_PROGRESS, JSON.stringify(progress)); } catch { /* Learning remains available when storage is unavailable. */ }
 }

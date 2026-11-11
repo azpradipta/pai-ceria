@@ -2,13 +2,13 @@
   <div v-if="babData" class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-6 space-y-8">
     
     <!-- Top Breadcrumb & Navigation -->
-    <div class="flex items-center justify-between text-xs sm:text-sm">
-      <router-link :to="`/kelas/${kelas}`" class="inline-flex items-center gap-1 font-bold text-slate-500 hover:text-emerald-700">
+    <div class="flex flex-wrap items-center justify-between gap-3 text-xs sm:text-sm">
+      <router-link :to="classLocation(kelas)" class="inline-flex items-center gap-1 font-bold text-slate-500 hover:text-emerald-700">
         <span>←</span>
         <span>Kembali ke Daftar Bab Kelas {{ kelas }}</span>
       </router-link>
 
-      <div class="flex items-center gap-2">
+      <div class="flex flex-wrap items-center gap-2">
         <button
           @click="markRead"
           class="inline-flex items-center gap-1 px-3 py-1.5 rounded-full font-bold transition-all text-xs"
@@ -36,10 +36,10 @@
         <span class="text-2xl">{{ currentMode === 'cp-baru' ? '✨' : '📖' }}</span>
         <div>
           <span class="font-black uppercase tracking-wide">
-            {{ currentMode === 'cp-baru' ? 'Versi Materi: CP Baru (Revisi BSKAP 020/2026 Word Docx)' : 'Versi Materi: CP Lama (Buku Siswa Kemdikbud Cetak)' }}
+            {{ currentMode === 'cp-baru' ? 'Versi Materi: CP Baru (Dokumen Perubahan CP)' : 'Versi Materi: CP Lama (Buku Siswa Kemdikbud Cetak)' }}
           </span>
           <p class="text-slate-600 text-xs mt-0.5">
-            {{ currentMode === 'cp-baru' ? 'Materi ini disesuaikan dengan aturan capaian pembelajaran revisi terbaru di Word docx.' : 'Materi ini mengikuti teks dan urutan buku cetak siswa Kemdikbud.' }}
+            {{ currentMode === 'cp-baru' ? 'Materi dikembangkan mengikuti lingkup dokumen perubahan CP yang disertakan.' : 'Materi mengikuti teks dan urutan buku cetak siswa Kemdikbud.' }}
           </p>
         </div>
       </div>
@@ -48,7 +48,7 @@
         @click="switchCurriculumMode"
         class="self-start sm:self-auto px-4 py-2 rounded-xl font-black text-xs bg-white shadow-sm border border-slate-300 hover:bg-slate-50 transition-all flex items-center gap-1.5 active:scale-95 shrink-0"
       >
-        <span>Lihat Versi {{ currentMode === 'cp-baru' ? '📖 CP Lama (Buku)' : '✨ CP Baru (Docx)' }}</span>
+        <span>Lihat Versi {{ currentMode === 'cp-baru' ? '📖 CP Lama (Buku)' : '✨ CP Baru' }}</span>
         <span>⇄</span>
       </button>
     </div>
@@ -114,9 +114,10 @@
         <span>📖</span>
         <span>Pengantar Materi Pembelajaran</span>
       </h3>
-      <p class="text-sm sm:text-base text-slate-700 leading-relaxed font-medium">
+      <p class="text-sm sm:text-base text-slate-700 leading-relaxed font-normal">
         {{ babData.materi?.pengantar }}
       </p>
+      <AudioSynthesizerReader :text="babData.materi.pengantar" label="Dengarkan pengantar" />
     </div>
 
     <!-- Sub-Bab Detailed Material Sections -->
@@ -127,7 +128,7 @@
         class="bg-white rounded-3xl p-6 sm:p-8 shadow-sm border border-slate-200/90 space-y-6"
       >
         <!-- Sub-Bab Header with Dedicated Illustration -->
-        <div class="flex items-center justify-between border-b border-slate-100 pb-4 gap-4">
+        <div class="flex flex-col sm:flex-row sm:items-center justify-between border-b border-slate-100 pb-4 gap-4">
           <div class="flex items-center gap-3">
             <div class="w-12 h-12 rounded-2xl bg-emerald-50 border border-emerald-200 flex items-center justify-center shrink-0">
               <IslamicIllustration :name="sub.ilustrasi || babData.icon || 'quran'" className="w-9 h-9" />
@@ -140,9 +141,9 @@
           </div>
 
           <AudioSynthesizerReader
-            v-if="sub.dalil || sub.lafal"
-            :text="sub.dalil?.latin || sub.lafal?.latin || sub.subJudul"
-            label="Dengarkan Suara"
+            v-if="sub.uraian"
+            :text="sub.uraian"
+            label="Dengarkan penjelasan"
           />
         </div>
 
@@ -153,7 +154,7 @@
 
         <!-- Dalil Naqli Al-Qur'an / Hadis Box -->
         <div v-if="sub.dalil" class="bg-emerald-50/70 border-2 border-emerald-300/80 rounded-3xl p-6 space-y-3 shadow-sm">
-          <div class="flex items-center justify-between">
+          <div class="flex flex-wrap items-center justify-between gap-3">
             <span class="text-xs font-black text-emerald-900 uppercase tracking-wider flex items-center gap-1.5">
               <span>📖</span> Dalil Naqli (Al-Qur'an & Hadis)
             </span>
@@ -161,7 +162,7 @@
           </div>
 
           <div class="text-right py-2">
-            <p class="font-arabic text-2xl sm:text-3xl text-slate-900 leading-loose">
+            <p lang="ar" dir="rtl" class="font-arabic text-2xl sm:text-3xl text-slate-900 leading-loose">
               {{ sub.dalil.arab }}
             </p>
           </div>
@@ -178,7 +179,7 @@
 
         <!-- Kalimat Thayyibah Box -->
         <div v-if="sub.lafal" class="bg-amber-50/70 border-2 border-amber-300/80 rounded-3xl p-6 space-y-3 shadow-sm">
-          <div class="flex items-center justify-between">
+          <div class="flex flex-wrap items-center justify-between gap-3">
             <span class="text-xs font-black text-amber-900 uppercase tracking-wider flex items-center gap-1.5">
               <span>✨</span> Kalimat Thayyibah Mulia
             </span>
@@ -203,12 +204,13 @@
 
         <!-- Ayat List (Surah Al-Fatihah / Al-Ma'un / Al-Insyirah / Al-Duha / Al-Ikhlas) -->
         <div v-if="sub.ayatList || sub.ayatPenting" class="space-y-3.5">
+          <p class="text-xs text-slate-500 leading-relaxed">Bacaan dan transliterasi · tombol suara membacakan teks Latin melalui perangkat. Untuk makhraj dan tajwid, ikuti bimbingan guru.</p>
           <div
             v-for="(ayat, aIdx) in (sub.ayatList || sub.ayatPenting)"
             :key="aIdx"
             class="p-4 rounded-2xl bg-slate-50 border border-slate-200 space-y-2 hover:bg-emerald-50/40 transition-colors"
           >
-            <div class="flex items-center justify-between">
+            <div class="flex flex-wrap items-center justify-between gap-3">
               <span class="w-7 h-7 rounded-full bg-emerald-600 text-white font-bold text-xs flex items-center justify-center">
                 {{ ayat.no || (aIdx + 1) }}
               </span>
@@ -309,7 +311,7 @@
             class="p-4 rounded-2xl bg-amber-50/80 border border-amber-200 space-y-2"
           >
             <div class="flex items-center justify-between">
-              <span class="font-black text-sm text-amber-950">{{ asm.nama }}</span>
+            <span class="font-black text-sm text-amber-950">{{ asm.nama }}</span>
               <span v-if="asm.arti" class="text-xs font-bold px-2 py-0.5 rounded-full bg-amber-200 text-amber-900">{{ asm.arti }}</span>
             </div>
             <p v-if="asm.makna || asm.penjelasan" class="text-xs text-slate-700 leading-relaxed font-medium">
@@ -358,8 +360,62 @@
           </div>
         </div>
 
+        <div v-for="bacaan in sub.bacaanTambahan" :key="bacaan.judul" class="rounded-2xl bg-emerald-50 border border-emerald-200 p-5 space-y-3">
+          <h4 class="font-bold text-emerald-900">{{ bacaan.judul }}</h4>
+          <p class="font-arabic text-2xl text-right" lang="ar" dir="rtl">{{ bacaan.arab }}</p>
+          <p class="italic text-sm text-slate-600">{{ bacaan.latin }}</p>
+          <p class="text-sm text-slate-700">{{ bacaan.arti }}</p>
+        </div>
+
+        <!-- Generic poin list -->
+        <div v-if="sub.poinList" class="space-y-2">
+          <div
+            v-for="(poin, pIdx) in sub.poinList"
+            :key="pIdx"
+            class="flex items-start gap-2 p-3 rounded-xl bg-slate-50 border border-slate-100"
+          >
+            <span class="text-emerald-600 font-black shrink-0 mt-0.5">•</span>
+            <span class="text-xs sm:text-sm text-slate-700 font-medium">{{ poin }}</span>
+          </div>
+        </div>
+
+        <!-- Tabel / info blocks -->
+        <div v-if="sub.tabelInfo" class="overflow-x-auto rounded-2xl border border-slate-200">
+          <table class="w-full text-xs sm:text-sm">
+            <thead>
+              <tr class="bg-emerald-700 text-white">
+                <th v-for="(col, cIdx) in sub.tabelInfo.header" :key="cIdx" class="px-3 py-2 text-left font-black">{{ col }}</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr
+                v-for="(row, rIdx) in sub.tabelInfo.rows"
+                :key="rIdx"
+                :class="rIdx % 2 === 0 ? 'bg-white' : 'bg-emerald-50/40'"
+              >
+                <td v-for="(cell, cIdx) in row" :key="cIdx" class="px-3 py-2 text-slate-700">{{ cell }}</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
       </div>
     </div>
+
+    <section class="bg-white rounded-3xl p-6 sm:p-8 border border-slate-200 space-y-4">
+      <h2 class="text-xl font-black text-emerald-900">Ayo praktikkan</h2>
+      <p class="text-sm text-slate-500">Aktivitas pengembangan · lakukan dengan pendamping sesuai kebutuhan.</p>
+      <ol class="list-decimal pl-5 space-y-3 text-sm sm:text-base text-slate-700 leading-relaxed"><li v-for="activity in babData.materi.aktivitas" :key="activity">{{ activity }}</li></ol>
+    </section>
+    <section class="bg-white rounded-3xl p-6 sm:p-8 border border-slate-200 space-y-5">
+      <h2 class="text-xl font-black text-emerald-900">Cek pemahamanmu</h2>
+      <p class="text-sm text-slate-500">Coba jawab terlebih dahulu, lalu buka pembahasannya.</p>
+      <article v-for="(q, index) in babData.materi.latihan" :key="q.tanya" class="border-b border-slate-100 pb-5 space-y-3">
+        <h3 class="text-sm sm:text-base font-bold text-slate-800">{{ index + 1 }}. {{ q.tanya }}</h3>
+        <details class="rounded-xl bg-emerald-50 p-4"><summary class="cursor-pointer text-xs font-bold text-emerald-800">Lihat jawaban dan pembahasan</summary><p class="text-sm text-slate-700 mt-3 leading-relaxed"><strong>{{ q.opsi[q.benar] }}.</strong> {{ q.alasan }}</p></details>
+      </article>
+      <div class="bg-amber-50 rounded-2xl p-5 space-y-2"><h3 class="font-black text-sm text-amber-900">Renungkan</h3><p class="text-sm text-slate-700 leading-relaxed">{{ babData.materi.refleksi }}</p></div>
+    </section>
 
     <!-- Mutiara Budi Pekerti / Karakter Card -->
     <div v-if="babData.materi?.budiPekerti" class="bg-gradient-to-r from-emerald-500 to-teal-600 text-white rounded-3xl p-6 sm:p-8 shadow-md flex items-center gap-4">
@@ -385,37 +441,12 @@
       </ul>
     </div>
 
-    <!-- Catatan Refleksi Mengajar untuk Ibu Guru -->
-    <div class="bg-white rounded-3xl p-6 sm:p-8 shadow-sm border border-amber-200 space-y-4">
-      <div class="flex items-center justify-between">
-        <div class="flex items-center gap-2">
-          <span class="text-2xl">👩‍🏫</span>
-          <div>
-            <h3 class="text-base sm:text-lg font-black text-slate-900">Catatan Mengajar Ibu Guru</h3>
-            <p class="text-xs text-slate-500">Tersimpan otomatis di perangkat ibu untuk bab ini</p>
-          </div>
-        </div>
-        <span v-if="noteSavedNotice" class="text-xs font-bold text-emerald-600 animate-pulse">
-          ✓ Tersimpan!
-        </span>
-      </div>
-
-      <textarea
-        v-model="currentTeacherNote"
-        rows="3"
-        placeholder="Tuliskan catatan khusus untuk bab ini (misal: tanggal ulangan, anak yang perlu bimbingan tajwid tambahan, atau ide ice breaking kelas)..."
-        class="w-full p-3.5 bg-amber-50/50 border border-amber-200 rounded-2xl text-xs sm:text-sm text-slate-800 focus:outline-none focus:ring-2 focus:ring-amber-500"
-      ></textarea>
-
-      <div class="flex justify-end">
-        <button
-          @click="saveNote"
-          class="px-5 py-2 rounded-xl bg-amber-500 hover:bg-amber-600 text-slate-950 font-extrabold text-xs shadow-sm transition-all active:scale-95"
-        >
-          Simpan Catatan Bab Ini
-        </button>
-      </div>
-    </div>
+    <section class="rounded-2xl border border-slate-200 bg-slate-50 p-5 space-y-3">
+      <h2 class="font-black text-sm text-slate-800">Rujukan bab ini</h2>
+      <ul class="space-y-2"><li v-for="source in babData.materi.sumber" :key="source.file" class="text-xs text-slate-600 leading-relaxed"><strong>{{ source.judul }}</strong> · {{ source.lokasi }}<span class="block text-slate-500 break-words">{{ source.file }}</span></li></ul>
+      <p class="text-xs text-slate-500 leading-relaxed">{{ babData.materi.catatanSumber }}</p>
+      <router-link to="/perubahan-cp" class="inline-block text-xs font-bold text-emerald-700">Lihat panduan sumber dan kurikulum →</router-link>
+    </section>
 
     <!-- Big Action: Play Game CTA Banner -->
     <div class="bg-gradient-to-r from-purple-700 via-indigo-700 to-purple-900 text-white rounded-3xl p-6 sm:p-8 shadow-xl flex flex-col md:flex-row items-center justify-between gap-6">
@@ -424,9 +455,9 @@
           <span>🎮</span>
           <span>Game Edukatif Bab Ini</span>
         </div>
-        <h3 class="text-2xl font-black">{{ babData.game.nama }}</h3>
+        <h3 class="text-2xl font-black">{{ babData.game?.nama }}</h3>
         <p class="text-xs sm:text-sm text-purple-200 max-w-xl">
-          {{ babData.game.petunjuk }} Mainkan sekarang bersama siswa di kelas untuk menguji pemahaman dengan ceria!
+          {{ babData.game?.petunjuk }} Mainkan sekarang bersama siswa di kelas untuk menguji pemahaman dengan ceria!
         </p>
       </div>
 
@@ -444,68 +475,24 @@
     <div class="text-4xl">⚠️</div>
     <h2 class="text-xl font-bold text-slate-800">Bab Tidak Ditemukan</h2>
     <p class="text-xs text-slate-500">Materi untuk bab yang dipilih tidak tersedia atau telah dipindahkan.</p>
-    <router-link :to="`/kelas/${kelas}`" class="inline-block px-4 py-2 bg-emerald-600 text-white rounded-xl text-xs font-bold">
+    <router-link :to="classLocation(kelas)" class="inline-block px-4 py-2 bg-emerald-600 text-white rounded-xl text-xs font-bold">
       Kembali ke Daftar Bab Kelas {{ kelas }}
     </router-link>
   </div>
 </template>
 
 <script setup>
-import { ref, computed, onMounted } from 'vue';
+import { computed } from 'vue';
 import { useAppStore } from '../stores/appStore';
-import { getMateriByKelasAndBab, getAllBabsForKelas } from '../data/paiData';
+import { useCurriculumNavigation } from '../composables/useCurriculumNavigation';
+import { getMateriByKelasAndBab } from '../data/paiData';
 import AudioSynthesizerReader from '../components/AudioSynthesizerReader.vue';
 import IslamicIllustration from '../components/IslamicIllustration.vue';
-
-const props = defineProps({
-  kelas: {
-    type: [String, Number],
-    required: true
-  },
-  babId: {
-    type: String,
-    required: true
-  }
-});
-
+const props = defineProps({ kelas: { type: [String, Number], required: true }, babId: { type: String, required: true } });
 const store = useAppStore();
-const currentTeacherNote = ref('');
-const noteSavedNotice = ref(false);
-
-const currentMode = computed(() => store.curriculumMode);
-
-const babData = computed(() => {
-  return getMateriByKelasAndBab(Number(props.kelas), props.babId, currentMode.value);
-});
-
-const isRead = computed(() => {
-  if (!babData.value) return false;
-  return store.isChapterRead(babData.value.id);
-});
-
-const markRead = () => {
-  if (!babData.value) return;
-  store.markChapterAsRead(babData.value.id);
-};
-
-const switchCurriculumMode = () => {
-  const nextMode = currentMode.value === 'cp-baru' ? 'cp-lama' : 'cp-baru';
-  store.setCurriculumMode(nextMode);
-};
-
-const saveNote = () => {
-  if (!babData.value) return;
-  store.saveNote(babData.value.id, currentTeacherNote.value);
-  noteSavedNotice.value = true;
-  setTimeout(() => {
-    noteSavedNotice.value = false;
-  }, 2500);
-};
-
-onMounted(() => {
-  if (babData.value) {
-    currentTeacherNote.value = store.getNoteForBab(babData.value.id);
-    store.markChapterAsRead(babData.value.id);
-  }
-});
+const { currentMode, selectCurriculum, classLocation } = useCurriculumNavigation();
+const babData = computed(() => getMateriByKelasAndBab(Number(props.kelas), props.babId));
+const isRead = computed(() => store.isChapterRead(props.babId));
+const markRead = () => store.markChapterAsRead(props.babId);
+const switchCurriculumMode = () => selectCurriculum(currentMode.value === 'cp-baru' ? 'cp-lama' : 'cp-baru');
 </script>
